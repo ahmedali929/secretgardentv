@@ -329,12 +329,6 @@
 							<h2 class="sec-title_heading"><span>Lighting </span> the way for our Children</h2>
 							<div class="sec-title_text">We are an Islamic media company devoted to nurturing the inner world of children through spiritually rich stories, thoughtful animation, and heart-centered learning. Rooted in the tradition of God-consciousness, our content helps children see the world — and themselves — as signs (āyāt) of the Divine. We believe in raising souls, not just minds, guiding young hearts toward beauty, meaning, and nearness to God.</div>
 						</div>
-						<!-- About One List -->
-						<ul class="about-one_list">
-							<li><i class="flaticon-checked"></i>Inspiring children with Islamic creativity</li>
-							<li><i class="flaticon-checked"></i>Passionate team builds faith-based connections</li>
-							<li><i class="flaticon-checked"></i>Discover a journey of meaningful learning</li>
-						</ul>
 						<!-- Options -->
 						<div class="about-one_options">
 							<div class="about-one_button">
@@ -1202,7 +1196,6 @@
     <p>Sign up to receive uplifting stories, new episode alerts, and behind-the-scenes content for SGTV Kids!</p>
     <form action="http://globalshiism.com/sendy/subscription" method="get" target="_blank">
       <input type="hidden" name="f" value="gnya2GbzYPXTJn0QIdMabrVowGkv86fe892o4n2M5y8PkpUQCZP0892TRouoTbf5qla5">
-      <input type="email" name="email" placeholder="Enter your email" required>
       <button type="submit" class="theme-btn btn-style-one mt-3">
         <span class="btn-wrap">
           <span class="text-one">Subscribe <i class="flaticon-next-1"></i></span>
@@ -1216,12 +1209,12 @@
 <script>
   function closeNewsletterPopup() {
     document.getElementById("newsletter-popup").classList.add("d-none");
-    localStorage.setItem("newsletterDismissed", "true");
+    sessionStorage .setItem("newsletterDismissed", "true");
   }
 
   window.addEventListener("load", () => {
     setTimeout(() => {
-      const dismissed = localStorage.getItem("newsletterDismissed");
+      const dismissed = sessionStorage .getItem("newsletterDismissed");
       if (!dismissed) {
         document.getElementById("newsletter-popup").classList.remove("d-none");
       }
