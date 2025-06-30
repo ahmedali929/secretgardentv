@@ -258,67 +258,71 @@
 	</section>
 	<!-- End Faq One -->
 	
-	<!-- Contact Form -->
+	<!-- Donate Section -->
+
 	<section class="contact-form-section">
-		<div class="auto-container">
-			<div class="row clearfix">
-				<!-- Column -->
-				<div class="form-column col-lg-6 col-md-12 col-sm-12">
-					<div class="inner-column">
-						<h3>Contact Us Right Now</h3>
-						<div class="text">Your email address will not be published. Required fields are marked *</div>
-						<div class="default-form contact-form">
-							<form method="post" action="sendemail.php" id="contact-form">
-								<div class="row clearfix">
-									<!--Form Group-->
-									<div class="form-group col-lg-6 col-md-6 col-sm-6">
-										<input type="text" name="name" value="" placeholder="Name" required>
-									</div>
-									<!--Form Group-->
-									<div class="form-group col-lg-6 col-md-6 col-sm-6">
-										<input type="email" name="email" value="" placeholder="Email" required>
-									</div>
-									<div class="form-group col-lg-6 col-md-6 col-sm-6">
-										<input type="text" name="phone" value="" placeholder="Phone" required>
-									</div>
-									<!--Form Group-->
-									<div class="form-group col-lg-6 col-md-6 col-sm-6">
-										<select name="country" class="custom-select-box">
-											<option>Select service</option>
-											<option>Service 01</option>
-											<option>Service 02</option>
-											<option>Service 03</option>
-										</select>
-									</div>
-									<div class="col-lg-12 col-md-12 col-sm-12 form-group">
-										<textarea class="" name="message" placeholder="Type comment here*"></textarea>
-									</div>
-									<div class="form-group col-lg-12 col-md-12 col-sm-12">
-										<button type="button" class="template-btn btn-style-one">
-											<span class="btn-wrap">
-												<span class="text-one">Submit now <i class="flaticon-next-1"></i></span>
-												<span class="text-two">Submit now <i class="flaticon-next-1"></i></span>
-											</span>
-										</button>
-									</div>
-									
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<!-- Column -->
-				<div class="map-column col-lg-6 col-md-12 col-sm-12">
-					<div class="inner-column">
-						<div class="map-one_map">
-							<iframe id="gmap_canvas" src="https://maps.google.com/maps?q=636+5th+Ave%2C+New+York&t=&z=18&ie=UTF8&iwloc=&output=embed"></iframe>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+	  <div class="auto-container">
+	    <div class="row clearfix justify-content-center">
+	      <!-- Donation Column -->
+	      <div class="form-column col-lg-8 col-md-12 col-sm-12">
+	        <div class="inner-column text-center wow fadeInUp" data-wow-delay="0.2s">
+	          <h3 class="mb-3">Support Our Mission</h3>
+	          <div class="text mb-5">Your generous donation helps Secret Garden TV for Kids bring creative, faith-based education to children around the world.</div>
+
+	          <!-- Donation Amount Options -->
+	          <div class="donation-options d-flex flex-wrap justify-content-center gap-3 mb-4">
+	            <button class="donation-btn" data-amount="10">$10</button>
+	            <button class="donation-btn" data-amount="25">$25</button>
+	            <button class="donation-btn" data-amount="50">$50</button>
+	            <button class="donation-btn" data-amount="100">$100</button>
+	            <button class="donation-btn" data-amount="custom">Custom</button>
+	          </div>
+
+	          <!-- Donation Form -->
+	          <div class="default-form contact-form">
+	            <form method="post" action="donate-handler.php" id="donate-form">
+	              <input type="hidden" id="selected-amount" name="amount" value="">
+	              <div class="row clearfix justify-content-center">
+	                <!-- Name -->
+	                <div class="form-group col-lg-6 col-md-6">
+	                  <input type="text" name="name" placeholder="Full Name" required>
+	                </div>
+	                <!-- Email -->
+	                <div class="form-group col-lg-6 col-md-6">
+	                  <input type="email" name="email" placeholder="Email Address" required>
+	                </div>
+	                <!-- Custom Amount -->
+	                <div class="form-group col-lg-6 col-md-6 d-none" id="custom-amount-group">
+	                  <input type="number" id="custom-amount" placeholder="Enter custom amount" min="1" step="any">
+	                </div>
+	                <!-- Message -->
+	                <div class="form-group col-lg-12">
+	                  <textarea name="message" placeholder="Leave a message (optional)"></textarea>
+	                </div>
+	                <!-- Submit -->
+	                <div class="form-group col-lg-12">
+	                  <button type="submit" class="template-btn btn-style-one">
+	                    <span class="btn-wrap">
+	                      <span class="text-one">Donate Now <i class="flaticon-next-1"></i></span>
+	                      <span class="text-two">Donate Now <i class="flaticon-next-1"></i></span>
+	                    </span>
+	                  </button>
+	                </div>
+	              </div>
+	            </form>
+	            <!-- Success Message Placeholder -->
+	            <div class="alert alert-success mt-4 d-none" id="success-message">
+	              Thank you for your generous support! 💚
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
 	</section>
-	<!-- End Contact Form -->
+
+
+	<!-- End Donate Form -->
 	
 	<!-- Main Footer -->
 	<footer class="footer-style_two">
@@ -571,6 +575,44 @@
 <script src="assets/js/nav-tool.js"></script>
 <script src="assets/js/jquery-ui.js"></script>
 <script src="assets/js/script.js"></script>
+
+<script>
+  const donationButtons = document.querySelectorAll('.donation-btn');
+  const selectedAmountInput = document.getElementById('selected-amount');
+  const customAmountGroup = document.getElementById('custom-amount-group');
+  const customAmountInput = document.getElementById('custom-amount');
+  const form = document.getElementById('donate-form');
+  const successMessage = document.getElementById('success-message');
+
+  donationButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      donationButtons.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const amount = btn.getAttribute('data-amount');
+      if (amount === 'custom') {
+        customAmountGroup.classList.remove('d-none');
+        selectedAmountInput.value = '';
+      } else {
+        customAmountGroup.classList.add('d-none');
+        selectedAmountInput.value = amount;
+      }
+    });
+  });
+
+  form.addEventListener('submit', function (e) {
+    if (selectedAmountInput.value === '' && customAmountInput.value) {
+      selectedAmountInput.value = customAmountInput.value;
+    }
+
+    // Optional: prevent submission to show demo feedback
+    // e.preventDefault();
+    // successMessage.classList.remove('d-none');
+    // form.reset();
+    // donationButtons.forEach(b => b.classList.remove('active'));
+    // customAmountGroup.classList.add('d-none');
+  });
+</script>
+
 
 </body>
 </html>
