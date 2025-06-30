@@ -8305,3 +8305,47 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+
+.episode-grid {
+  background-color: #f9f9f9;
+}
+
+.episode-tile {
+  display: block;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.episode-tile:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.episode-thumb {
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  background-position: center;
+}
+
+.episode-info {
+  padding: 15px;
+}
+
+.episode-info h5 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: 700;
+}
+
+.episode-info p {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+}
