@@ -606,11 +606,11 @@
     }
 
     // Optional: prevent submission to show demo feedback
-    // e.preventDefault();
-    // successMessage.classList.remove('d-none');
-    // form.reset();
-    // donationButtons.forEach(b => b.classList.remove('active'));
-    // customAmountGroup.classList.add('d-none');
+    e.preventDefault();
+    successMessage.classList.remove('d-none');
+    form.reset();
+    donationButtons.forEach(b => b.classList.remove('active'));
+    customAmountGroup.classList.add('d-none');
   });
 </script>
 

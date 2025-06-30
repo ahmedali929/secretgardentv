@@ -901,8 +901,6 @@
 	 });
 	}
 
-
-
 	///////////////////////////////////////////////////// 
     // Title Animation
     let splitTitleLines = gsap.utils.toArray(".title-anim");
