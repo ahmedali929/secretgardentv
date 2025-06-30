@@ -678,6 +678,25 @@
 		</div>
 	</section>
 	<!-- End Booking One -->
+
+
+
+
+	<!-- Donation -->
+	<section class="donate-home-section">
+	  <div class="auto-container">
+	    <div class="inner-container p-5 rounded shadow-lg text-center" style="background-image: url('assets/images/background/flower_garden_bg.jpg'); background-size: cover; background-position: center;">
+	      <h2 class="mb-3" style="font-family: 'Playfair Display', serif;">Help Us Grow This Garden </h2>
+	      <p class="fs-5 mb-4">Every story we tell is planted with love and faith. Your donation helps us nurture children’s hearts through spiritually grounded content. Even small contributions blossom into something beautiful.</p>
+	      <a href="donate.html" class="theme-btn btn-style-one">
+	        <span class="btn-wrap">
+	          <span class="text-one">Donate Now <i class="flaticon-next-1"></i></span>
+	          <span class="text-two">Donate Now <i class="flaticon-next-1"></i></span>
+	        </span>
+	      </a>
+	    </div>
+	  </div>
+	</section>
 	
 	<!-- Testimonial Two -->
 	<section class="testimonial-two">
@@ -918,6 +937,7 @@
 		</div>
 	</section>
 	<!-- End Blog Two -->
+
 	
 	<!-- Main Footer -->
 	<footer class="footer-style_two">
@@ -1171,6 +1191,44 @@
 <script src="assets/js/jquery-ui.js"></script>
 <script src="assets/js/jquery.countdown.js"></script>
 <script src="assets/js/script.js"></script>
+
+
+
+<!-- Newsletter Popup -->
+<div id="newsletter-popup" class="newsletter-popup-overlay d-none">
+  <div class="newsletter-popup-box">
+    <button class="close-popup" onclick="closeNewsletterPopup()">×</button>
+    <h3>Join the Secret Garden!</h3>
+    <p>Sign up to receive uplifting stories, new episode alerts, and behind-the-scenes content for SGTV Kids!</p>
+    <form action="http://globalshiism.com/sendy/subscription" method="get" target="_blank">
+      <input type="hidden" name="f" value="gnya2GbzYPXTJn0QIdMabrVowGkv86fe892o4n2M5y8PkpUQCZP0892TRouoTbf5qla5">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit" class="theme-btn btn-style-one mt-3">
+        <span class="btn-wrap">
+          <span class="text-one">Subscribe <i class="flaticon-next-1"></i></span>
+          <span class="text-two">Subscribe <i class="flaticon-next-1"></i></span>
+        </span>
+      </button>
+    </form>
+  </div>
+</div>
+
+<script>
+  function closeNewsletterPopup() {
+    document.getElementById("newsletter-popup").classList.add("d-none");
+    localStorage.setItem("newsletterDismissed", "true");
+  }
+
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      const dismissed = localStorage.getItem("newsletterDismissed");
+      if (!dismissed) {
+        document.getElementById("newsletter-popup").classList.remove("d-none");
+      }
+    }, 5000); // Show after 5 seconds
+  });
+</script>
+
 
 </body>
 </html>
