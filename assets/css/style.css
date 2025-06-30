@@ -8235,3 +8235,18 @@
   padding: 10px 15px;
   border-radius: 6px;
 }
+
+.info-block_two-inner {
+  background-color: #f9f9f9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-block_two-inner:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.info-block_two-icon i {
+  color: #45aab1;
+}
+
