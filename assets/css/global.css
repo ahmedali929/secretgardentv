@@ -61,9 +61,9 @@
 
 :root {
 	
-	/* #F4831F in decimal RGB */
-	--main-color: rgb(244,131,31);
-	--main-color-rgb:244,131,31;
+	/* #0da148 in decimal RGB */
+	--main-color: rgb(13, 161, 72);
+	--main-color-rgb:13, 161, 72;
 	
 	/* #08C76A in decimal RGB */
 	--color-two: rgb(8,199,106);

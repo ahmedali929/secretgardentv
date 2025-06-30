@@ -3464,7 +3464,7 @@
 	padding:40px 35px;
 	border-radius:8px;
 	background-color:var(--main-color);
-	box-shadow:-10px -10px 0px rgba(244,131,31,0.20);
+	box-shadow:-10px -10px 0px rgba(13, 161, 72,0.20);
 }
 
 .booking-one_counter:before{
@@ -3475,7 +3475,7 @@
 	right:20px;
 	bottom:20px;
 	border-radius:8px;
-	background-color:rgba(244,131,31,0.20);
+	background-color:rgba(13, 161, 72,0.20);
 }
 
 .booking-one_counter-title{
