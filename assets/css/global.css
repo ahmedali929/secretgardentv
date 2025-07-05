@@ -890,6 +890,13 @@ img{
 
 /* Cursor */
 
+@media (max-width: 1024px) {
+  .cursor,
+  .cursor-follower {
+    display: none !important;
+  }
+}
+
 .cursor {
     position: fixed;
     background-color: var(--main-color);
