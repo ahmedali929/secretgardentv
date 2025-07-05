@@ -109,7 +109,7 @@
 							
 							<!-- Button Box -->
 							<div class="main-header_button">
-								<a target="_blank" href="http://globalshiism.com/sendy/subscription?f=gnya2GbzYPXTJn0QIdMabrVowGkv86fe892o4n2M5y8PkpUQCZP0892TRouoTbf5qla5" class="theme-btn btn-style-one">
+								<a href="#" class="theme-btn btn-style-one" onclick="openNewsletterPopup()">
 									<span class="btn-wrap">
 										<span class="text-one">Join Our Newsletter</span>
 									</span>
@@ -201,7 +201,7 @@
 								<h1 class="slider-two_heading">Aiming to <span>reimagine</span> <br> Islamic Education.</h1>
 								<div class="slider-two_text">Secret Garden TV for Kids is an entrepreneurial venture aiming to reimagine Islamic education through cutting-edge, appealing, and creative media and entertainment.</div>
 								<div class="slider-two_button d-flex justify-content-center align-items-center flex-wrap">
-									<a href="http://globalshiism.com/sendy/subscription?f=gnya2GbzYPXTJn0QIdMabrVowGkv86fe892o4n2M5y8PkpUQCZP0892TRouoTbf5qla5" target="_blank" class="theme-btn btn-style-one">
+									<a href="#" class="theme-btn btn-style-one" onclick="openNewsletterPopup()">
 										<span class="btn-wrap">
 											<span class="text-one">Join Our Newsletter <i class="flaticon-next-1"></i></span>
 											<span class="text-two">Join Our Newsletter <i class="flaticon-next-1"></i></span>
@@ -238,7 +238,7 @@
 								<h1 class="slider-two_heading">Inspiring a <span>love for learning</span><br> through storytelling.</h1>
 								<div class="slider-two_text">We bring engaging stories rooted in Islamic values that spark curiosity, build character, and connect young hearts to faith in meaningful ways.</div>
 								<div class="slider-two_button d-flex justify-content-center align-items-center flex-wrap">
-									<a href="http://globalshiism.com/sendy/subscription?f=gnya2GbzYPXTJn0QIdMabrVowGkv86fe892o4n2M5y8PkpUQCZP0892TRouoTbf5qla5" target="_blank" class="theme-btn btn-style-one">
+									<a href="#" class="theme-btn btn-style-one" onclick="openNewsletterPopup()">
 										<span class="btn-wrap">
 											<span class="text-one">Join Our Newsletter <i class="flaticon-next-1"></i></span>
 											<span class="text-two">Join Our Newsletter <i class="flaticon-next-1"></i></span>
@@ -275,7 +275,7 @@
 								<h1 class="slider-two_heading">Building a <span>brighter future</span><br> for Muslim children.</h1>
 								<div class="slider-two_text">Our mission is to empower the next generation with knowledge, creativity, and a strong spiritual foundation—through fun, thoughtful, and faith-centered content.</div>
 								<div class="slider-two_button d-flex justify-content-center align-items-center flex-wrap">
-									<a href="http://globalshiism.com/sendy/subscription?f=gnya2GbzYPXTJn0QIdMabrVowGkv86fe892o4n2M5y8PkpUQCZP0892TRouoTbf5qla5" target="_blank" class="theme-btn btn-style-one">
+									<a href="#" class="theme-btn btn-style-one" onclick="openNewsletterPopup()">
 										<span class="btn-wrap">
 											<span class="text-one">Join Our Newsletter <i class="flaticon-next-1"></i></span>
 											<span class="text-two">Join Our Newsletter <i class="flaticon-next-1"></i></span>
@@ -649,7 +649,7 @@
 							<h2 class="sec-title_heading">Sign Up to our newsletter!"</h2>
 						</div>
 						<div class="booking-one_button">
-							<a href="http://globalshiism.com/sendy/subscription?f=gnya2GbzYPXTJn0QIdMabrVowGkv86fe892o4n2M5y8PkpUQCZP0892TRouoTbf5qla5" target="_blank" class="theme-btn btn-style-one">
+							<a href="#" class="theme-btn btn-style-one" onclick="openNewsletterPopup()">
 								<span class="btn-wrap">
 									<span class="text-one">Join Our Newsletter <i class="flaticon-next-1"></i></span>
 									<span class="text-two">Join Our Newsletter <i class="flaticon-next-1"></i></span>
@@ -1266,6 +1266,13 @@
     document.getElementById("newsletter-success").style.display = "block";
   }
 </script>
+
+<script>
+  function openNewsletterPopup() {
+    document.getElementById("newsletter-popup").classList.remove("d-none");
+  }
+</script>
+
 
 
 </body>
