@@ -2597,6 +2597,16 @@
   }
 }
 
+/* Allow text selection inside slider content */
+.slider-two_content-inner,
+.slider-two_heading,
+.slider-two_text {
+  user-select: text;
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+}
+
 /*** 
 
 ====================================================================
