@@ -822,7 +822,7 @@
 		speed: 500,
 		slidesPerView: 5,
 		centeredSlides: true,
-		// direction: "vertical",
+		slideToClickedSlide: true,
 		autoplay: {
 			enabled: true,
 			delay: 6000
@@ -876,6 +876,7 @@
 			swiper: Testimonial_nav,
 		},
 	});
+	
 
 
 
