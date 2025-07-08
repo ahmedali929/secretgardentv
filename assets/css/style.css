@@ -2584,6 +2584,19 @@
 	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
+/* Disable slide-in animation on tablets and phones */
+@media (max-width: 1024px) {
+  .slider-two_image {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%) !important;
+    transition: none !important;
+  }
+
+  .slider-two .swiper-slide-active .slider-two_image {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%) !important;
+    transition-delay: 0s !important;
+  }
+}
+
 /*** 
 
 ====================================================================
