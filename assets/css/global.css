@@ -890,6 +890,12 @@ img{
 
 /* Cursor */
 
+body,
+html {
+  cursor: none !important;
+}
+
+
 @media (max-width: 1024px) {
   .cursor,
   .cursor-follower {
