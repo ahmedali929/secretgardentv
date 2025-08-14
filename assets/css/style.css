@@ -5632,6 +5632,17 @@
 	
 }
 
+
+.testimonial__nav-thumb {
+  margin: 0 auto;
+  text-align: center;
+}
+.testimonial__nav-thumb .thumb-content {
+  margin: 0 auto;
+  text-align: center;
+}
+
+
 /***
 
 ====================================================================

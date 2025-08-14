@@ -820,39 +820,20 @@
 		loop: true,
 		spaceBetween: 10,
 		speed: 500,
-		slidesPerView: 5,
-		centeredSlides: true,
+		slidesPerView: 1,
+		centeredSlides: false,
 		slideToClickedSlide: true,
 		autoplay: {
 			enabled: true,
 			delay: 6000
 		},
-		
-		breakpoints: {
-			'1400': {
-				slidesPerView: 5,
-			},
-			'1200': {
-				slidesPerView: 5,
-			},
-			'992': {
-				slidesPerView: 4,
-			},
-			'991': {
-				slidesPerView: 4,
-			},
-			'768': {
-				slidesPerView: 4,
-			},
-			'577': {
-				slidesPerView: 4,
-			},
-			'0': {
-				slidesPerView: 3,
-				//direction: "horizontal",
-			},
-		},
+		allowTouchMove: false, // optional: to prevent user manually messing up sync		
+		// Fix loop rewind by disabling short swiping back
+		watchSlidesProgress: true,
+		watchSlidesVisibility: true,
+
 	});
+
 	var swiper2 = new Swiper(".testimonial__active", {
 		loop: true,
 		navigation: {
@@ -872,9 +853,21 @@
 			delay: 6000
 		},
 		slidesPerView: 1,
-		thumbs: {
-			swiper: Testimonial_nav,
-		},
+		// thumbs: {
+		// 	swiper: Testimonial_nav,
+		// },
+		on: {
+    		slideChange: function () {
+		    // Get real index (because of looping)
+		    const realIndex = this.realIndex;
+		    Testimonial_nav.slideToLoop(realIndex); // Sync thumbs
+		    }
+		  }
+	});
+
+	Testimonial_nav.on('click', function () {
+		const clickedIndex = Testimonial_nav.clickedIndex;
+		swiper2.slideToLoop(clickedIndex);
 	});
 	
 
