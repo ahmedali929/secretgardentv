@@ -198,11 +198,16 @@
 					<div class="slider-two_icon-one" style="background-image:url(assets/images/main-slider/icon-4.png)"></div>
 					<div class="slider-two_icon-two" style="background-image:url(assets/images/main-slider/icon-5.png)"></div>
 					<div class="slider-two_icon-three" style="background-image:url(assets/images/main-slider/icon-6.png)"></div>
-					<div class="auto-container">
-						
+					<div class="auto-container">						
 						<!-- Content Column -->
 						<div class="slider-two_content">
 							<div class="slider-two_content-inner text-center">
+								<div>
+									
+
+				  <!-- Arrows -->
+  <button class="swiper-button-prev main-slider-prev" aria-label="Previous slide"></button>
+  <button class="swiper-button-next main-slider-next" aria-label="Next slide"></button>
 								<span class="swiper-no-swiping">
 									<h1 class="slider-two_heading">
 									<span>Know</span> the Garden</h1>
@@ -223,6 +228,7 @@
 										</span>
 									</a>
 								</div>
+							</div>
 								
 								<div class="slider-two_image">
 									<img src="assets/images/main-slider/test.png" alt="" />
@@ -396,6 +402,7 @@
 						</div>
 					</div>
 				</div>
+
 
 			</div>
 		</div>
@@ -1411,6 +1418,24 @@
   </div>
 </div>
 
+<script>
+  // If you already initialize this slider elsewhere, just add the `navigation` and `keyboard` options there.
+  const mainSlider = new Swiper('.main-slider', {
+    loop: true,
+    speed: 700,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    },
+    navigation: {
+      nextEl: '.main-slider .swiper-button-next',
+      prevEl: '.main-slider .swiper-button-prev'
+    },
+    keyboard: { enabled: true },
+    // Optional: If dragging is allowed
+    grabCursor: true
+  });
+</script>
 
 
 <script src="assets/js/jquery.js"></script>
