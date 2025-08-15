@@ -8400,3 +8400,16 @@
 .service-block_one-title, .service-block_one-text { transition: opacity .2s; }
 .js-hover-swap.swapping .service-block_one-title,
 .js-hover-swap.swapping .service-block_one-text { opacity: 0.15; }
+
+
+.team-block_two-image { position: relative; overflow: hidden; }
+.team-block_two-overlay {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  padding: 16px; text-align: center;
+  opacity: 0; transition: opacity .25s ease;
+  background: rgba(0,0,0,0.55); color: #fff;
+}
+.team-block_two-image:hover .team-block_two-overlay { opacity: 1; }
+
+.team-block_two-bio { font-size: 14px; line-height: 1.5; }
