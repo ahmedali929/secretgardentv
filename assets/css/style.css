@@ -8416,3 +8416,11 @@
 
 
 
+/* Make the whole section scroll inside a fixed window */
+.scrollable-text {
+  max-height: clamp(24rem, 60vh, 34rem);
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
