@@ -8395,3 +8395,8 @@
   transform: scale(1.02);
   transition: 0.3s ease;
 }
+
+/* Optional: smooth fade on text change */
+.service-block_one-title, .service-block_one-text { transition: opacity .2s; }
+.js-hover-swap.swapping .service-block_one-title,
+.js-hover-swap.swapping .service-block_one-text { opacity: 0.15; }
