@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Secret Garden TV for Kids | Blog</title>
+    <title>Secret Garden TV for Kids | Blog (Coming Soon)</title>
     <!-- Stylesheets -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
@@ -19,6 +19,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+<style>
+    /* ===== Brand-ish tokens (tweak to match your palette) ===== */
+    :root{
+      --bg: #f7faf7;               /* soft garden backdrop */
+      --bg-accent: #eef7ff;        /* breezy blue tint */
+      --ink: #1f2937;              /* slate-900 */
+      --muted: #637587;            /* slate-500/600 */
+      --primary: #2f855a;          /* garden green */
+      --primary-ink: #ffffff;      
+      --ring: rgba(47,133,90,.25);
+      --card: #ffffff;
+      --card-border: #e6ebef;
+      --shadow: 0 10px 30px rgba(0,0,0,.06);
+      --radius: 18px;
+    }
+
+    /* ===== Reset-ish ===== */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--ink);
+      background:
+        radial-gradient(1200px 600px at 100% -10%, var(--bg-accent) 0, transparent 60%),
+        radial-gradient(1000px 600px at -10% 100%, #fef6e7 0, transparent 55%),
+        var(--bg);
+      font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+    img{max-width:100%;height:auto;display:block}
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{width:min(1100px, 92%); margin-inline:auto}
+
+    /* ===== Header ===== */
+    .site-header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:700}
+    .brand-logo{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(from 180deg, #a7f3d0, #93c5fd, #fde68a, #a7f3d0)}
+    .brand-logo svg{width:26px;height:26px;opacity:.9}
+    .nav a{padding:8px 12px;border-radius:10px}
+    .nav a:hover{background:rgba(47,133,90,.08);text-decoration:none}
+
+    /* ===== Hero ===== */
+    .hero{position:relative;overflow:hidden;border-radius:28px;background:linear-gradient(180deg, rgba(255,255,255,.6), rgba(255,255,255,.9));box-shadow:var(--shadow);}
+    .hero-inner{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;padding:48px}
+    @media (max-width: 900px){.hero-inner{grid-template-columns:1fr;padding:28px}}
+
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:#e8f5ee;border:1px solid #d3ebdd;color:#256c49;padding:6px 12px;border-radius:999px;font-weight:600;font-size:.9rem}
+    .eyebrow svg{width:16px;height:16px}
+    h1{font-size:clamp(1.9rem, 3vw + .8rem, 3rem);line-height:1.15;margin:14px 0 10px}
+    .sub{color:var(--muted);max-width:55ch;margin-bottom:20px}
+
+    /* ===== CTA form ===== */
+    .cta{display:flex;align-items:center;gap:10px}
+    .input{flex:1;display:flex;background:var(--card);border:1px solid var(--card-border);border-radius:999px;box-shadow:0 1px 0 rgba(0,0,0,.04)}
+    .input input{flex:1;border:0;background:transparent;padding:14px 16px 14px 18px;outline:0;font-size:1rem}
+    .btn{border:0;background:var(--primary);color:var(--primary-ink);font-weight:700;padding:12px 18px;border-radius:999px;cursor:pointer;box-shadow:0 6px 16px var(--ring)}
+    .btn:hover{filter:brightness(1.05)}
+
+    .note{font-size:.9rem;color:var(--muted);margin-top:8px}
+
+    /* ===== Empty state cards ===== */
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+    @media (max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:620px){.cards{grid-template-columns:1fr}}
+
+    .card{border:1px solid var(--card-border);background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);position:relative}
+    .thumb{aspect-ratio:16/9;background:linear-gradient(90deg, #eef2f7 0%, #f6f9fb 50%, #eef2f7 100%);animation:shimmer 1.4s infinite linear;background-size:200% 100%}
+    @keyframes shimmer{to{background-position: -200% 0}}
+    .card-body{padding:16px}
+    .meta{font-size:.9rem;color:var(--muted);margin-bottom:4px}
+    .title{height:2.6lh;line-height:1.3;overflow:hidden;position:relative}
+    .title::after{content:"";position:absolute;inset:auto 0 0 0;height:1.3lh;background:linear-gradient(180deg, transparent, var(--card))}
+
+    /* ===== Footer ===== */
+    .site-footer{display:grid;gap:10px;justify-items:center;margin:46px 0 28px;color:var(--muted);font-size:.95rem}
+    .pill{display:inline-flex;gap:8px;align-items:center;padding:8px 12px;border-radius:999px;border:1px solid var(--card-border);background:rgba(255,255,255,.6)}
+  </style>
+
+
+
 </head>
 
 <body>
@@ -210,12 +293,48 @@
         <!--Waves end-->
     </section>
     <!-- End Page Title -->
+
+
+    <section class="hero" aria-labelledby="headline">
+      <div class="hero-inner">
+        <div>
+          <h1 id="headline">No posts yet — new seeds are sprouting soon</h1>
+          <p class="sub">We’re preparing thoughtful stories, reflections, and resources for families. Join the newsletter and you’ll get the first read when posts go live.</p>
+          <form class="cta" action="#" method="post" aria-label="Newsletter sign-up" onsubmit="event.preventDefault();announce();">
+            <div class="input">
+              <label class="sr-only" for="email">Email address</label>
+              <input id="email" name="email" type="email" placeholder="Enter your email" autocomplete="email" required />
+            </div>
+            <button class="btn" type="submit">Notify me</button>
+          </form>
+          <p class="note">No spam. Unsubscribe anytime.</p>
+        </div>
+        <div aria-hidden="true">
+          <!-- Decorative empty-state illustration -->
+          <svg viewBox="0 0 640 520" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Garden illustration" style="width:100%;height:auto">
+            <defs>
+              <linearGradient id="g" x1="0" x2="1">
+                <stop offset="0" stop-color="#bbf7d0"/>
+                <stop offset="1" stop-color="#bfdbfe"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="640" height="520" fill="url(#g)" opacity=".45"/>
+            <g opacity=".9">
+              <ellipse cx="320" cy="430" rx="210" ry="22" fill="#dbeafe"/>
+              <path d="M320 120c60 52 90 103 90 152 0 53-40 96-90 96s-90-43-90-96c0-49 30-100 90-152Z" fill="#34d399"/>
+              <path d="M320 160c40 36 60 71 60 104 0 35-27 64-60 64s-60-29-60-64c0-33 20-68 60-104Z" fill="#10b981"/>
+              <circle cx="480" cy="190" r="14" fill="#f59e0b"/>
+              <circle cx="145" cy="220" r="9" fill="#f472b6"/>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
 	
-	<!-- Blog Three -->
-	<section class="blog-three">
+<!-- 	<section class="blog-three">
 		<div class="auto-container">
 			<div class="row clearfix">
-				<!-- 1. Raising Purposeful Children in a Distracted World -->
+
 <div class="news-block_one col-lg-4 col-md-6 col-sm-12">
 	<div class="news-block_one-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
 		<div class="news-block_one-image">
@@ -232,7 +351,7 @@
 	</div>
 </div>
 
-<!-- 2. Teaching Adab in Everyday Moments -->
+
 <div class="news-block_one col-lg-4 col-md-6 col-sm-12">
 	<div class="news-block_one-inner wow fadeInUp" data-wow-delay="100ms" data-wow-duration="1500ms">
 		<div class="news-block_one-image">
@@ -249,7 +368,7 @@
 	</div>
 </div>
 
-<!-- 3. Why Stories Matter: Building Character Through Narrative -->
+
 <div class="news-block_one col-lg-4 col-md-6 col-sm-12">
 	<div class="news-block_one-inner wow fadeInUp" data-wow-delay="200ms" data-wow-duration="1500ms">
 		<div class="news-block_one-image">
@@ -266,7 +385,7 @@
 	</div>
 </div>
 
-<!-- 4. From Dhikr to Discipline: Nurturing the Spiritual Heart -->
+
 <div class="news-block_one col-lg-4 col-md-6 col-sm-12">
 	<div class="news-block_one-inner wow fadeInUp" data-wow-delay="300ms" data-wow-duration="1500ms">
 		<div class="news-block_one-image">
@@ -283,7 +402,7 @@
 	</div>
 </div>
 
-<!-- 5. Family First: How to Build a Home of Belonging and Barakah -->
+
 <div class="news-block_one col-lg-4 col-md-6 col-sm-12">
 	<div class="news-block_one-inner wow fadeInUp" data-wow-delay="400ms" data-wow-duration="1500ms">
 		<div class="news-block_one-image">
@@ -300,7 +419,7 @@
 	</div>
 </div>
 
-<!-- 6. The Prophet as a Teacher: Lessons for Modern Parents -->
+
 <div class="news-block_one col-lg-4 col-md-6 col-sm-12">
 	<div class="news-block_one-inner wow fadeInUp" data-wow-delay="500ms" data-wow-duration="1500ms">
 		<div class="news-block_one-image">
@@ -317,7 +436,7 @@
 	</div>
 </div>
 
-<!-- 7. Love, Loyalty & Laughter: Building Friendships the Islamic Way -->
+
 <div class="news-block_one col-lg-4 col-md-6 col-sm-12">
 	<div class="news-block_one-inner wow fadeInUp" data-wow-delay="600ms" data-wow-duration="1500ms">
 		<div class="news-block_one-image">
@@ -334,7 +453,7 @@
 	</div>
 </div>
 
-<!-- 8. Small Hands, Big Impact: Encouraging Social Responsibility Early -->
+
 <div class="news-block_one col-lg-4 col-md-6 col-sm-12">
 	<div class="news-block_one-inner wow fadeInUp" data-wow-delay="700ms" data-wow-duration="1500ms">
 		<div class="news-block_one-image">
@@ -351,7 +470,7 @@
 	</div>
 </div>
 
-<!-- 9. No Binaries, Only Balance: Helping Kids Navigate Complexity with Faith -->
+
 <div class="news-block_one col-lg-4 col-md-6 col-sm-12">
 	<div class="news-block_one-inner wow fadeInUp" data-wow-delay="800ms" data-wow-duration="1500ms">
 		<div class="news-block_one-image">
@@ -367,7 +486,7 @@
 		</div>
 	</div>
 </div>
-</div>
+</div> -->
 			
 			<!-- Styled Pagination -->
 <!-- 			<ul class="styled-pagination text-center">
@@ -378,8 +497,8 @@
 			</ul> -->
 			<!-- End Styled Pagination -->
 			
-		</div>
-	</section>
+<!-- 		</div>
+	</section> -->
 	<!-- End Blog Three -->
 	
 	<!-- Main Footer -->
