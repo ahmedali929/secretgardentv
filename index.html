@@ -22,6 +22,46 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<style>
+	.slider-two_arrows {
+  flex-basis: 100%;   /* forces it to take the full width in the flexbox */
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+
+.slider-two_arrows .arrow-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--theme-color); /* subtle outline to match theme */
+  background: transparent; /* plain background */
+  color: var(--theme-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Force remove ANY shadows */
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.slider-two_arrows .arrow-btn:hover {
+  background: var(--theme-color);
+  color: green;
+  transform: translateY(-2px);
+}
+
+.slider-two_arrows .arrow-btn:focus {
+  outline: 2px solid var(--theme-color);
+  outline-offset: 3px;
+}
+
+</style>
 
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
@@ -189,7 +229,7 @@
 	
 	<!-- Slider Two -->
 	<section class="slider-two">
-		<div class="main-slider swiper-container">
+		<div class="main-slider swiper-container" id="hero-swiper">
 			<div class="swiper-wrapper">
 
 				<!-- Slide -->
@@ -222,6 +262,11 @@
 											<span class="text-two">Read More <i class="flaticon-next-1"></i></span>
 										</span>
 									</a>
+									<!-- under your CTAs inside each .swiper-slide -->
+									<div class="slider-two_arrows">
+									  <button class="arrow-btn slide-prev" aria-label="Previous slide"><i class="flaticon-left-arrow"></i></button>
+									  <button class="arrow-btn slide-next" aria-label="Next slide"><i class="flaticon-next-1"></i></button>
+									</div>
 								</div>
 							</div>
 								
@@ -263,6 +308,13 @@
 											<span class="text-two">Read More <i class="flaticon-next-1"></i></span>
 										</span>
 									</a>
+									<!-- under your CTAs inside each .swiper-slide -->
+									<div class="slider-two_arrows">
+									  <button class="arrow-btn slide-prev" aria-label="Previous slide"><i class="flaticon-left-arrow"></i></button>
+									  <button class="arrow-btn slide-next" aria-label="Next slide"><i class="flaticon-next-1"></i></button>
+									</div>
+
+
 								</div>
 								
 								<div class="slider-two_image">
@@ -303,6 +355,13 @@
 											<span class="text-two">Read More <i class="flaticon-next-1"></i></span>
 										</span>
 									</a>
+									<!-- under your CTAs inside each .swiper-slide -->
+									<div class="slider-two_arrows">
+									  <button class="arrow-btn slide-prev" aria-label="Previous slide"><i class="flaticon-left-arrow"></i></button>
+									  <button class="arrow-btn slide-next" aria-label="Next slide"><i class="flaticon-next-1"></i></button>
+									</div>
+
+
 								</div>
 								
 								<div class="slider-two_image">
@@ -345,7 +404,15 @@
 											<span class="text-two">Read More <i class="flaticon-next-1"></i></span>
 										</span>
 									</a>
+									<!-- under your CTAs inside each .swiper-slide -->
+									<div class="slider-two_arrows">
+									  <button class="arrow-btn slide-prev" aria-label="Previous slide"><i class="flaticon-left-arrow"></i></button>
+									  <button class="arrow-btn slide-next" aria-label="Next slide"><i class="flaticon-next-1"></i></button>
+									</div>
+
+
 								</div>
+
 								
 								<div class="slider-two_image">
 									<img src="assets/images/main-slider/playinthegarden.png" alt="" />
@@ -387,6 +454,13 @@
 											<span class="text-two">Read More <i class="flaticon-next-1"></i></span>
 										</span>
 									</a>
+									<!-- under your CTAs inside each .swiper-slide -->
+									<div class="slider-two_arrows">
+									  <button class="arrow-btn slide-prev" aria-label="Previous slide"><i class="flaticon-left-arrow"></i></button>
+									  <button class="arrow-btn slide-next" aria-label="Next slide"><i class="flaticon-next-1"></i></button>
+									</div>
+
+
 								</div>
 								
 								<div class="slider-two_image">
@@ -1339,7 +1413,48 @@
 <script src="assets/js/script.js"></script>
 <script src="assets/js/newsletter.js"></script>
 
+<script>
+  // Wait until everything (including your theme's Swiper init) is done
+  window.addEventListener('load', function () {
+    const el = document.querySelector('#hero-swiper');
 
+    // IMPORTANT: Use the already-created instance if your theme initialized it
+    let heroSwiper = el && el.swiper;
+    // If, for some reason, it wasn't initialized elsewhere, create it (no autoplay here)
+    if (!heroSwiper) {
+      heroSwiper = new Swiper(el, { loop: true });
+    }
+
+    // Helper: resume autoplay if available, without reading params.autoplay
+    function resumeAutoplay(sw) {
+      if (sw && sw.autoplay && typeof sw.autoplay.start === 'function') {
+        // If disableOnInteraction exists, relax it (guarded)
+        if (sw.params && sw.params.autoplay && typeof sw.params.autoplay.disableOnInteraction !== 'undefined') {
+          sw.params.autoplay.disableOnInteraction = false;
+        }
+        sw.autoplay.start();
+      }
+    }
+
+    // Wire per-slide arrows
+    el.querySelectorAll('.swiper-slide').forEach((slide) => {
+      const prevBtn = slide.querySelector('.slider-two_arrows .slide-prev');
+      const nextBtn = slide.querySelector('.slider-two_arrows .slide-next');
+
+      if (prevBtn) prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        heroSwiper.slidePrev();
+        resumeAutoplay(heroSwiper);
+      });
+
+      if (nextBtn) nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        heroSwiper.slideNext();
+        resumeAutoplay(heroSwiper);
+      });
+    });
+  });
+</script>
 
 
 </body>

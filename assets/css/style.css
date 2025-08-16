@@ -8441,6 +8441,25 @@
 }
 
 
+.slider-two_arrows{
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  margin-top:14px;
+}
+.slider-two_arrows .slide-prev,
+.slider-two_arrows .slide-next{
+  border:0;
+  background:#fff;
+  padding:10px 14px;
+  border-radius:999px;
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+  cursor:pointer;
+  line-height:1;
+}
+.slider-two_arrows .slide-prev:focus,
+.slider-two_arrows .slide-next:focus{ outline:2px solid #222; outline-offset:2px; }
+
 
 
 
