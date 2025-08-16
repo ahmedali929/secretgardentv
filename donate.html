@@ -133,7 +133,7 @@
 							
 							<!-- Button Box -->
 							<div class="main-header_button">
-								<a href="#" class="theme-btn btn-style-one" onclick="openNewsletterPopup()">
+								<a class="ml-onclick-form theme-btn btn-style-one" href="javascript:void(0)" onclick="ml('show', 'Pcso7D', true)">
 									<span class="btn-wrap">
 										<span class="text-one">Join Our Newsletter</span>
 									</span>
@@ -588,57 +588,6 @@
 
 
 
-<!-- Newsletter Popup -->
-<div id="newsletter-popup" class="newsletter-popup-overlay d-none">
-  <div class="newsletter-popup-box">
-    <button class="close-popup" onclick="closeNewsletterPopup()">×</button>
-    <h3>Join the Secret Garden!</h3>
-
-    <div id="newsletter-intro">
-      <p>Sign up to receive uplifting stories, new episode alerts, and behind-the-scenes content for SGTV Kids!</p>
-      <!-- <p>Sign up now to receive a free downloadable coloring booklet!</p> -->
-    </div>
-
-    <form id="newsletterForm" onsubmit="handleNewsletterSubmit(event)" method="POST" target="_blank" style="max-width: 400px; margin: 0 auto;">
-      <input type="hidden" name="list" value="gnya2GbzYPXTJn0QIdMabrVowGkv86fe892o4n2M5y8PkpUQCZP0892TRouoTbf5qla5">
-
-      <div id="newsletter-fields">
-        <div class="form-group mb-3">
-          <input type="text" name="name" placeholder="First Name" required 
-                 style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
-        </div>
-
-        <div class="form-group mb-3">
-          <input type="text" name="last_name" placeholder="Last Name"
-                 style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
-        </div>
-
-        <div class="form-group mb-3">
-          <input type="email" name="email" placeholder="Email" required
-                 style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
-        </div>
-
-        <div class="form-group mb-4">
-          <label style="font-size: 0.9rem;">
-            <input type="checkbox" name="gdpr" value="1" required>
-            I agree to receive email updates from SGTV and understand I can unsubscribe at any time.
-          </label>
-        </div>
-
-        <button type="submit" class="theme-btn btn-style-one mt-2">
-          <span class="btn-wrap">
-            <span class="text-one">Subscribe <i class="flaticon-next-1"></i></span>
-            <span class="text-two">Subscribe <i class="flaticon-next-1"></i></span>
-          </span>
-        </button>
-      </div>
-
-      <div id="newsletter-success" style="display:none; color: green; margin-top: 30px; font-weight: bold; text-align: center;">
-        Thank you for signing up! We sent you an email. Please verify it to receive your free downloadable PDF.
-      </div>
-    </form>
-  </div>
-</div>
 
 <script src="assets/js/jquery.js"></script>
 <script src="assets/js/popper.min.js"></script>

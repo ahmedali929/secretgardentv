@@ -468,6 +468,11 @@
     color:rgba(var(--color-four-rgb), 0.70);
 }
 
+.newsletter_footer-text:hover {
+	color:rgba(var(--main-color-rgb), 1);
+}
+
+
 /* Newsletter Box */
 
 .newsletter-box_two{
