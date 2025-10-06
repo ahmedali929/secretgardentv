@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8BV81NN8H4"></script>
@@ -13,201 +13,1538 @@
     allow_ad_personalization_signals: false
   });
 </script>
-    <meta charset="utf-8">
-    <title>Secret Garden TV for Kids | Shows and Programs</title>
-    <!-- Stylesheets -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="assets/css/meanmenu.min.css" rel="stylesheet">
-    <link href="assets/css/responsive.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="assets/images/favicon_sgtv/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="assets/images/favicon_sgtv/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <!-- Responsive -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta charset="utf-8">
+<title>Secret Garden TV for Kids</title>
+<!-- Stylesheets -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/meanmenu.min.css" rel="stylesheet">
+<link href="assets/css/responsive.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="assets/images/favicon_sgtv/favicon.ico" type="image/x-icon">
+<link rel="icon" href="assets/images/favicon_sgtv/favicon.ico" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+.slider-two_arrows {
+  flex-basis: 100%;   /* forces it to take the full width in the flexbox */
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+
+.slider-two_arrows .arrow-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 2px solid var(--theme-color); /* subtle outline to match theme */
+  background: transparent; /* plain background */
+  color: var(--theme-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  /* Force remove ANY shadows */
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+.slider-two_arrows .arrow-btn:hover {
+  background: var(--theme-color);
+  color: green;
+  transform: translateY(-2px);
+}
+
+.slider-two_arrows .arrow-btn:focus {
+  outline: 2px solid var(--theme-color);
+  outline-offset: 3px;
+}
+
+.swiper-wrapper .swiper-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  position: relative;
+  display: flex;
+  align-items: flex-end; /* push content to bottom */
+  justify-content: center; /* center horizontally */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding-top: 0px;
+}
+
+/* dark overlay to improve text readability */
+.swiper-wrapper .swiper-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(211, 211, 211, 0.8); 
+  z-index: 0;
+}
+
+/* make sure all slide content stays above the overlay */
+.swiper-wrapper .swiper-slide > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* container inside slide */
+.swiper-slide .auto-container {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 5vh; /* adjust bottom spacing */
+}
+
+.slider-two_video video.slider-video {
+  width: 60%;
+  max-width: 720px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+/* 🎥 Cinematic YouTube embed */
+.slider-two_video {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 60vw;               
+  max-width: 1200px;         
+  aspect-ratio: 16 / 9;      /* maintains cinematic proportions */
+  margin: 5vh auto;          /* centers and adds breathing room */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+}
+
+.slider-two_video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: inherit;
+}
+
+/* Optional: subtle fade-in animation */
+.slider-two_video iframe {
+  opacity: 0;
+  animation: fadeInVideo 1.5s ease forwards 0.4s;
+}
+
+@keyframes fadeInVideo {
+  from { opacity: 0; transform: scale(1.05); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* 🎥 Background YouTube video styling */
+.youtube-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.youtube-bg iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%);
+  pointer-events: none; /* disables clicks on video */
+  border: none;
+}
+
+/* Optional dark overlay for text readability */
+.youtube-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); /* darkens for contrast */
+  z-index: 1;
+}
+
+/* Make sure text sits above the video */
+.swiper-slide > * {
+  position: relative;
+  z-index: 2;
+}
+
+
+.video-row {
+  background-color: #fff;
+  background-image: url('assets/images/background/lavendar_fields.png');
+  color: #fff;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.video-scroll {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 1rem;
+}
+
+.video-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+.video-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+.video-scroll::-webkit-scrollbar-thumb:hover {
+  background: #ccc;
+}
+
+.video-card {
+  flex: 0 0 auto;
+  width: 320px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.video-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.video-thumb iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: limegreen;
+  color: #000;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.video-info {
+  padding: 0.8rem 1rem 1rem;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.video-info .meta {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+.video-info .title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 4px 0;
+}
+
+.video-info .desc {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+
+
+/* Section background (use your lavender image like the video row if you want) */
+/* 🎨 Collections Section */
+.collections-row {
+  background-image: url('assets/images/background/lavendar_fields.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding: 4rem 2rem;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+}
+
+.collections-row::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 0;
+}
+
+.collections-row > * {
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+/* 🔄 Horizontal scroll container */
+.collections-scroll {
+  display: flex;
+  gap: 2.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 2rem;
+  justify-content: center;
+}
+
+.collections-scroll::-webkit-scrollbar {
+  height: 10px;
+}
+.collections-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+.collections-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+/* 🧱 Collection Card — larger for 3 visible at a time */
+.collection-card {
+  flex: 0 0 calc(33.333% - 2rem); /* show 3 cards at once */
+  max-width: 550px;                /* large but contained */
+  min-width: 480px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.6);
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.collection-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* 📺 Thumbnail area */
+.collection-thumb {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.collection-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.collection-card:hover .collection-thumb img {
+  transform: scale(1.05);
+}
+
+/* NEW & count badges */
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #8fff59;
+  color: #000;
+  font-weight: 800;
+  font-size: 1rem;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+.pill {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 6px 14px;
+  border-radius: 16px;
+  font-size: 0.95rem;
+  backdrop-filter: blur(3px);
+}
+
+/* 🧾 Info text */
+.collection-info {
+  padding: 1.2rem 1.5rem 1.5rem;
+  text-align: left;
+}
+
+.collection-info .title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+}
+
+.collection-info .desc {
+  font-size: 1.05rem;
+  color: #ddd;
+}
+
+/* 📱 Responsive tweaks */
+@media (max-width: 1200px) {
+  .collection-card {
+    min-width: 400px;
+  }
+}
+
+@media (max-width: 900px) {
+  .collection-card {
+    flex: 0 0 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .collection-card {
+    flex: 0 0 85%;
+  }
+}
+
+
+
+
+
+</style>
+
+
 
 <!-- MailerLite Universal -->
-<script>
+<!-- <script>
     (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
     .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
     n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
     (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '1739117');
-</script>
+</script> -->
 <!-- End MailerLite Universal -->
 
 
-    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
-    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 
-<style>
-/* compact, low-conflict namespaced styles */
-.sg-controls{display:flex;gap:.75rem;align-items:center;margin:1rem 0 .5rem}
-.sg-btn{
-  appearance:none;border:1px solid rgba(0,0,0,.1);padding:.6rem .9rem;border-radius:999px;
-  font-weight:600;cursor:pointer;background:#f3f5f7;
-}
-.sg-btn:active{transform:translateY(1px)}
-.sg-count{color:#6b7280;font-size:.95rem}
-
-.sg-grid{display:grid;gap:12px;margin:12px 0 36px}
-@media (min-width:540px){.sg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (min-width:820px){.sg-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (min-width:1100px){.sg-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
-
-.sg-tile{
-  display:block;position:relative;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;
-  background:#0f1520;border:1px solid rgba(0,0,0,.08);
-}
-.sg-thumb{aspect-ratio:16/9;background:#13202e;background-size:cover;background-position:center}
-.sg-meta{
-  position:absolute;left:0;right:0;bottom:0;padding:.6rem .7rem;
-  background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.65));color:#fff
-}
-.sg-name{font-weight:700;font-size:.95rem}
-.sg-tag{font-size:.8rem;opacity:.85}
-.sg-empty{padding:2rem 0;color:#6b7280;text-align:center}
-</style>
-
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
 </head>
+
 <body>
-  <div class="page-wrapper">
 
-        <!-- Cursor -->
-        <div class="cursor"></div>
-        <div class="cursor-follower"></div>
-  <header class="main-header header-style-two">
-        
-        <!-- Header Top -->
-        <div class="header-top">
-            <div class="auto-container">
-                <div class="inner-container">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        <div class="left-box d-flex align-items-center flex-wrap">
-                            <!-- Info List -->
-                            <ul class="header-top_list d-flex flex-wrap">
-                                <li><span class="icon flaticon-envelope"></span><a href="mailto:secretgardentv@gmail.com">secretgardentv@gmail.com</a></li>
-                            </ul>
-                        </div>
-                        <div class="right-box d-flex align-items-center flex-wrap">
-                            
-                            <!-- Social Box -->
-                            <div class="header-top_socials">
-                                            <a target="_blank" href="https://www.youtube.com/@SecretGardenTVforKids"><i class="fa-brands fa-youtube"></i></a>
-                                            <a target="_blank" href="https://www.instagram.com/secretgardentvforkids"><i class="fa-brands fa-instagram"></i></a>
-                                            <a target="_blank" href="https://www.tiktok.com/@secretgardentvforkids"><i class="fa-brands fa-tiktok"></i></a>
-                                            <a target="_blank" href="https://www.facebook.com/profile.php?id=61568807675251"><i class="fa-brands fa-facebook"></i></a>
-                                            <a target="_blank" href="https://x.com/secretgarden_tv"><i class="fa-brands fa-x-twitter"></i></a>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<div class="page-wrapper">
+    
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <!-- Cursor End -->
+    
+    <!-- Preloader -->
+    <!-- <div class="preloader"></div> -->
+    <!-- End Preloader -->
+    
+    <!-- Main Header / Header Style Two -->
+    <header class="main-header header-style-two">
         
         <!-- Header Lower -->
-        <div class="header-lower">
-            <div class="auto-container">
-                <div class="inner-container">
-                    <div class="d-flex justify-content-between align-items-center flex-wrap">
-                        
-                        <div class="nav-outer d-flex align-items-center flex-wrap">
-                            <!-- Logo Box -->
-                            <div class="logo-box">
-                                <div class="logo"><a href="/"><img src="assets/images/sgtv_logo_transparent_1.png" alt="" title="kidscamp"></a></div>
-                            </div>
-                            <!-- Main Menu -->
-                            <nav class="main-menu navbar-expand-md">
-                                <div class="navbar-header">
-                                    <!-- Toggle Button -->      
-                                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                        <span class="icon-bar"></span>
-                                    </button>
-                                </div>
-                                
-                                <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-                                    <ul class="navigation clearfix">
-                                        <li><a href="/">Home</a></li>
-                                        <li><a href="about.html">About us</a></li>
-                                        <li><a href="program.html">Programs</a></li>
-                                        <li><a href="blog.html">Blog</a></li>
-                                        <li><a href="faq.html">FAQs</a></li>                            
-                                        <!-- <li><a href="donate.html">Donate</a></li> -->
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
 
-                        <!-- Main Menu End-->
-                        <div class="outer-box d-flex align-items-center flex-wrap">
-                            
-                            <!-- Button Box -->
-                            <div class="main-header_button">
-                                <a class="ml-onclick-form theme-btn btn-style-one" href="javascript:void(0)" onclick="ml('show', 'Pcso7D', true)">
-                                    <span class="btn-wrap">
-                                        <span class="text-one">Join Our Newsletter</span>
-                                    </span>
-                                </a>
-                            </div>
-                            
-                            <!-- About Widget -->
-<!--                            <span class="about-widget">
-                                <span class="hamburger">
-                                    <span class="top-bun"></span>
-                                    <span class="meat"></span>
-                                </span>
-                            </span> -->
-
-                            <!-- Mobile Navigation Toggler -->
-                            <div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
-
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--End Header Lower-->
-        
-        <!-- Mobile Menu  -->
-        <div class="mobile-menu">
-            <div class="menu-backdrop"></div>
-            <div class="close-btn"><span class="icon flaticon-close"></span></div>
-            
-            <nav class="menu-box">
-                <div class="nav-logo"><a href="/"><img src="assets/images/14.png" alt="" title=""></a></div>
-                <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
-            </nav>
-        </div>
         <!-- End Mobile Menu -->
     
     </header>
+    <!-- End Main Header -->
+    
+    <!-- About Sidebar -->
+<!--    <div class="about-sidebar">
+        <div class="gradient-layer"></div>
 
-<main>
-  <div class="auto-container">
-    <!-- Controls -->
-    <div class="sg-controls" role="toolbar" aria-label="Toggle Shows and Music">
-      <button id="sgToggle" class="sg-btn" aria-pressed="true">Showing: Shows • Click to switch</button>
-      <span id="sgCount" class="sg-count" aria-live="polite"></span>
+        <div class="close-sidebar-widget close-button">
+            <span class="fa-solid fa-xmark fa-fw"></span>
+        </div>
+        <div class="sidebar-inner">
+            <div class="upper-box">
+                <div class="image">
+                    <img src="assets/images/resource/about.png" alt="" />
+                </div>
+                <div class="content-box">
+                    <h3>About <span>Secret Garden TV for Kids</span></h3>
+                    <div class="text">Secret Garden TV for Kids is an entrepreneurial venture aiming to reimagine Islamic education through cutting-edge, appealing, and creative media and entertainment. The website will serve as a central hub for the organization, showcasing its values, projects, and resources while providing an interactive and engaging experience for children and adults.</div>
+                    <ul class="about-sidebar_list">
+                        <li>Interactive Education</li>
+                        <li>Creative Media</li>
+                        <li>Innovative Entertainment</li>
+                        <li>Islamic Values</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="social-box">
+                                            <a target="_blank" href="https://youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                                            <a target="_blank" href="https://instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                                            <a target="_blank" href="https://tiktok.com/"><i class="fa-brands fa-tiktok"></i></a>
+                                            <a target="_blank" href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                                            <a target="_blank" href="https://twitter.com/"><i class="fa-brands fa-x-twitter"></i></a>
+                                        </div>
+        </div>
+    </div> -->
+    <!-- End About Sidebar -->
+    
+    <!-- Slider Two -->
+    <section class="slider-two">
+        <div class="main-slider swiper-container" id="hero-swiper">
+            <div class="swiper-wrapper">
+
+                <!-- Slide -->
+                <div class="swiper-slide" style="background-image: url('assets/images/main-slider/test.png');">
+                    <div class="auto-container">
+                        <!-- 🎬 YouTube Background Video -->
+                        <div class="youtube-bg">
+                          <iframe
+                            src="https://www.youtube.com/embed/DB_rjATvLBk?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&modestbranding=1&rel=0&start=30"
+                            title="YouTube video background"
+                            frameborder="0"
+                            allow="autoplay; encrypted-media"
+                            allowfullscreen
+                          ></iframe>
+                        </div>              
+                        <!-- Content Column -->
+                        <div class="slider-two_content">
+                            <div class="slider-two_content-inner text-center">
+                                <div>
+                                    <span class="swiper-no-swiping">
+                                        <h1 class="slider-two_heading">
+                                        <span>Know</span> the Garden</h1>
+                                        <h3 class="slider-two_heading">Building a <span>brighter future</span> for Muslim children.</h3>
+                                    </span>
+                                    <div class="slider-two_button d-flex justify-content-center align-items-center flex-wrap">
+                                    <a class="ml-onclick-form theme-btn btn-style-one" href="javascript:void(0)" onclick="ml('show', 'Pcso7D', true)">
+                                            <span class="btn-wrap">
+                                                <span class="text-one"><i class="flaticon-play"></i>  Watch Now</span>
+                                                <span class="text-two"><i class="flaticon-play">  Watch Now</i></span>
+                                            </span>
+                                        </a>
+                                        <!-- under your CTAs inside each .swiper-slide -->
+                                        <div class="slider-two_arrows">
+                                          <button class="arrow-btn slide-prev" aria-label="Previous slide"><i class="flaticon-left-arrow"></i></button>
+                                          <button class="arrow-btn slide-next" aria-label="Next slide"><i class="flaticon-next-1"></i></button>
+                                        </div>
+                                    </div>
+                                </div>                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide -->
+                <div class="swiper-slide" style="background-image: url('assets/images/main-slider/test2.png');">
+                    <div class="auto-container">
+                        <!-- 🎬 YouTube Background Video -->
+                        <div class="youtube-bg">
+                          <iframe
+                            src="https://www.youtube.com/embed/DXGrvqgQIi4?autoplay=1&mute=1&loop=1&playlist=DXGrvqgQIi4&controls=0&showinfo=0&modestbranding=1&rel=0&start=30"
+                            title="YouTube video background"
+                            frameborder="0"
+                            allow="autoplay; encrypted-media"
+                            allowfullscreen
+                          ></iframe>
+                        </div>     
+                        <!-- Content Column -->
+                        <div class="slider-two_content">
+                            <div class="slider-two_content-inner text-center">
+                                <span class="swiper-no-swiping">
+                                    <h1 class="slider-two_heading"><span>See</span> the Garden</h1>
+                                    <h3 class="slider-two_heading"><span>A fresh vision </span>for Islamic learning.</h3>
+                                    <div class="slider-two_text"> We bring Allah’s signs to life through engaging, high-quality media that sparks curiosity and helps children see His wonders in everyday life.</div>
+                                </span>
+                                <div class="slider-two_button d-flex justify-content-center align-items-center flex-wrap">
+                                <a class="ml-onclick-form theme-btn btn-style-one" href="javascript:void(0)" onclick="ml('show', 'Pcso7D', true)">
+                                        <span class="btn-wrap">
+                                            <span class="text-one">Join Our Newsletter <i class="flaticon-next-1"></i></span>
+                                            <span class="text-two">Join Our Newsletter <i class="flaticon-next-1"></i></span>
+                                        </span>
+                                    </a>
+                                    <a href="about.html" class="theme-btn btn-style-three">
+                                        <span class="btn-wrap">
+                                            <span class="text-one">Read More <i class="flaticon-next-1"></i></span>
+                                            <span class="text-two">Read More <i class="flaticon-next-1"></i></span>
+                                        </span>
+                                    </a>
+                                    <!-- under your CTAs inside each .swiper-slide -->
+                                    <div class="slider-two_arrows">
+                                      <button class="arrow-btn slide-prev" aria-label="Previous slide"><i class="flaticon-left-arrow"></i></button>
+                                      <button class="arrow-btn slide-next" aria-label="Next slide"><i class="flaticon-next-1"></i></button>
+                                    </div>
+
+
+                                </div>                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Slider Two Section -->
+    
+    <section class="video-row">
+  <h2 class="section-title">Our Shows</h2>
+  <div class="video-scroll">
+    <div class="video-card">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/DXGrvqgQIi4?autoplay=0&mute=1&controls=0&loop=1&playlist=DXGrvqgQIi4"
+                title="Episode 1"></iframe>
+        <span class="badge">NEW</span>
+      </div>
+      <div class="video-info">
+        <p class="meta">S1 E16 25m</p>
+        <h3 class="title">Electric Bloom</h3>
+        <p class="desc">How We (Sorta) Got Our First Big Break: Part 1</p>
+      </div>
     </div>
 
-    <!-- Grid -->
-    <div id="sgGrid" class="sg-grid" aria-live="polite"></div>
+    <div class="video-card">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2?autoplay=0&mute=1&controls=0&loop=1&playlist=YOUR_VIDEO_ID_2"
+                title="Episode 2"></iframe>
+        <span class="badge">NEW</span>
+      </div>
+      <div class="video-info">
+        <p class="meta">S1 E17 26m</p>
+        <h3 class="title">Electric Bloom</h3>
+        <p class="desc">How We (Sorta) Got Our First Big Break: Part 2</p>
+      </div>
+    </div>
 
-    <!-- Optional empty state -->
-    <div id="sgEmpty" class="sg-empty" hidden>No items to display.</div>
+    <div class="video-card">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3?autoplay=0&mute=1&controls=0&loop=1&playlist=YOUR_VIDEO_ID_3"
+                title="Episode 3"></iframe>
+        <span class="badge">NEW</span>
+      </div>
+      <div class="video-info">
+        <p class="meta">S1 E14 24m</p>
+        <h3 class="title">Electric Bloom</h3>
+        <p class="desc">How We Handled An Unexpected Visitor</p>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_4?autoplay=0&mute=1&controls=0&loop=1&playlist=YOUR_VIDEO_ID_4"
+                title="Episode 4"></iframe>
+        <span class="badge">NEW</span>
+      </div>
+      <div class="video-info">
+        <p class="meta">S1 E15 26m</p>
+        <h3 class="title">Electric Bloom</h3>
+        <p class="desc">How We Defeated a Jingle Bell Bully</p>
+      </div>
+    </div>
   </div>
-</main>
+</section>
+    
+    <section class="video-row">
+  <h2 class="section-title">Our Music</h2>
+  <div class="video-scroll">
+    <div class="video-card">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/DXGrvqgQIi4?autoplay=0&mute=1&controls=0&loop=1&playlist=DXGrvqgQIi4"
+                title="Episode 1"></iframe>
+        <span class="badge">NEW</span>
+      </div>
+      <div class="video-info">
+        <p class="meta">S1 E16 25m</p>
+        <h3 class="title">Electric Bloom</h3>
+        <p class="desc">How We (Sorta) Got Our First Big Break: Part 1</p>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2?autoplay=0&mute=1&controls=0&loop=1&playlist=YOUR_VIDEO_ID_2"
+                title="Episode 2"></iframe>
+        <span class="badge">NEW</span>
+      </div>
+      <div class="video-info">
+        <p class="meta">S1 E17 26m</p>
+        <h3 class="title">Electric Bloom</h3>
+        <p class="desc">How We (Sorta) Got Our First Big Break: Part 2</p>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3?autoplay=0&mute=1&controls=0&loop=1&playlist=YOUR_VIDEO_ID_3"
+                title="Episode 3"></iframe>
+        <span class="badge">NEW</span>
+      </div>
+      <div class="video-info">
+        <p class="meta">S1 E14 24m</p>
+        <h3 class="title">Electric Bloom</h3>
+        <p class="desc">How We Handled An Unexpected Visitor</p>
+      </div>
+    </div>
+
+    <div class="video-card">
+      <div class="video-thumb">
+        <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_4?autoplay=0&mute=1&controls=0&loop=1&playlist=YOUR_VIDEO_ID_4"
+                title="Episode 4"></iframe>
+        <span class="badge">NEW</span>
+      </div>
+      <div class="video-info">
+        <p class="meta">S1 E15 26m</p>
+        <h3 class="title">Electric Bloom</h3>
+        <p class="desc">How We Defeated a Jingle Bell Bully</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
-<footer class="footer-style_two">
+<section class="collections-row">
+  <h2 class="section-title">Collections</h2>
+
+  <div class="collections-scroll">
+    <!-- Card -->
+    <a class="collection-card" href="collection-allahs-secret-signs.html">
+      <div class="collection-thumb">
+        <img src="assets/images/collections/allahs_secret_signs.jpg" alt="Allah's Secret Signs">
+        <span class="badge">NEW</span>
+        <span class="pill">12 Videos</span>
+      </div>
+      <div class="collection-info">
+        <h3 class="title">Allah’s Secret Signs</h3>
+        <p class="desc">The Science Show for Muslims</p>
+      </div>
+    </a>
+
+    <a class="collection-card" href="collection-nurheart-fables.html">
+      <div class="collection-thumb">
+        <img src="assets/images/collections/nurheart_fables.jpg" alt="Nurheart Fables">
+        <span class="pill">9 Videos</span>
+      </div>
+      <div class="collection-info">
+        <h3 class="title">Nurheart Fables</h3>
+        <p class="desc">Tiny adventures. Timeless wisdom.</p>
+      </div>
+    </a>
+
+    <a class="collection-card" href="collection-toy-box-stories.html">
+      <div class="collection-thumb">
+        <img src="assets/images/collections/toy_box_stories.jpg" alt="Toy Box Stories">
+        <span class="pill">8 Videos</span>
+      </div>
+      <div class="collection-info">
+        <h3 class="title">Toy Box Stories</h3>
+        <p class="desc">Following the Sunnah with toys</p>
+      </div>
+    </a>
+
+    <a class="collection-card" href="collection-babagha-sadiqi.html">
+      <div class="collection-thumb">
+        <img src="assets/images/collections/babagha_sadiqi.jpg" alt="Babagha Sadiqi">
+        <span class="pill">10 Videos</span>
+      </div>
+      <div class="collection-info">
+        <h3 class="title">Babagha Sadiqi</h3>
+        <p class="desc">Fly into the world of Arabic</p>
+      </div>
+    </a>
+
+    <a class="collection-card" href="collection-quran-safari.html">
+      <div class="collection-thumb">
+        <img src="assets/images/collections/quran_safari.jpg" alt="Qur'an Safari">
+        <span class="pill">7 Videos</span>
+      </div>
+      <div class="collection-info">
+        <h3 class="title">Qur’an Safari with Taha</h3>
+        <p class="desc">Discover a world of duʿāʾ</p>
+      </div>
+    </a>
+  </div>
+</section>
+
+
+
+
+
+    <!-- Services Two -->
+    <section class="services-two">
+        <div class="auto-container">
+                        <div class="row clearfix">
+                <!-- Image Column -->
+                <div class="about-one_image-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="about-one_image-outer">
+                        <div class="about-one_video">
+                             <video autoplay loop muted playsinline style="width: 100%; border-radius: 12px;">
+                                <source src="assets/images/resource/Tree_Blooming.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                              </video> 
+<!--                            <img src="assets/images/resource/lighting-the-way-1.png" alt="" />
+                            <a href="assets/images/resource/Tree_Blooming.mp4" class="lightbox-video about-one_play-video"><span class="flaticon-play"><i class="ripple"></i></span></a>
+ -->                        </div>
+                    </div>
+                        <div style="max-width:60%;" class="about-one_image-two">
+                            <img src="assets/images/resource/lighting-the-way-2.png" alt="" />
+                        </div>
+                </div>
+                
+                <!-- Content Column -->
+                <div class="about-one_content-column col-lg-6 col-md-12 col-sm-12">
+                    <div class="about-one_content-outer">
+                        <!-- Sec Title -->
+                        <div class="sec-title style-two title-anim">
+                            <div class="sec-title_title">About Secret Garden TV</div>
+                            <h2 class="sec-title_heading"><span>Lighting </span> the way for our Children</h2>
+                            <div class="sec-title_text">We are an Islamic educational media organization devoted to nurturing the Garden within each child—through spiritually rich stories, thoughtful animation, and heart-centered learning.</div> <br>
+                            <div class="sec-title_text">Rooted in the tradition of Taqwa (God-consciousness), our programming helps children see the Ayaat (Signs) of Allah in themselves and the world around them. We believe in guiding young hearts toward beauty, true meaning, and nearness to al-Khaaliq, the Creator.</div>
+                        </div>
+                        <!-- Options -->
+                        <div class="about-one_options">
+                            <div class="about-one_button">
+                                <a href="about.html" class="theme-btn btn-style-one">
+                                    <span class="btn-wrap">
+                                        <span class="text-one">Learn more <i class="flaticon-next-1"></i></span>
+                                        <span class="text-two">Learn more <i class="flaticon-next-1"></i></span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <!-- Sec Title -->
+            <div class="sec-title style-two">
+                <div class="sec-title_title">Discover the Difference</div>
+                <h2 class="sec-title_heading">Discover the Light of <br> true Islamic <span>teachings</span></h2>
+            </div>
+            <div class="program-one_carousel swiper-container">
+                <div class="swiper-wrapper"><div class="swiper-slide">
+    <!-- Service Block Two -->
+    <div class="service-block_two">
+        <div class="service-block_two-inner">
+            <div class="service-block_two-stars" style="background-image:url(assets/images/icons/icon-8.png)"></div>
+            <div class="service-block_two-icon">
+                <i class="flaticon-leader"></i>
+            </div>
+            <span class="swiper-no-swiping">
+                <h4 class="service-block_two-title"><a href="about.html">The Garden as Teacher</a></h4>
+                <div class="service-block_two-text">From the smallest seeds to the widest skies, creation is filled with Allah’s signs. Our stories help children read creation as a living book of Ayaat (Signs)—so the Garden outside becomes a mirror of the Garden within.</div>
+            </span>
+            <a class="service-block_two-more" href="about.html">Learn more <i class="flaticon-next-1"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="swiper-slide">
+    <div class="service-block_two">
+        <div class="service-block_two-inner">
+            <div class="service-block_two-stars" style="background-image:url(assets/images/icons/icon-8.png)"></div>
+            <div class="service-block_two-icon">
+                <i class="flaticon-leader"></i>
+            </div>
+            <span class="swiper-no-swiping">
+                <h4 class="service-block_two-title"><a href="about.html">Purposeful Living, Purposeful Content</a></h4>
+                <div class="service-block_two-text">We inspire children to see life as a meaningful journey—rooted in Taqwa (God-consciousness), true imagination, and creative action. Every story nurtures duty, responsibility, and wonder toward the world and themselves.</div>
+            </span>
+            <a class="service-block_two-more" href="about.html">Learn more <i class="flaticon-next-1"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="swiper-slide">
+    <div class="service-block_two">
+        <div class="service-block_two-inner">
+            <div class="service-block_two-stars" style="background-image:url(assets/images/icons/icon-8.png)"></div>
+            <div class="service-block_two-icon">
+                <i class="flaticon-leader"></i>
+            </div>
+            <span class="swiper-no-swiping">
+                <h4 class="service-block_two-title"><a href="about.html">Character That Shines From Within</a></h4>
+                <div class="service-block_two-text">Through gentle storytelling and memorable characters, we teach Adab (courtesy), Akhlaq (character), Sabr (patience), and Khushu’ (humility)—values that help children flourish both spiritually and socially.</div>
+            </span>
+            <a class="service-block_two-more" href="about.html">Learn more <i class="flaticon-next-1"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="swiper-slide">
+    <div class="service-block_two">
+        <div class="service-block_two-inner">
+            <div class="service-block_two-stars" style="background-image:url(assets/images/icons/icon-8.png)"></div>
+            <div class="service-block_two-icon">
+                <i class="flaticon-leader"></i>
+            </div>
+            <span class="swiper-no-swiping">
+                <h4 class="service-block_two-title"><a href="about.html">Science Filled with Light</a></h4>
+                <div class="service-block_two-text">Exploring nature and science becomes part of knowing Allah. From photosynthesis to the flight of birds, every discovery is a step closer to the Creator.</div>
+            </span>
+            <a class="service-block_two-more" href="about.html">Learn more <i class="flaticon-next-1"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="swiper-slide">
+    <div class="service-block_two">
+        <div class="service-block_two-inner">
+            <div class="service-block_two-stars" style="background-image:url(assets/images/icons/icon-8.png)"></div>
+            <div class="service-block_two-icon">
+                <i class="flaticon-leader"></i>
+            </div>
+            <span class="swiper-no-swiping">
+                <h4 class="service-block_two-title"><a href="about.html">Awakening the Heart</a></h4>
+                <div class="service-block_two-text">Our media kindles the heart’s awakening—nurturing emotional refinement, Dhikr-filled moments, and intentional living. Children learn to know themselves… and through that, come to know their Lord.</div>
+            </span>
+            <a class="service-block_two-more" href="about.html">Learn more <i class="flaticon-next-1"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="swiper-slide">
+    <div class="service-block_two">
+        <div class="service-block_two-inner">
+            <div class="service-block_two-stars" style="background-image:url(assets/images/icons/icon-8.png)"></div>
+            <div class="service-block_two-icon">
+                <i class="flaticon-leader"></i>
+            </div>
+            <span class="swiper-no-swiping">
+                <h4 class="service-block_two-title"><a href="about.html">Signs in Every Culture, Wisdom in Every Face</a></h4>
+                <div class="service-block_two-text">By exploring diverse cultures through an Islamic lens, we teach children to see every people and tradition as an Ayah—a Sign—pointing back to the One.</div>
+            </span>
+            <a class="service-block_two-more" href="about.html">Learn more <i class="flaticon-next-1"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="swiper-slide">
+    <div class="service-block_two">
+        <div class="service-block_two-inner">
+            <div class="service-block_two-stars" style="background-image:url(assets/images/icons/icon-8.png)"></div>
+            <div class="service-block_two-icon">
+                <i class="flaticon-leader"></i>
+            </div>
+            <span class="swiper-no-swiping">
+                <h4 class="service-block_two-title"><a href="about.html">The Human as a Sacred Trust</a></h4>
+                <div class="service-block_two-text">We center every child’s tremendous worth through the Qur’anic truth of the human being as Ahsan Taqweem—“the best of forms” (Qur’an 95:4). Our work reflects this lofty view, teaching compassion, self-worth, and the dignity of seeing humanity with divinely created purpose.</div>
+            </span>
+            <a class="service-block_two-more" href="about.html">Learn more <i class="flaticon-next-1"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="swiper-slide">
+    <div class="service-block_two">
+        <div class="service-block_two-inner">
+            <div class="service-block_two-stars" style="background-image:url(assets/images/icons/icon-8.png)"></div>
+            <div class="service-block_two-icon">
+                <i class="flaticon-leader"></i>
+            </div>
+            <span class="swiper-no-swiping">
+                <h4 class="service-block_two-title"><a href="about.html">Love That Begins at Home</a></h4>
+                <div class="service-block_two-text">We revive the spiritual depth of family, where care, loyalty, and forgiveness reflect Allah’s Divine Attributes. Through characters like Ali, Baba, and Grandma, children learn that home is the first school of the heart.</div>
+            </span>
+            <a class="service-block_two-more" href="about.html">Learn more <i class="flaticon-next-1"></i></a>
+        </div>
+    </div>
+</div>
+
+<div class="swiper-slide">
+    <div class="service-block_two">
+        <div class="service-block_two-inner">
+            <div class="service-block_two-stars" style="background-image:url(assets/images/icons/icon-8.png)"></div>
+            <div class="service-block_two-icon">
+                <i class="flaticon-leader"></i>
+            </div>
+            <span class="swiper-no-swiping">
+                <h4 class="service-block_two-title"><a href="about.html">Living with Presence</a></h4>
+                <div class="service-block_two-text">We guide children to slow down, notice, and truly be with the people, places, and moments around them. Through play, prayer, and reflection, they learn that presence is the doorway to gratitude and wisdom.</div>
+            </span>
+            <a class="service-block_two-more" href="about.html">Learn more <i class="flaticon-next-1"></i></a>
+        </div>
+    </div>
+</div>
+</div>
+                
+                <!-- If we need pagination -->
+                <div class="program-one_carousel-pagination"></div>
+                
+                <!-- If we need navigation buttons -->
+                <div class="program-one_carousel-prev fas fa-angle-left fa-fw"></div>
+                <div class="program-one_carousel-next fas fa-angle-right fa-fw"></div>
+                
+            </div>
+            
+        </div>
+    </section>
+    <!-- End Services Two -->
+    
+    <!-- Program Two -->
+    <section class="program-two">
+        <div class="program-two-baloon" style="background-image:url(assets/images/icons/icon-9.png)"></div>
+        <div class="outer-container">
+            <div class="auto-container">
+                <!-- Sec Title -->
+                <div class="sec-title style-two">
+                    <div class="sec-title_title">Our Shows</div>
+                    <h2 class="sec-title_heading">Based on the principles <br> of <span>the Prophet Muhammad</span></h2>
+                </div>
+                <div class="inner-container">
+                    <div class="program-two_carousel owl-carousel owl-theme">
+                        
+                        <!-- Slide -->
+                        <div class="slide">
+                            
+                            <!-- Program Block Three -->
+                            <div class="program-block_three">
+                                <div class="program-block_three-inner">
+                                    <!-- <div class="program-block_three-number">[01]</div> -->
+                                    <div class="upper-box d-flex justify-content-between flex-wrap">
+                                        <div class="left-box">
+                                            <h5 class="program-block_three-title"><a href="program.html">Allah's Secret Signs&trade;</a></h5>
+                                            <!-- <div class="program-block_three-old">Ages 4-10</div> -->
+                                        </div>
+                                        <div class="right-box"> 
+                                            <div class="program-block_three-text">The Science Show for Muslims</div>
+                                        </div>
+                                    </div>
+                                    <div class="program-block_three-image">
+                                        <img src="assets/images/shows/allah_secret_signs.png" alt ="" />
+                                        <a class="program-block_three-arrow" href="program.html"><i class="flaticon-up-right-arrow"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <!-- Slide -->
+                        <div class="slide">
+                            
+                            <!-- Program Block Three -->
+                            <div class="program-block_three">
+                                <div class="program-block_three-inner">
+                                    <!-- <div class="program-block_three-number">[02]</div> -->
+                                    <div class="upper-box d-flex justify-content-between flex-wrap">
+                                        <div class="left-box">
+                                            <h5 class="program-block_three-title"><a href="program.html">Nurheart Fables&trade;</a></h5>
+                                            <!-- <div class="program-block_three-old">Ages 3-7</div> -->
+                                        </div>
+                                        <div class="right-box">
+                                            <div class="program-block_three-text">Tiny Adventures. Timeless wisdom.</div>
+                                        </div>
+                                    </div>
+                                    <div class="program-block_three-image">
+                                        <img src="assets/images/shows/nurheart_fables.png" alt ="" />
+                                        <a class="program-block_three-arrow" href="program.html"><i class="flaticon-up-right-arrow"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide -->
+                        <div class="slide">
+                            
+                            <!-- Program Block Three -->
+                            <div class="program-block_three">
+                                <div class="program-block_three-inner">
+                                    <!-- <div class="program-block_three-number">[03]</div> -->
+                                    <div class="upper-box d-flex justify-content-between flex-wrap">
+                                        <div class="left-box">
+                                            <h5 class="program-block_three-title"><a href="program.html">Toy Box Stories&trade;</a></h5>
+                                            <!-- <div class="program-block_three-old">Ages 3-7</div> -->
+                                        </div>
+                                        <div class="right-box">
+                                            <div class="program-block_three-text">Following the Sunnah with toys.</div>
+                                        </div>
+                                    </div>
+                                    <div class="program-block_three-image">
+                                        <img src="assets/images/shows/toyboxstories.PNG" alt ="" />
+                                        <a class="program-block_three-arrow" href="program.html"><i class="flaticon-up-right-arrow"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide -->
+                        <div class="slide">
+                            
+                            <!-- Program Block Three -->
+                            <div class="program-block_three">
+                                <div class="program-block_three-inner">
+                                    <!-- <div class="program-block_three-number">[04]</div> -->
+                                    <div class="upper-box d-flex justify-content-between flex-wrap">
+                                        <div class="left-box">
+                                            <h5 class="program-block_three-title"><a href="program.html">Babagha Sadiqi&trade;</a></h5>
+                                            <!-- <div class="program-block_three-old">Ages 3-7</div> -->
+                                        </div>
+                                        <div class="right-box">
+                                            <div class="program-block_three-text">Fly with Babagha into the world of Arabic.</div>
+                                        </div>
+                                    </div>
+                                    <div class="program-block_three-image">
+                                        <img src="assets/images/shows/babagha_sadiqi.gif" alt ="" />
+                                        <a class="program-block_three-arrow" href="program.html"><i class="flaticon-up-right-arrow"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <!-- Slide -->
+                        <div class="slide">
+                            
+                            <!-- Program Block Three -->
+                            <div class="program-block_three">
+                                <div class="program-block_three-inner">
+                                    <!-- <div class="program-block_three-number">[05]</div> -->
+                                    <div class="upper-box d-flex justify-content-between flex-wrap">
+                                        <div class="left-box">
+                                            <h5 class="program-block_three-title"><a href="program.html">Qur'an Safari with <br>Taha Tiger&trade;</a></h5>
+                                            <!-- <div class="program-block_three-old">Ages 3-7</div> -->
+                                        </div>
+                                        <div class="right-box">
+                                            <div class="program-block_three-text">Discover a world of Qur’anic prayers.</div>
+                                        </div>
+                                    </div>
+                                    <div class="program-block_three-image">
+                                        <img src="assets/images/shows/quranSafari.png" alt ="" />
+                                        <a class="program-block_three-arrow" href="program.html"><i class="flaticon-up-right-arrow"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            
+                        <!-- Slide -->
+<!--                        <div class="slide">
+                            
+                             Program Block Three 
+                            <div class="program-block_three">
+                                <div class="program-block_three-inner">
+                                    <div class="program-block_three-number">[06]</div>
+                                    <div class="upper-box d-flex justify-content-between flex-wrap">
+                                        <div class="left-box">
+                                            <h5 class="program-block_three-title"><a href="program.html">Order of the Secret Garden</a></h5>
+                                            <div class="program-block_three-old">Ages 10+</div>
+                                        </div>
+                                        <div class="right-box">
+                                            <div class="program-block_three-text">Learn Martial Arts and become a member of the Order of the Secret Garden!</div>
+                                        </div>
+                                    </div>
+                                    <div class="program-block_three-image">
+                                        <img src="assets/images/shows/venusFlyTrapStory.png" alt ="" />
+                                        <a class="program-block_three-arrow" href="program.html"><i class="flaticon-up-right-arrow"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                        
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End Program Two -->
+    
+    <!-- Price One -->
+    <section class="price-one">
+        <div class="auto-container"></div>
+    </section>
+    <!-- End Price One -->
+    
+    <!-- Booking One -->
+    <section class="booking-one">
+        <div class="auto-container">
+            <div class="inner-container" style="background-image:url(assets/images/background/lavendar_fields.png)">
+                <div class="booking-one_pattern" style="background-image:url(assets/images/background/booking_pattern-1.png)"></div>
+                <div class="row clearfix">
+                    <!-- Column -->
+                    <div class="title-column col-lg-12 col-md-12 col-sm-12">
+                        <!-- Sec Title -->
+                        <div class="sec-title style-two light">
+                            <div class="sec-title_title">Stay Updated</div>
+                            <h2 class="sec-title_heading">Be the First to Enter the Secret Garden</h2>
+                            <div class="sec-title_text" style="color: white;">Sign up for our newsletter and be part of our journey from the very first season of blooming.</div>
+                        </div>
+                        <div class="booking-one_button">
+                            <a class="ml-onclick-form theme-btn btn-style-one" href="javascript:void(0)" onclick="ml('show', 'Pcso7D', true)">
+                                <span class="btn-wrap">
+                                    <span class="text-one">Join the Secret Garden Family <i class="flaticon-next-1"></i></span>
+                                    <span class="text-two">Join the Secret Garden Family <i class="flaticon-next-1"></i></span>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Column -->
+<!--                    <div class="counter-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="booking-one_counter-outer">
+                            <div class="booking-one_counter">
+                                <div class="booking-one_counter-title">Our next episode will release soon!</div>
+
+                                <div class="time-countdown_two clearfix" data-countdown="2025/08/17 14:00:00"></div>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Booking One -->
+
+
+
+
+    <!-- Donation -->
+<!--    <section class="donate-home-section">
+      <div class="auto-container">
+        <div class="inner-container p-5 rounded shadow-lg text-center" style="background-image: url('assets/images/background/flower_garden_bg.jpg'); background-size: cover; background-position: center;">
+          <h2 class="mb-3" style="font-family: 'Playfair Display', serif;">Help Us Grow This Garden </h2>
+          <p class="fs-5 mb-4"> Every story we tell is planted with love and faith. Your support helps us create spiritually grounded shows that nurture children’s hearts.</p>
+          <p class="fs-5 mb-4"> Like a seed into a tree, even the smallest contribution can blossom into something beautiful. </p>
+          <a href="donate.html" class="theme-btn btn-style-one">
+            <span class="btn-wrap">
+              <span class="text-one">Plant a Seed - Donate Now <i class="flaticon-next-1"></i></span>
+              <span class="text-two">Plant a Seed - Donate Now<i class="flaticon-next-1"></i></span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+     -->
+    <!-- Testimonial Two -->
+    <section class="testimonial-two">
+        <div class="auto-container">
+            <!-- Sec Title -->
+            <div class="sec-title style-two centered">
+                <div class="sec-title_title">Kid-approved Stories</div>
+                <h2 class="sec-title_heading">Voices of Adventure from <br> Kids <span> and Parents</span></h2>
+            </div>
+            <div class="testimonial-two_carousel">
+                <div class="swiper-wrapper">
+
+                    <!-- Slide -->
+                    <div class="swiper-slide">
+                        <!-- Testimonial Block Two -->
+                        <div class="testimonial-block_two">
+                            <div class="testimonial-block_two-inner">
+                                <div class="testimonial-block_two-quote">
+                                    <i><img src="assets/images/icons/quote-1.svg" alt="" /></i>
+                                </div>
+                                <span class="swiper-no-swiping">
+                                <div class="testimonial-block_two-text">Secret Garden TV for Kids is exactly what I’ve been looking for. The stories are bright and gentle while teaching adab and gratitude <span>in a way my toddler understands</span>. He’s started repeating the duas and noticing Allah’s signs in nature. I trust SGTV for safe, beautiful screen time in our home.</div>
+                            </span>
+                                <div class="testimonial-block_two-author">
+                                    <strong>Fairouz</strong>
+                                    Young Mother
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide -->
+                    <div class="swiper-slide">
+                        <!-- Testimonial Block Two -->
+                        <div class="testimonial-block_two">
+                            <div class="testimonial-block_two-inner">
+                                <div class="testimonial-block_two-quote">
+                                    <i><img src="assets/images/icons/quote-1.svg" alt="" /></i>
+                                </div>
+                                <span class="swiper-no-swiping">
+                                <div class="testimonial-block_two-text"> Nur <span>always beats</span> Zulaamaat! I want to go to the Garden!</div>
+                            </span>
+                                <div class="testimonial-block_two-author">
+                                    <strong>Hamza</strong>
+                                    Age 5
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide -->
+                    <div class="swiper-slide">
+                        <!-- Testimonial Block Two -->
+                        <div class="testimonial-block_two">
+                            <div class="testimonial-block_two-inner">
+                                <div class="testimonial-block_two-quote">
+                                    <i><img src="assets/images/icons/quote-1.svg" alt="" /></i>
+                                </div>
+                                <span class="swiper-no-swiping">
+                                <div class="testimonial-block_two-text">SGTV gives us family moments filled with wonder and values. The episodes spark real conversations about Allah’s creation, kindness, and courage. I love that it’s cheerful yet high-quality, never preachy, and always uplifting. It’s a show <span>I’m proud to watch with my kids</span>.</div>
+                            </span>
+                                <div class="testimonial-block_two-author">
+                                    <strong>Karim</strong>
+                                    Young Father
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide -->
+                    <div class="swiper-slide">
+                        <!-- Testimonial Block Two -->
+                        <div class="testimonial-block_two">
+                            <div class="testimonial-block_two-inner">
+                                <div class="testimonial-block_two-quote">
+                                    <i><img src="assets/images/icons/quote-1.svg" alt="" /></i>
+                                </div>
+                                <span class="swiper-no-swiping">
+                                <div class="testimonial-block_two-text">I love Secret Garden TV for Kids. It will teach everyone how to get to the garden. Allah is everywhere!</div>
+                            </span>
+                                <div class="testimonial-block_two-author">
+                                    <strong>Jamal</strong>
+                                    Age 6
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+                <!-- If we need pagination -->
+                <div class="testimonial-two_carousel-pagination"></div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- End Testimonial Two -->
+    
+    <!-- Faq One -->
+    <section class="faq-one">
+        <div class="outer-container">
+            <div class="auto-container">
+                <div class="row clearfix">
+                    <!-- Title Column -->
+                    <div class="title-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                            <!-- Sec Title -->
+                            <div class="sec-title style-two title-anim">
+                                <div class="sec-title_title">General FAQs</div>
+                                <h2 class="sec-title_heading">General <span>Questions</span></h2>
+                                <div class="sec-title_text"><strong>We’re happy to answer your questions about Secret Garden TV.</strong></div>
+                                <div class="sec-title_text">Here are some of the most popular — click “See More” to explore more answers.</div>
+                            </div>
+                            
+                            <!-- Options Box -->
+                            <div class="faq-one_options d-flex align-items-center flex-wrap">
+                                
+                                <!-- Button Box -->
+                                <div class="faq-one_button">
+                                    <a href="faq.html" class="theme-btn btn-style-one">
+                                        <span class="btn-wrap">
+                                            <span class="text-one">See More <i class="flaticon-next-1"></i></span>
+                                            <span class="text-two">See More <i class="flaticon-next-1"></i></span>
+                                        </span>
+                                    </a>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Accordion Column -->
+                    <div class="accordion-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column scrollable-text">
+
+                            <!-- Accordion Box -->
+                            <ul class="accordion-box">
+                                
+                                <!-- Block -->
+                                <li class="accordion block active-block">
+                                    <div class="acc-btn active"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>What is Secret Garden TV?</div>
+                                    <div class="acc-content current">
+                                        <div class="content">
+                                            <p>Secret Garden TV is a faith-inspired edutainment platform offering fun, educational videos for Muslim children. Our content includes nature and play-based science education, martial arts with Islamic heritage, Arabic learning adventures, Qur’anic duʿas, and spiritually themed storytelling — all designed to nurture the Garden within each child.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                            
+                                <!-- Block -->
+                                <li class="accordion block">
+                                    <div class="acc-btn"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div> Is the content suitable for all ages?</div>
+                                    <div class="acc-content">
+                                        <div class="content">
+                                            <p>Yes! While our shows are designed especially for ages 4–10, many older children — and even parents — enjoy them too. We make Islamic learning engaging, beautiful, and accessible for the whole family.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <!-- Block -->
+                                <li class="accordion block">
+                                    <div class="acc-btn"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>How often do you release new videos?</div>
+                                    <div class="acc-content">
+                                        <div class="content">
+                                            <p>We release new episodes regularly — usually every week or two. Subscribe to our YouTube channel, join our newsletter, and follow our socials so you never miss a new story or adventure.</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <!-- Block -->
+                                <li class="accordion block">
+                                    <div class="acc-btn"><div class="icon-outer"><span class="icon fa-solid fa-angle-down fa-fw"></span></div>How can I support Secret Garden TV?</div>
+                                    <div class="acc-content">
+                                        <div class="content">
+                                            <p>You can support us by subscribing, sharing our videos, and donating via the links in our footer. Your support helps us plant more seeds of faith and learning in children’s hearts around the world.</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+
+                                <!-- Block -->
+                                <li class="accordion block">
+                                    <div class="acc-btn">
+                                        <div class="icon-outer">
+                                            <span class="icon fa-solid fa-angle-down fa-fw"></span>
+                                        </div>
+                                        Is your content safe and values-based?
+                                    </div>
+                                    <div class="acc-content">
+                                        <div class="content">
+                                            <p>Absolutely. Every episode is rooted in Islamic values and designed with both faith and child development in mind. We avoid harmful themes, encourage good character, and weave lessons of the Qur’an and Sunnah throughout.</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- Block -->
+                                <li class="accordion block">
+                                    <div class="acc-btn">
+                                        <div class="icon-outer">
+                                            <span class="icon fa-solid fa-angle-down fa-fw"></span>
+                                        </div>
+                                        How can my children watch your shows?
+                                    </div>
+                                    <div class="acc-content">
+                                        <div class="content">
+                                            <p>Our shows are available on YouTube and can also be accessed through links on our website. We are working toward making them available on more platforms in the future, insha’Allah.</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <!-- Block -->
+                                <li class="accordion block">
+                                    <div class="acc-btn">
+                                        <div class="icon-outer">
+                                            <span class="icon fa-solid fa-angle-down fa-fw"></span>
+                                        </div>
+                                        How do you approach screen time?
+                                    </div>
+                                    <div class="acc-content">
+                                        <div class="content">
+                                            <p>We believe screen time can be meaningful when used wisely. Our episodes are short, purposeful, and often include hands-on activities, as well as thought and physical exercises, to encourage children to engage with the world beyond the screen.</p>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            
+                            </ul>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Faq One -->
+    
+    <!-- Blog Two -->
+    <!--<section class="blog-two">
+        <div class="auto-container">
+
+            <div class="sec-title centered">
+                <div class="sec-title_title">Read our blog</div>
+                <h2 class="sec-title_heading">Little Seeds of <span>Wisdom</span></h2>
+            </div>
+            <div class="row clearfix">
+                
+
+                <div class="news-block_two col-lg-6 col-md-12 col-sm-12">
+                    <div class="news-block_two-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                        <div class="news-block_two-image">
+                            <img src="assets/images/resource/blog-4.png" alt= ""/>
+                            <div class="news-block_two-content">
+                                <ul class="news-block_two-meta">
+                                    <li>By FirstName LastName</li>
+                                    <li>7 min read</li>
+                                </ul>
+                                <h4 class="news-block_two-title"><a href="blog.html">Why Stories Matter: Building Character Through Narrative</a></h4>
+                                <a class="news-block_two-more" href="blog.html">Read Now <i class="flaticon-next-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="right-column col-lg-6 col-md-12 col-sm-12">
+                    
+
+                    <div class="news-block_three">
+                        <div class="news-block_three-inner d-flex align-items-center flex-wrap">
+                            <div class="news-block_three-image">
+                                <img src="assets/images/resource/blog/blog-1.png" alt= ""/>
+                            </div>
+                            <div class="news-block_three-content">
+                                <ul class="news-block_three-meta">
+                                    <li>By FirstName LastName</li>
+                                    <li>6 min read</li>
+                                </ul>
+                                <h4 class="news-block_three-title"><a href="blog.html">Raising Purposeful Children in a Distracted World</a></h4>
+                                <a class="news-block_three-more" href="blog.html">Read Now <i class="flaticon-next-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="news-block_three">
+                        <div class="news-block_three-inner d-flex align-items-center flex-wrap">
+                            <div class="news-block_three-image">
+                                <img src="assets/images/resource/blog/blog-2.png" alt= ""/>
+                            </div>
+                            <div class="news-block_three-content">
+                                <ul class="news-block_three-meta">
+                                    <li>By FirstName LastName</li>
+                                    <li>5 min read</li>
+                                </ul>
+                                <h4 class="news-block_three-title"><a href="blog.html">Teaching Adab in Everyday Moments</a></h4>
+                                <a class="news-block_three-more" href="blog.html">Read Now <i class="flaticon-next-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+     </section>-->
+    <!-- End Blog Two -->
+
+    
+    <!-- Main Footer -->
+    <footer class="footer-style_two">
         <div class="footer-two_icon" style="background-image: url(assets/images/icons/footer-icon-1.png)"></div>
         <div class="footer-two_icon-two" style="background-image: url(assets/images/icons/footer-icon-2.png)"></div>
         <div class="footer-two_icon-three" style="background-image: url(assets/images/icons/footer-icon-3.png)"></div>
@@ -314,37 +1651,101 @@
             
         </div>
     </footer>
-        <!-- End Main Footer -->
-      </div>
+    <!-- End Main Footer -->
+    
+    <!-- Search Popup -->
+    <div class="search-popup">
+        <div class="color-layer"></div>
+        <button class="close-search"><span class="flaticon-close"></span></button>
+        <form method="post" action="blog.html">
+            <div class="form-group">
+                <input type="search" name="search-field" value="" placeholder="Search Here" required="">
+                <button class="fa fa-solid fa-magnifying-glass fa-fw" type="submit"></button>
+            </div>
+        </form>
+    </div>
+    <!-- End Search Popup -->
+    
+</div>
+<!-- End PageWrapper -->
 
-<style>
-/* compact, low-conflict namespaced styles */
-.sg-controls{display:flex;gap:.75rem;align-items:center;margin:1rem 0 .5rem}
-.sg-btn{
-  appearance:none;border:1px solid rgba(0,0,0,.1);padding:.6rem .9rem;border-radius:999px;
-  font-weight:600;cursor:pointer;background:#f3f5f7;
-}
-.sg-btn:active{transform:translateY(1px)}
-.sg-count{color:#6b7280;font-size:.95rem}
+<div class="progress-wrap">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+    </svg>
+</div>
 
-.sg-grid{display:grid;gap:12px;margin:12px 0 36px}
-@media (min-width:540px){.sg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (min-width:820px){.sg-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
-@media (min-width:1100px){.sg-grid{grid-template-columns:repeat(5,minmax(0,1fr))}}
+<!-- Newsletter Popup -->
 
-.sg-tile{
-  display:block;position:relative;border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;
-  background:#0f1520;border:1px solid rgba(0,0,0,.08);
-}
-.sg-thumb{aspect-ratio:16/9;background:#13202e;background-size:cover;background-position:center}
-.sg-meta{
-  position:absolute;left:0;right:0;bottom:0;padding:.6rem .7rem;
-  background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.65));color:#fff
-}
-.sg-name{font-weight:700;font-size:.95rem}
-.sg-tag{font-size:.8rem;opacity:.85}
-.sg-empty{padding:2rem 0;color:#6b7280;text-align:center}
-</style>
+
+
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/appear.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/tilt.jquery.min.js"></script>
+<script src="assets/js/jquery.paroller.min.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/owl.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/backtotop.js"></script>
+<script src="assets/js/odometer.js"></script>
+<script src="assets/js/parallax-scroll.js"></script>
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/SplitText.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/ScrollToPlugin.min.js"></script>
+<script src="assets/js/ScrollSmoother.min.js"></script>
+<script src="assets/js/magnific-popup.min.js"></script>
+<script src="assets/js/nav-tool.js"></script>
+<script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/jquery.countdown.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/newsletter.js"></script>
+
+<script>
+  // Wait until everything (including your theme's Swiper init) is done
+  window.addEventListener('load', function () {
+    const el = document.querySelector('#hero-swiper');
+
+    // IMPORTANT: Use the already-created instance if your theme initialized it
+    let heroSwiper = el && el.swiper;
+    // If, for some reason, it wasn't initialized elsewhere, create it (no autoplay here)
+    if (!heroSwiper) {
+      heroSwiper = new Swiper(el, { loop: true });
+    }
+
+    // Helper: resume autoplay if available, without reading params.autoplay
+    function resumeAutoplay(sw) {
+      if (sw && sw.autoplay && typeof sw.autoplay.start === 'function') {
+        // If disableOnInteraction exists, relax it (guarded)
+        if (sw.params && sw.params.autoplay && typeof sw.params.autoplay.disableOnInteraction !== 'undefined') {
+          sw.params.autoplay.disableOnInteraction = false;
+        }
+        sw.autoplay.start();
+      }
+    }
+
+    // Wire per-slide arrows
+    el.querySelectorAll('.swiper-slide').forEach((slide) => {
+      const prevBtn = slide.querySelector('.slider-two_arrows .slide-prev');
+      const nextBtn = slide.querySelector('.slider-two_arrows .slide-next');
+
+      if (prevBtn) prevBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        heroSwiper.slidePrev();
+        resumeAutoplay(heroSwiper);
+      });
+
+      if (nextBtn) nextBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        heroSwiper.slideNext();
+        resumeAutoplay(heroSwiper);
+      });
+    });
+  });
+</script>
 
 
 </body>
