@@ -122,7 +122,7 @@
 										<li><a href="program.html">Programs</a></li>
 										<li><a href="blog.html">Blog</a></li>
 										<li><a href="faq.html">FAQs</a></li>							
-										<li><a href="donate.html">Donate</a></li>
+										<!-- <li><a href="donate.html">Donate</a></li> -->
 									</ul>
 								</div>
 							</nav>
@@ -210,7 +210,7 @@
 	<!-- End About Sidebar -->
 	
 	<!-- Page Title -->
-    <section class="page-title">
+    <section class="page-title" style="background-image: url('assets/images/main-slider/donate_banner.jpg'); background-size: cover;">
 		<div class="color-one"></div>
 		<div class="color-two"></div>
 		<div class="color-four"></div>
@@ -263,12 +263,16 @@
 	            <form method="post" action="donate-handler.php" id="donate-form">
 	              <input type="hidden" id="selected-amount" name="amount" value="">
 	              <div class="row clearfix justify-content-center">
-	                <!-- Name -->
-	                <div class="form-group col-lg-6 col-md-6">
-	                  <input type="text" name="name" placeholder="Full Name" required>
-	                </div>
+	                <!-- First Name -->
+									<div class="form-group col-lg-6 col-md-6">
+									  <input type="text" name="first_name" placeholder="First Name" required>
+									</div>
+									<!-- Last Name -->
+									<div class="form-group col-lg-6 col-md-6">
+									  <input type="text" name="last_name" placeholder="Last Name" required>
+									</div>
 	                <!-- Email -->
-	                <div class="form-group col-lg-6 col-md-6">
+	                <div class="form-group col-lg-12 col-md-6">
 	                  <input type="email" name="email" placeholder="Email Address" required>
 	                </div>
 	                <!-- Custom Amount -->
@@ -287,6 +291,9 @@
 	                      <span class="text-two">Donate Now <i class="flaticon-next-1"></i></span>
 	                    </span>
 	                  </button>
+	                  <div class="donation-micro-note mt-3" style="font-size:0.92rem;opacity: 0.85;">
+										  Secure checkout powered by Zeffy — you’ll complete your donation on their page.
+										</div>
 	                </div>
 	              </div>
 	            </form>
@@ -364,107 +371,6 @@
 		<div class="outer-container">
 			<div class="auto-container">
 				<!-- Gallery Box -->
-				<div class="footer-two_gallery">
-					<div class="instagram_icon"><i class="fa-brands fa-instagram"></i></div>
-					<h2 class="footer-two_gallery-title">SGTV <span>Instagram</span></h2>
-					
-					<div class="instagram_carousel swiper-container">
-						<div class="swiper-wrapper">
-
-							<!-- Slide -->
-							<div class="swiper-slide">
-								<!-- Gallery One Block -->
-								<div class="gallery-one_block">
-									<div class="gallery-one_block-inner">
-										<div class="gallery-one_block-image">
-											<img src="assets/images/gallery/instagram-7.jpg" alt="" />
-											<div class="gallery-one_block-overlay">
-												<a href="assets/images/gallery/instagram-7.jpg" class="lightbox-image gallery-one_block-icon fa-brands fa-instagram"></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<!-- Slide -->
-							<div class="swiper-slide">
-								<!-- Gallery One Block -->
-								<div class="gallery-one_block">
-									<div class="gallery-one_block-inner">
-										<div class="gallery-one_block-image">
-											<img src="assets/images/gallery/instagram-8.jpg" alt="" />
-											<div class="gallery-one_block-overlay">
-												<a href="assets/images/gallery/instagram-8.jpg" class="lightbox-image gallery-one_block-icon fa-brands fa-instagram"></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<!-- Slide -->
-							<div class="swiper-slide">
-								<!-- Gallery One Block -->
-								<div class="gallery-one_block">
-									<div class="gallery-one_block-inner">
-										<div class="gallery-one_block-image">
-											<img src="assets/images/gallery/instagram-9.jpg" alt="" />
-											<div class="gallery-one_block-overlay">
-												<a href="assets/images/gallery/instagram-9.jpg" class="lightbox-image gallery-one_block-icon fa-brands fa-instagram"></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							
-							<!-- Slide -->
-							<div class="swiper-slide">
-								<!-- Gallery One Block -->
-								<div class="gallery-one_block">
-									<div class="gallery-one_block-inner">
-										<div class="gallery-one_block-image">
-											<img src="assets/images/gallery/instagram-10.jpg" alt="" />
-											<div class="gallery-one_block-overlay">
-												<a href="assets/images/gallery/instagram-10.jpg" class="lightbox-image gallery-one_block-icon fa-brands fa-instagram"></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<!-- Slide -->
-							<div class="swiper-slide">
-								<!-- Gallery One Block -->
-								<div class="gallery-one_block">
-									<div class="gallery-one_block-inner">
-										<div class="gallery-one_block-image">
-											<img src="assets/images/gallery/instagram-11.jpg" alt="" />
-											<div class="gallery-one_block-overlay">
-												<a href="assets/images/gallery/instagram-11.jpg" class="lightbox-image gallery-one_block-icon fa-brands fa-instagram"></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-							<!-- Slide -->
-							<div class="swiper-slide">
-								<!-- Gallery One Block -->
-								<div class="gallery-one_block">
-									<div class="gallery-one_block-inner">
-										<div class="gallery-one_block-image">
-											<img src="assets/images/gallery/instagram-12.jpg" alt="" />
-											<div class="gallery-one_block-overlay">
-												<a href="assets/images/gallery/instagram-12.jpg" class="lightbox-image gallery-one_block-icon fa-brands fa-instagram"></a>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-				</div>
 				<!-- End Gallery Box -->
 			</div>
 			
@@ -499,7 +405,7 @@
 										<h5 class="footer-title"><a href="/">Home</a></h5>
 										<h5 class="footer-title"><a href="about.html">About Us</a></h5>
 										<h5 class="footer-title"><a href="program.html">Programs</a></h5>
-										<h5 class="footer-title"><a href="donate.html">Donate</a></h5>
+										<!-- <h5 class="footer-title"><a href="donate.html">Donate</a></h5> -->
 									</div>
 								</div>
 
@@ -642,17 +548,47 @@
   });
 
   form.addEventListener('submit', function (e) {
-    if (selectedAmountInput.value === '' && customAmountInput.value) {
-      selectedAmountInput.value = customAmountInput.value;
-    }
+  e.preventDefault();
 
-    // Optional: prevent submission to show demo feedback
-    e.preventDefault();
-    successMessage.classList.remove('d-none');
-    form.reset();
-    donationButtons.forEach(b => b.classList.remove('active'));
-    customAmountGroup.classList.add('d-none');
-  });
+  let amount = selectedAmountInput.value || customAmountInput.value;
+  if (!amount) {
+    alert("Please select a donation amount.");
+    return;
+  }
+
+  const email = form.querySelector('input[name="email"]').value;
+  const firstName = form.querySelector('input[name="first_name"]').value.trim();
+  const lastName  = form.querySelector('input[name="last_name"]').value.trim();
+
+  const baseUrl = new URL("https://www.zeffy.com/en-US/donation-form/donate-to-make-a-difference-18636");
+
+  // Build URL with params
+  let redirectUrl;
+  try {
+    const zeffyUrl = new URL(baseUrl);
+
+    // Primary params (what you already had "almost working")
+    zeffyUrl.searchParams.set("amount", amount);
+
+    // Helpful extras (Zeffy may or may not use these depending on their setup)
+    zeffyUrl.searchParams.set("email", email);
+
+    // Send split + combined for maximum compatibility
+    zeffyUrl.searchParams.set("firstName", firstName);
+    zeffyUrl.searchParams.set("lastName", lastName);
+    zeffyUrl.searchParams.set("name", `${firstName} ${lastName}`.trim());
+
+    redirectUrl = zeffyUrl.toString();
+  } catch (err) {
+    // Fallback #1: if URL building fails for any reason, go to base Zeffy page
+    window.location.href = baseUrl;
+    return;
+  }
+
+  // Fallback #2: If something about the params causes issues, user can still donate on Zeffy
+  // (We can’t detect Zeffy’s acceptance reliably before redirect, so we provide a safe secondary route.)
+  window.location.href = redirectUrl;
+});
 </script>
 
 
