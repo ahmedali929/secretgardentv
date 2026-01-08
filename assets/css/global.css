@@ -158,10 +158,12 @@ body {
 	font-family: "Lato", sans-serif;
 	color:var(--color-four);
 	line-height:1.6em;
-	font-weight:400;
+	font-weight:500;
 	font-size:14px;
 	-webkit-font-smoothing: antialiased;
-	-moz-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	letter-spacing: 0.01em;
 }
 
 .text-left{
@@ -232,7 +234,7 @@ textarea{
 p{
 	position:relative;
 	line-height:1.7em;
-	color:var(--color-four);
+	color:var(--black-color);
 	font-size:16px;
 }
 

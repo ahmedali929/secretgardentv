@@ -1,0 +1,330 @@
+::1 - - [08/Jan/2026 14:04:37] "HEAD / HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:04:43] "GET /blog-raising-purposeful-children.html HTTP/1.1" 304 -
+::1 - - [08/Jan/2026 14:04:43] "GET /assets/css/style.css HTTP/1.1" 304 -
+::1 - - [08/Jan/2026 14:04:43] "GET /assets/css/global.css HTTP/1.1" 304 -
+::1 - - [08/Jan/2026 14:04:43] "GET /assets/images/resource/blog/blog-1.png HTTP/1.1" 304 -
+::1 - - [08/Jan/2026 14:09:25] "GET /blog-raising-purposeful-children.html HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:09:26] "GET /assets/images/resource/blog/blog-1-thumb.jpg HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:02] "GET /blog-raising-purposeful-children.html HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:02] "GET /assets/images/resource/blog/blog-1-thumb.jpg HTTP/1.1" 304 -
+::1 - - [08/Jan/2026 14:10:27] "GET /blog-raising-purposeful-children.html HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/bootstrap.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/style.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/meanmenu.min.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/responsive.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/images/sgtv_logo_transparent_1.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/images/14.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/images/resource/about.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/jquery.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/images/resource/blog/blog-1.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/images/resource/blog/blog-10.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/global.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/footer.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/header.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/owl.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/animate.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/jquery-ui.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/swiper.min.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/font-awesome.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/custom-animate.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/magnific-popup.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/flaticon_kidscamp-icons.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/css/odometer-theme-default.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/bootstrap.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/popper.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/appear.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/parallax.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/tilt.jquery.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/jquery.paroller.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/wow.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/swiper.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/backtotop.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/odometer.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/parallax-scroll.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/gsap.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/SplitText.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/ScrollTrigger.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/ScrollToPlugin.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/ScrollSmoother.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/js/magnific-popup.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:27] "GET /assets/fonts/flaticon_kidscamp-icons.woff2? HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/images/icons/favicon_sgtv.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/images/main-slider/blog-banner.jpg HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/images/background/header-pattern.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/images/background/header-pattern-1.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/js/nav-tool.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/js/jquery-ui.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/js/jquery.countdown.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/js/script.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/js/newsletter.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/images/resource/blog/blog-1-thumb.jpg HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/images/resource/blog/blog-11.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/images/resource/blog/blog-12.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/images/cross-out.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/images/icons/footer-icon-1.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/images/icons/footer-icon-2.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/images/icons/footer-icon-3.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:10:28] "GET /assets/images/favicon_sgtv/favicon.ico HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:54] "GET /index.html HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:54] "GET /assets/images/main-slider/test.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:54] "GET /assets/images/main-slider/test2.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:54] "GET /assets/images/main-slider/14.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:54] "GET /assets/images/main-slider/playinthegarden.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:54] "GET /assets/js/owl.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:54] "GET /assets/images/main-slider/prayinthegarden.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:54] "GET /assets/images/main-slider/icon-5.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:54] "GET /assets/images/main-slider/colors-pattern.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:54] "GET /assets/images/resource/lighting-the-way-2.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:54] "GET /assets/images/main-slider/icon-4.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:54] "GET /assets/images/main-slider/icon-6.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:54] "GET /assets/images/shows/allah_secret_signs.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:54] "GET /assets/images/shows/nurheart_fables.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:55] "GET /assets/images/shows/toyboxstories.PNG HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:55] "GET /assets/images/shows/babagha_sadiqi.gif HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:55] "GET /assets/images/shows/quranSafari.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:55] "GET /assets/images/icons/quote-1.svg HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:55] "GET /assets/images/icons/icon-8.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:55] "GET /assets/images/icons/icon-9.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:55] "GET /assets/images/background/lavendar_fields.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:55] "GET /assets/images/background/booking_pattern-1.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:55] "GET /assets/images/resource/Tree_Blooming.mp4 HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:56] "GET /assets/images/favicon_sgtv/favicon.ico HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:58] "GET /blog-raising-purposeful-children.html HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:15:58] "GET /assets/images/resource/blog/blog-1(vid).png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:16:06] "GET /blog-raising-purposeful-children.html HTTP/1.1" 304 -
+::1 - - [08/Jan/2026 14:16:06] "GET /assets/images/resource/blog/blog-1(vid).png HTTP/1.1" 304 -
+::1 - - [08/Jan/2026 14:16:42] "GET /blog-raising-purposeful-children.html HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:16:42] "GET /assets/images/resource/blog/blog-1(vid).png HTTP/1.1" 304 -
+::1 - - [08/Jan/2026 14:17:29] "HEAD /blog-raising-purposeful-children.html HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:17:29] "GET /blog-raising-purposeful-children.html HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:18:07] "GET /assets/images/resource/blog/blog-1(vid).png HTTP/1.1" 304 -
+::1 - - [08/Jan/2026 14:46:37] "GET /assets/images/resource/blog/blog-1.mp4 HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('::1', 61987, 0, 0)
+::1 - - [08/Jan/2026 14:46:37] "GET /assets/images/resource/blog/blog-1.mp4 HTTP/1.1" 200 -
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 660, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 434, in handle
+    self.handle_one_request()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 422, in handle_one_request
+    method()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 667, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 867, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 208, in copyfileobj
+    fdst_write(buf)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+::1 - - [08/Jan/2026 14:47:10] "GET /assets/images/resource/blog/blog-1.mp4 HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('::1', 62018, 0, 0)
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 660, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 434, in handle
+    self.handle_one_request()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 422, in handle_one_request
+    method()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 667, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 867, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 208, in copyfileobj
+    fdst_write(buf)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+::1 - - [08/Jan/2026 14:47:10] "GET /assets/images/resource/blog/blog-1.mp4 HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:47:37] "GET /assets/images/resource/blog/blog-1.mp4 HTTP/1.1" 200 -
+----------------------------------------
+Exception occurred during processing of request from ('::1', 62047, 0, 0)
+Traceback (most recent call last):
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 683, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 360, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 660, in __init__
+    super().__init__(*args, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 747, in __init__
+    self.handle()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 434, in handle
+    self.handle_one_request()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 422, in handle_one_request
+    method()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 667, in do_GET
+    self.copyfile(f, self.wfile)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/http/server.py", line 867, in copyfile
+    shutil.copyfileobj(source, outputfile)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/shutil.py", line 208, in copyfileobj
+    fdst_write(buf)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/socketserver.py", line 826, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+----------------------------------------
+::1 - - [08/Jan/2026 14:47:37] "GET /assets/images/resource/blog/blog-1.mp4 HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:21] "GET /blog-raising-purposeful-children.html HTTP/1.1" 304 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/bootstrap.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/style.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/meanmenu.min.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/responsive.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/images/sgtv_logo_transparent_1.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/jquery.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/images/14.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/images/resource/about.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/images/resource/blog/blog-1.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/global.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/footer.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/header.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/owl.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/jquery-ui.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/animate.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/swiper.min.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/font-awesome.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/custom-animate.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/flaticon_kidscamp-icons.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/magnific-popup.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/css/odometer-theme-default.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/images/resource/blog/blog-10.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/popper.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/bootstrap.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/appear.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/parallax.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/tilt.jquery.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/jquery.paroller.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/swiper.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/wow.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/backtotop.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/odometer.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/parallax-scroll.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/gsap.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/SplitText.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/ScrollTrigger.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/ScrollToPlugin.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/ScrollSmoother.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/magnific-popup.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/nav-tool.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/jquery-ui.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/jquery.countdown.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/script.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/images/resource/blog/blog-1(vid).png HTTP/1.1" 304 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/js/newsletter.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/images/resource/blog/blog-11.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/images/resource/blog/blog-12.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/images/background/header-pattern.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/images/icons/favicon_sgtv.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/images/background/header-pattern-1.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/fonts/flaticon_kidscamp-icons.woff2? HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/images/main-slider/blog-banner.jpg HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:50:22] "GET /assets/images/cross-out.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:02] "GET /assets/images/resource/blog/blog-1.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET / HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/bootstrap.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/style.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/meanmenu.min.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/responsive.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/images/sgtv_logo_transparent_1.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/images/14.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/global.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/header.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/footer.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/owl.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/animate.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/jquery-ui.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/swiper.min.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/font-awesome.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/custom-animate.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/magnific-popup.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/flaticon_kidscamp-icons.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/css/odometer-theme-default.css HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/images/main-slider/test.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/images/main-slider/test2.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/images/main-slider/14.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/js/jquery.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/js/popper.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/js/bootstrap.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/js/appear.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/js/parallax.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/js/tilt.jquery.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/js/jquery.paroller.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/js/wow.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/js/owl.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/js/swiper.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/js/backtotop.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/js/odometer.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/images/main-slider/icon-4.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/images/main-slider/icon-5.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/fonts/flaticon_kidscamp-icons.woff2? HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:07] "GET /assets/images/main-slider/icon-6.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/background/header-pattern-1.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/background/header-pattern.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/js/parallax-scroll.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/js/gsap.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/js/SplitText.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/js/ScrollTrigger.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/js/ScrollToPlugin.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/js/ScrollSmoother.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/js/magnific-popup.min.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/js/nav-tool.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/js/jquery-ui.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/js/jquery.countdown.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/js/script.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/js/newsletter.js HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/main-slider/playinthegarden.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/main-slider/prayinthegarden.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/resource/lighting-the-way-2.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/shows/allah_secret_signs.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/shows/nurheart_fables.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/main-slider/colors-pattern.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/shows/toyboxstories.PNG HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/shows/babagha_sadiqi.gif HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/shows/quranSafari.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/icons/quote-1.svg HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/icons/icon-8.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/icons/icon-9.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/background/lavendar_fields.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/background/booking_pattern-1.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/icons/footer-icon-1.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/icons/footer-icon-2.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/icons/footer-icon-3.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:08] "GET /assets/images/resource/Tree_Blooming.mp4 HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:09] "GET /assets/images/favicon_sgtv/favicon.ico HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:13] "GET /blog-raising-purposeful-children.html HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:13] "GET /assets/images/resource/about.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:13] "GET /assets/images/resource/blog/blog-1.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:13] "GET /assets/images/resource/blog/blog-10.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:13] "GET /assets/images/resource/blog/blog-1(vid).png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:13] "GET /assets/images/resource/blog/blog-11.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:13] "GET /assets/images/resource/blog/blog-12.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:13] "GET /assets/images/icons/favicon_sgtv.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:13] "GET /assets/images/main-slider/blog-banner.jpg HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:13] "GET /assets/images/cross-out.png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:35] "GET /blog-raising-purposeful-children.html HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:35] "GET /assets/images/resource/blog/blog-1(vid).png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:51:35] "GET /assets/css/style.css HTTP/1.1" 304 -
+::1 - - [08/Jan/2026 14:51:35] "GET /assets/css/global.css HTTP/1.1" 304 -
+::1 - - [08/Jan/2026 14:51:35] "GET /assets/images/resource/blog/blog-1.png HTTP/1.1" 304 -
+::1 - - [08/Jan/2026 14:55:07] "GET /blog-raising-purposeful-children.html HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:55:10] "GET /blog-raising-purposeful-children.html HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:55:15] "GET /blog-raising-purposeful-children.html HTTP/1.1" 304 -
+::1 - - [08/Jan/2026 14:55:16] "GET /assets/images/resource/blog/blog-1(vid).png HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:55:29] code 404, message File not found
+::1 - - [08/Jan/2026 14:55:29] "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 -
+::1 - - [08/Jan/2026 14:56:45] "GET /blog-raising-purposeful-children.html HTTP/1.1" 200 -
+::1 - - [08/Jan/2026 14:56:45] "GET /assets/images/resource/blog/blog-1(vid).png HTTP/1.1" 200 -
