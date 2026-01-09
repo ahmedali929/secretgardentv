@@ -6898,7 +6898,7 @@
 
 .blog-detail p{
 	font-size: 16px;
-	color: rgba(var(--color-four-rgb), 0.70);
+	color: rgba(var(--black-color-rgb), 1);
 }
 
 .blog-detail blockquote{
@@ -6910,7 +6910,7 @@
 	border-radius:8px;
 	overflow:hidden;
 	margin-bottom: 30px;
-	color:rgba(var(--color-four-rgb), 0.70);
+	color: rgba(var(--black-color-rgb), 1);
 	border-left: 3px solid var(--main-color);
 	background-color:rgba(var(--main-color-rgb), 0.10);
 }
@@ -6930,7 +6930,7 @@
 	font-weight: 500;
 	padding-left: 50px;
 	display: inline-block;
-	color:rgba(var(--color-four-rgb), 1);
+	color: rgba(var(--black-color-rgb), 1);
 	font-family: "Playfair Display", serif;
 }
 
