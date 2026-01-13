@@ -24,23 +24,15 @@
       
 
 </head>
-  <!-- Google Analytics (GA4) - replace G-XXXXX with your Measurement ID -->
-        <!-- If you don't have a Measurement ID yet, sign in to Google Analytics and create a GA4 property. -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-N9CVS15KPD"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N9CVS15KPD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-            /* Replace 'G-XXXXX' below with your GA4 Measurement ID */
-            gtag('config', 'G-N9CVS15KPD', {
-                'page_title': document.title,
-                'page_path': location.pathname
-            });
-
-            /* Optional: explicit page_view event for single-page apps or extra control */
-            // gtag('event', 'page_view', { 'page_title': document.title, 'page_path': location.pathname, 'page_location': location.href });
-        </script>
+  gtag('config', 'G-N9CVS15KPD');
+</script>
 <body>
     <div class="page-wrapper">
         <!-- Cursor -->
