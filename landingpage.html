@@ -427,6 +427,35 @@
 }
 
 
+/* Slider pagination dots */
+.slider-dots {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    width: auto;
+    text-align: left;
+    z-index: 20;
+}
+
+/* Dot style */
+.slider-dots .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.6);
+    opacity: 1;
+    margin: 0 6px 0 0;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+
+/* Active dot */
+.slider-dots .swiper-pagination-bullet-active {
+    background: #ffffff;
+    transform: scale(1.2);
+}
+
+
 
 
 
@@ -581,6 +610,8 @@
                     </div>
                 </div>
             </div>
+            <div class="swiper-pagination slider-dots"></div>
+
         </div>
     </section>
     <!-- End Slider Two Section -->
@@ -1675,21 +1706,46 @@
 <script src="assets/js/newsletter.js"></script>
 
 <script>
-  // Wait until everything (including your theme's Swiper init) is done
   window.addEventListener('load', function () {
     const el = document.querySelector('#hero-swiper');
+    if (!el) return;
 
-    // IMPORTANT: Use the already-created instance if your theme initialized it
-    let heroSwiper = el && el.swiper;
-    // If, for some reason, it wasn't initialized elsewhere, create it (no autoplay here)
+    // Use existing theme instance if present
+    let heroSwiper = el.swiper;
+
+    // If theme didn't init it, create it with pagination + nav
     if (!heroSwiper) {
-      heroSwiper = new Swiper(el, { loop: true });
+      heroSwiper = new Swiper(el, {
+        loop: true,
+        pagination: {
+          el: el.querySelector('.swiper-pagination'),
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.slide-next',
+          prevEl: '.slide-prev',
+        },
+      });
+    } else {
+      // Theme DID init it — attach pagination to the existing instance
+      heroSwiper.params.pagination = heroSwiper.params.pagination || {};
+      heroSwiper.params.pagination.el = el.querySelector('.swiper-pagination');
+      heroSwiper.params.pagination.clickable = true;
+
+      // If you use loop:true and want dots that match slides nicely:
+      // heroSwiper.params.pagination.type = 'bullets';
+
+      // Initialize + render pagination (critical when adding after init)
+      if (heroSwiper.pagination) {
+        heroSwiper.pagination.init();
+        heroSwiper.pagination.render();
+        heroSwiper.pagination.update();
+      }
     }
 
-    // Helper: resume autoplay if available, without reading params.autoplay
+    // Helper: resume autoplay if available
     function resumeAutoplay(sw) {
       if (sw && sw.autoplay && typeof sw.autoplay.start === 'function') {
-        // If disableOnInteraction exists, relax it (guarded)
         if (sw.params && sw.params.autoplay && typeof sw.params.autoplay.disableOnInteraction !== 'undefined') {
           sw.params.autoplay.disableOnInteraction = false;
         }
@@ -1697,7 +1753,7 @@
       }
     }
 
-    // Wire per-slide arrows
+    // Wire per-slide arrows (your existing behavior)
     el.querySelectorAll('.swiper-slide').forEach((slide) => {
       const prevBtn = slide.querySelector('.slider-two_arrows .slide-prev');
       const nextBtn = slide.querySelector('.slider-two_arrows .slide-next');
@@ -1709,12 +1765,7 @@
       });
 
       if (nextBtn) nextBtn.addEventListener('click', (e) => {
-        e.preventDefault();
-        heroSwiper.slideNext();
-        resumeAutoplay(heroSwiper);
-      });
-    });
-  });
+        e.preventDefa
 </script>
 
 
@@ -1722,17 +1773,18 @@
   document.addEventListener('DOMContentLoaded', () => {
     const heroSwiper = document.querySelector('#hero-swiper')?.swiper;
     if (heroSwiper) {
-      // Stop autoplay
+      // Stop autoplay (optional)
       if (heroSwiper.autoplay) heroSwiper.autoplay.stop();
-      // Disable manual dragging/swiping
+
+      // Disable manual dragging/swiping only
       heroSwiper.allowTouchMove = false;
-      // Lock slide change
-      heroSwiper.allowSlideNext = false;
-      heroSwiper.allowSlidePrev = false;
+
+      // DO NOT lock slideNext/slidePrev, or arrows/dots won't work
+      // heroSwiper.allowSlideNext = false;
+      // heroSwiper.allowSlidePrev = false;
     }
   });
 </script>
-
 
 
 </body>
