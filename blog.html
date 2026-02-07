@@ -688,6 +688,12 @@
 <script src="assets/js/jquery.countdown.js"></script>
 <script src="assets/js/script.js"></script>
 <script src="assets/js/newsletter.js"></script>
+<script>
+	var url = window.location.href;
+url = url.split('.html')[0];
+//url = url.substring(0, url.lastIndexOf("."));
+window.history.replaceState( null, null, url );
+</script>
 
 </body>
 </html>
