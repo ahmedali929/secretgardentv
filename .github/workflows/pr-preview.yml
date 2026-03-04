@@ -24,8 +24,8 @@ jobs:
       - name: Generate preview domain
         id: domain
         run: |
-          HASH=$(echo -n "${{ github.repository }}" | md5sum | cut -c1-4)
-          DOMAIN="sgtv-${HASH}-pr-${{ github.event.pull_request.number }}.surge.sh"
+          OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          DOMAIN="${OWNER}-sgtv-pr-${{ github.event.pull_request.number }}.surge.sh"
           echo "domain=$DOMAIN" >> "$GITHUB_OUTPUT"
 
       - name: Deploy to Surge
@@ -75,8 +75,8 @@ jobs:
       - name: Generate preview domain
         id: domain
         run: |
-          HASH=$(echo -n "${{ github.repository }}" | md5sum | cut -c1-4)
-          DOMAIN="sgtv-${HASH}-pr-${{ github.event.pull_request.number }}.surge.sh"
+          OWNER=$(echo "${{ github.repository_owner }}" | tr '[:upper:]' '[:lower:]')
+          DOMAIN="${OWNER}-sgtv-pr-${{ github.event.pull_request.number }}.surge.sh"
           echo "domain=$DOMAIN" >> "$GITHUB_OUTPUT"
 
       - name: Teardown preview
