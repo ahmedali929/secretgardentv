@@ -17,11 +17,23 @@ jobs:
       - name: Checkout PR branch
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+
+      - name: Build app
+        run: |
+          npm --prefix app ci
+          npm --prefix app run build
+
       - name: Deploy to Netlify
         id: deploy
         uses: nwtgck/actions-netlify@v3
         with:
-          publish-dir: ./
+          publish-dir: ./app/dist
           production-deploy: false
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "PR #${{ github.event.pull_request.number }} — ${{ github.event.pull_request.title }}"
