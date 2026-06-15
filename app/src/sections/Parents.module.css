@@ -1,0 +1,129 @@
+.parents {
+  position: relative;
+  background: linear-gradient(170deg, var(--canopy-800), var(--canopy-950));
+  color: var(--ink-on-dark);
+  padding: clamp(4rem, 9vh, 7rem) 0;
+  overflow: clip;
+}
+.parents::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(50% 60% at 100% 0%, oklch(0.66 0.14 147 / 0.16), transparent 60%);
+  pointer-events: none;
+}
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.25fr 0.9fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+.tag {
+  margin-bottom: 1.2rem;
+}
+.title {
+  font-size: var(--step-4);
+  color: oklch(0.97 0.02 95);
+  max-width: 16ch;
+}
+.lead {
+  margin-top: 1.3rem;
+  max-width: 52ch;
+  font-size: var(--step-1);
+  line-height: 1.55;
+  color: var(--ink-on-dark-soft);
+}
+
+.checks {
+  margin-top: 2.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.4rem 1.8rem;
+}
+.check {
+  display: flex;
+  gap: 0.8rem;
+  align-items: flex-start;
+}
+.check strong {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: oklch(0.97 0.02 95);
+  margin-bottom: 0.2rem;
+}
+.checkBody {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--ink-on-dark-soft);
+}
+.tick {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--sprout-400);
+  color: var(--canopy-950);
+  margin-top: 2px;
+}
+
+/* Gift card */
+.gift {
+  background: var(--cream);
+  color: var(--bark);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.8rem, 3vw, 2.6rem);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  isolation: isolate;
+}
+.gift::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-lg);
+  box-shadow: inset 0 0 0 2px oklch(0.74 0.155 78 / 0.35);
+  z-index: -1;
+}
+.giftEmoji {
+  display: inline-grid;
+  place-items: center;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: var(--sprout-300);
+  color: var(--canopy-900);
+  margin-bottom: 1rem;
+}
+.giftTitle {
+  font-size: var(--step-2);
+  color: var(--canopy-900);
+}
+.giftBody {
+  margin: 0.7rem auto 1.4rem;
+  max-width: 32ch;
+  font-size: 0.96rem;
+  line-height: 1.55;
+  color: var(--bark-soft);
+}
+.giftMeta {
+  margin-top: 0.9rem;
+  font-size: 0.82rem;
+  color: var(--bark-soft);
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .checks {
+    grid-template-columns: 1fr;
+  }
+}

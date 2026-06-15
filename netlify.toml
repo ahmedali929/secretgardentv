@@ -1,0 +1,15 @@
+# Production build for Netlify.
+# The live site is the Vite app in app/. We install + build it and publish app/dist.
+# (The legacy static HTML at the repo root is no longer served.)
+[build]
+  command = "npm --prefix app ci && npm --prefix app run build"
+  publish = "app/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Single-page app: serve index.html for any path so deep links don't 404.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200

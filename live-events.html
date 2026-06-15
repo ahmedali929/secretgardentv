@@ -1,0 +1,1168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8BV81NN8H4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8BV81NN8H4', {
+    allow_google_signals: false,
+    allow_ad_personalization_signals: false
+  });
+</script>
+<meta charset="utf-8">
+<title>Secret Garden TV for Kids | Live Events</title>
+<!-- Stylesheets -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/meanmenu.min.css" rel="stylesheet">
+<link href="assets/css/responsive.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="assets/images/favicon_sgtv/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="assets/images/favicon_sgtv/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<style>
+/* Forest green override for Live Events page */
+.event-types-section,
+.workshop-form-section,
+.live-events-intro {
+	--theme-color: #2d5a27;
+	--theme-color-rgb: 45, 90, 39;
+	--color-two: #2d5a27;
+	--color-two-rgb: 45, 90, 39;
+}
+
+.form-section-header {
+	color: #2d5a27 !important;
+	border-bottom-color: #2d5a27 !important;
+}
+
+.form-progress .step.active,
+.form-progress .step.completed {
+	background: #2d5a27 !important;
+}
+
+.form-nav-buttons .btn-next,
+.form-nav-buttons .btn-submit {
+	background: #2d5a27 !important;
+}
+
+.workshop-form input:focus,
+.workshop-form select:focus,
+.workshop-form textarea:focus {
+	border-color: #2d5a27 !important;
+	box-shadow: 0 0 0 3px rgba(45, 90, 39, 0.15) !important;
+}
+
+.event-type-card .card-icon {
+	color: #2d5a27 !important;
+}
+
+.form-confirmation .check-icon {
+	color: #2d5a27 !important;
+}
+
+.workshop-form-section .registration-one_form-outer {
+	background: #2d5a27 !important;
+	border-radius: 16px;
+	padding: 40px;
+}
+
+.workshop-form-section .registration-one_title {
+	color: #fff !important;
+}
+
+.workshop-form-section .intro-text,
+.workshop-form-section .form-section-intro {
+	color: rgba(255,255,255,0.85) !important;
+}
+
+.workshop-form-section .form-section-header {
+	color: #fff !important;
+	border-bottom-color: rgba(255,255,255,0.4) !important;
+}
+
+.workshop-form-section .form-group label {
+	color: #fff !important;
+}
+
+.workshop-form-section .form-group .label-help {
+	color: rgba(255,255,255,0.65) !important;
+}
+
+.workshop-form-section .option-description {
+	color: rgba(255,255,255,0.6) !important;
+}
+
+.form-progress .step {
+	background: rgba(255,255,255,0.3) !important;
+	color: #fff !important;
+}
+
+.form-progress .step.active {
+	background: #fff !important;
+	color: #2d5a27 !important;
+}
+
+.form-progress .step.completed {
+	background: rgba(255,255,255,0.6) !important;
+	color: #2d5a27 !important;
+}
+
+.form-nav-buttons .btn-next,
+.form-nav-buttons .btn-submit {
+	background: #fff !important;
+	color: #2d5a27 !important;
+}
+
+.form-nav-buttons .btn-prev {
+	background: rgba(255,255,255,0.2) !important;
+	color: #fff !important;
+}
+
+/* Live Events Page Styles */
+.live-events-intro {
+	padding: 60px 0 40px;
+}
+
+.live-events-intro .intro-text {
+	font-size: 1.1rem;
+	line-height: 1.8;
+	color: #555;
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.event-types-section {
+	padding: 40px 0 60px;
+}
+
+.event-type-card {
+	background: #fff;
+	border-radius: 16px;
+	padding: 30px;
+	margin-bottom: 30px;
+	box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	height: 100%;
+}
+
+.event-type-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.event-type-card .card-icon {
+	font-size: 2.5rem;
+	color: var(--theme-color);
+	margin-bottom: 15px;
+}
+
+.event-type-card h4 {
+	font-family: 'Playfair Display', serif;
+	font-size: 1.3rem;
+	margin-bottom: 12px;
+	color: #333;
+}
+
+.event-type-card p {
+	font-size: 0.95rem;
+	line-height: 1.7;
+	color: #666;
+}
+
+/* Form Styles */
+.workshop-form-section {
+	padding: 60px 0 80px;
+	background: #f9fafb;
+}
+
+.form-section-header {
+	font-family: 'Playfair Display', serif;
+	font-size: 1.6rem;
+	color: var(--theme-color);
+	margin: 40px 0 10px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid var(--theme-color);
+}
+
+.form-section-header:first-of-type {
+	margin-top: 20px;
+}
+
+.form-section-intro {
+	font-size: 0.95rem;
+	color: #666;
+	margin-bottom: 20px;
+	line-height: 1.6;
+}
+
+.workshop-form .form-group {
+	margin-bottom: 22px;
+}
+
+.workshop-form .form-group label {
+	font-weight: 600;
+	color: #333;
+	margin-bottom: 6px;
+	display: block;
+	font-size: 0.95rem;
+}
+
+.workshop-form .form-group label .required {
+	color: #e74c3c;
+	margin-left: 2px;
+}
+
+.workshop-form .form-group .label-help {
+	display: block;
+	font-weight: 400;
+	font-size: 0.85rem;
+	color: #888;
+	margin-top: 2px;
+	margin-bottom: 6px;
+}
+
+.workshop-form input[type="text"],
+.workshop-form input[type="email"],
+.workshop-form input[type="tel"],
+.workshop-form input[type="number"],
+.workshop-form input[type="date"],
+.workshop-form select,
+.workshop-form textarea {
+	width: 100%;
+	padding: 12px 16px;
+	border: 1px solid #ddd;
+	border-radius: 8px;
+	font-size: 0.95rem;
+	font-family: 'Lato', sans-serif;
+	transition: border-color 0.3s ease;
+	background: #fff;
+}
+
+.workshop-form input:focus,
+.workshop-form select:focus,
+.workshop-form textarea:focus {
+	border-color: var(--theme-color);
+	outline: none;
+	box-shadow: 0 0 0 3px rgba(var(--theme-color-rgb, 76, 175, 80), 0.15);
+}
+
+.workshop-form textarea {
+	min-height: 100px;
+	resize: vertical;
+}
+
+.workshop-form .checkbox-group,
+.workshop-form .radio-group {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.workshop-form .checkbox-group label,
+.workshop-form .radio-group label {
+	font-weight: 400;
+	display: flex;
+	align-items: flex-start;
+	gap: 8px;
+	cursor: pointer;
+	font-size: 0.93rem;
+}
+
+.workshop-form .checkbox-group input[type="checkbox"],
+.workshop-form .radio-group input[type="radio"] {
+	width: auto;
+	margin-top: 3px;
+	flex-shrink: 0;
+}
+
+.workshop-form .form-group .option-description {
+	display: block;
+	font-size: 0.85rem;
+	color: #888;
+	margin-left: 24px;
+	margin-top: -4px;
+}
+
+.form-progress {
+	display: flex;
+	justify-content: center;
+	gap: 8px;
+	margin-bottom: 30px;
+	flex-wrap: wrap;
+}
+
+.form-progress .step {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: #e0e0e0;
+	color: #999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.85rem;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+.form-progress .step.active {
+	background: var(--theme-color);
+	color: #fff;
+}
+
+.form-progress .step.completed {
+	background: var(--theme-color);
+	color: #fff;
+	opacity: 0.7;
+}
+
+.form-step {
+	display: none;
+}
+
+.form-step.active {
+	display: block;
+}
+
+.form-nav-buttons {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+	gap: 15px;
+}
+
+.form-nav-buttons .btn-prev,
+.form-nav-buttons .btn-next,
+.form-nav-buttons .btn-submit {
+	padding: 12px 32px;
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.form-nav-buttons .btn-prev {
+	background: #e0e0e0;
+	color: #555;
+}
+
+.form-nav-buttons .btn-prev:hover {
+	background: #ccc;
+}
+
+.form-nav-buttons .btn-next,
+.form-nav-buttons .btn-submit {
+	background: var(--theme-color);
+	color: #fff;
+}
+
+.form-nav-buttons .btn-next:hover,
+.form-nav-buttons .btn-submit:hover {
+	opacity: 0.9;
+	transform: translateY(-2px);
+}
+
+.form-confirmation {
+	display: none;
+	text-align: center;
+	padding: 60px 20px;
+}
+
+.form-confirmation.active {
+	display: block;
+}
+
+.form-confirmation .check-icon {
+	font-size: 4rem;
+	color: var(--theme-color);
+	margin-bottom: 20px;
+}
+
+.form-confirmation h3 {
+	font-family: 'Playfair Display', serif;
+	font-size: 1.8rem;
+	margin-bottom: 15px;
+}
+
+.form-confirmation p {
+	font-size: 1.05rem;
+	color: #666;
+	line-height: 1.7;
+	max-width: 600px;
+	margin: 0 auto 10px;
+}
+
+/* Photo gallery section */
+.events-gallery {
+	padding: 40px 0 60px;
+}
+
+.events-gallery img {
+	border-radius: 12px;
+	width: 100%;
+	height: 250px;
+	object-fit: cover;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+</style>
+
+<!-- MailerLite Universal -->
+<script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1739117');
+</script>
+<!-- End MailerLite Universal -->
+
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+
+<div class="page-wrapper">
+	
+	<!-- Cursor -->
+	<div class="cursor"></div>
+	<div class="cursor-follower"></div>
+	<!-- Cursor End -->
+
+	<!-- Main Header / Header Style Two -->
+	<header class="main-header header-style-two">
+		
+		<!-- Header Top -->
+		<div class="header-top">
+			<div class="auto-container">
+				<div class="inner-container">
+					<div class="d-flex justify-content-between align-items-center flex-wrap">
+						<div class="left-box d-flex align-items-center flex-wrap">
+							<!-- Info List -->
+							<ul class="header-top_list d-flex flex-wrap">
+								<li><span class="icon flaticon-envelope"></span><a href="mailto:secretgardentv@gmail.com">secretgardentv@gmail.com</a></li>
+							</ul>
+						</div>
+						<div class="right-box d-flex align-items-center flex-wrap">
+							
+							<!-- Social Box -->
+							<div class="header-top_socials">
+                                            <a target="_blank" href="https://www.youtube.com/@SecretGardenTVforKids"><i class="fa-brands fa-youtube"></i></a>
+                                            <a target="_blank" href="https://www.instagram.com/secretgardentvforkids"><i class="fa-brands fa-instagram"></i></a>
+                                            <a target="_blank" href="https://www.tiktok.com/@secretgardentv"><i class="fa-brands fa-tiktok"></i></a>
+                                            <a target="_blank" href="https://www.facebook.com/profile.php?id=61568807675251"><i class="fa-brands fa-facebook"></i></a>
+                                            <a target="_blank" href="https://x.com/secretgarden_tv"><i class="fa-brands fa-x-twitter"></i></a>
+                            </div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- Header Lower -->
+		<div class="header-lower">
+			<div class="auto-container">
+				<div class="inner-container">
+					<div class="d-flex justify-content-between align-items-center flex-wrap">
+						
+						<div class="nav-outer d-flex align-items-center flex-wrap">
+							<!-- Logo Box -->
+							<div class="logo-box">
+								<div class="logo"><a href="index.html"><img src="assets/images/sgtv_logo_transparent_1.png" alt="" title="kidscamp"></a></div>
+							</div>
+							<!-- Main Menu -->
+							<nav class="main-menu navbar-expand-md">
+								<div class="navbar-header">
+									<!-- Toggle Button -->    	
+									<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+										<span class="icon-bar"></span>
+									</button>
+								</div>
+								
+								<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                    <ul class="navigation clearfix">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li><a href="about.html">About us</a></li>
+                                        <li><a href="program.html">Programs</a></li>
+                                        <li><a href="blog.html">Blog</a></li>
+                                        <li><a href="faq.html">FAQs</a></li>
+                                        <li class="current"><a href="live-events.html">Live Events</a></li>
+                                        <li><a href="donate.html">Donate</a></li>
+                                    </ul>
+                                </div>
+							</nav>
+						</div>
+
+						<!-- Main Menu End-->
+						<div class="outer-box d-flex align-items-center flex-wrap">
+							
+							<!-- Button Box -->
+							<div class="main-header_button">
+								<a class="ml-onclick-form theme-btn btn-style-one" href="javascript:void(0)" onclick="ml('show', 'Pcso7D', true)">
+									<span class="btn-wrap">
+										<span class="text-one">Join Our Newsletter</span>
+									</span>
+								</a>
+							</div>
+
+							<!-- Mobile Navigation Toggler -->
+							<div class="mobile-nav-toggler"><span class="icon flaticon-menu"></span></div>
+
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--End Header Lower-->
+		
+		<!-- Mobile Menu  -->
+		<div class="mobile-menu">
+			<div class="menu-backdrop"></div>
+			<div class="close-btn"><span class="icon flaticon-close"></span></div>
+			
+			<nav class="menu-box">
+				<div class="nav-logo"><a href="index.html"><img src="assets/images/14.png" alt="" title=""></a></div>
+				<div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+			</nav>
+		</div>
+		<!-- End Mobile Menu -->
+	
+	</header>
+	<!-- End Main Header -->
+
+	<!-- Page Title -->
+    <section class="page-title" style="background-image: url('assets/images/main-slider/donate_banner.jpg'); background-size: cover;">
+		<div class="color-one"></div>
+		<div class="color-two"></div>
+		<div class="color-four"></div>
+        <div class="auto-container">
+			<h2>Live Events</h2>
+			<ul class="bread-crumb clearfix">
+				<li>Bringing the Garden to your community through live children's programs, workshops, and educator trainings.</li>
+			</ul>
+        </div>
+		<!--Waves Container-->
+        <div>
+          <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+          <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g class="parallaxx">
+          <use xlink:href="#gentle-wave" x="148" y="0" fill="rgba(255,255,255,0.7" />
+          <use xlink:href="#gentle-wave" x="100" y="3" fill="rgba(255,255,255,0.5)" />
+          <use xlink:href="#gentle-wave" x="70" y="5" fill="rgba(255,255,255,0.3)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+          </g>
+          </svg>
+        </div>
+        <!--Waves end-->
+    </section>
+    <!-- End Page Title -->
+
+	<!-- Introduction Section -->
+	<section class="live-events-intro">
+		<div class="auto-container">
+			<div class="row clearfix justify-content-center">
+				<div class="col-lg-8 col-md-10 col-sm-12 text-center">
+					<div class="sec-title centered wow fadeInUp" data-wow-delay="0.1s">
+						<h2>Bring Secret Garden TV to Your Community</h2>
+					</div>
+					<div class="intro-text wow fadeInUp" data-wow-delay="0.2s">
+						<p>Secret Garden TV offers live children's programs, storytime gatherings, educator trainings, and family/community workshops rooted in Islamic values, joyful learning, imagination, reflection, and play.</p>
+						<p>Our live events are designed to help children, families, and educators encounter Islam through stories, wonder, creativity, and the signs of Allah in the world around us.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Introduction -->
+
+	<!-- Event Types Section -->
+	<section class="event-types-section">
+		<div class="auto-container">
+			<div class="sec-title centered wow fadeInUp" data-wow-delay="0.1s">
+				<h2>Our Live Event Offerings</h2>
+			</div>
+			<div class="row clearfix">
+				
+				<!-- Classroom of Allah's Signs -->
+				<div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.1s">
+					<div class="event-type-card">
+						<div class="card-icon"><i class="fa-solid fa-sun"></i></div>
+						<h4>Classroom of Allah's Signs</h4>
+						<p>A guided Allah's Secret Signs screening paired with a hands-on activity that helps children encounter an ayah through reflection, creativity, and play.</p>
+					</div>
+				</div>
+
+				<!-- Garden Educator Training -->
+				<div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.2s">
+					<div class="event-type-card">
+						<div class="card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+						<h4>Garden Educator Training</h4>
+						<p>Professional development for teachers, Sunday school educators, parents, and mentors rooted in SGTV's whole-child approach to Islamic education, imagination, presence, and purposeful learning.</p>
+					</div>
+				</div>
+
+				<!-- Ayatology -->
+				<div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.3s">
+					<div class="event-type-card">
+						<div class="card-icon"><i class="fa-solid fa-book-open"></i></div>
+						<h4>Ayatology: Knowing the Signs</h4>
+						<p>A lecture or workshop for parents, educators, and community leaders introducing Ayatology and SGTV's core values as a framework for raising conscious, compassionate, and purposeful children.</p>
+					</div>
+				</div>
+
+				<!-- Secret Garden Storytime -->
+				<div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.4s">
+					<div class="event-type-card">
+						<div class="card-icon"><i class="fa-solid fa-book-bookmark"></i></div>
+						<h4>Secret Garden Storytime</h4>
+						<p>A live children's book read-aloud event featuring Secret Garden TV physical books, paired with a guided activity that brings story, character, and wonder into a warm community setting.</p>
+					</div>
+				</div>
+
+				<!-- Custom Event -->
+				<div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.5s">
+					<div class="event-type-card">
+						<div class="card-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+						<h4>Custom SGTV Event</h4>
+						<p>Not sure which format is right? We can recommend the best event design for your community's needs, audience, and goals.</p>
+					</div>
+				</div>
+
+				<!-- Donate/Support -->
+				<div class="col-lg-4 col-md-6 col-sm-12 wow fadeInUp" data-wow-delay="0.6s">
+					<div class="event-type-card">
+						<div class="card-icon"><i class="fa-solid fa-heart"></i></div>
+						<h4>Support Live Events</h4>
+						<p>Your generous donations help bring Secret Garden TV live experiences to communities that need them most. <a href="donate.html">Donate today</a> to help plant seeds of knowledge and wonder.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+	<!-- End Event Types -->
+
+	<!-- Workshop Request Form Section -->
+	<section class="workshop-form-section" id="request-form">
+		<div class="auto-container">
+			<div class="row clearfix justify-content-center">
+				<div class="col-lg-8 col-md-10 col-sm-12">
+					<div class="registration-one_form-outer wow fadeInUp" data-wow-delay="0.2s">
+						<div class="text-center mb-4">
+							<h3 class="registration-one_title">SGTV Live Events &amp; Workshop Request Form</h3>
+							<p class="intro-text" style="font-size: 0.95rem;">Please complete this form so our team can understand your community, your event goals, your audience, your preferred timing, and the basic venue needs.</p>
+							<p style="font-size: 0.9rem; color: #888;">After reviewing your request, an SGTV team member will follow up to schedule a planning conversation. Submitting this form does not automatically confirm an event.</p>
+						</div>
+
+						<!-- Progress Steps -->
+						<div class="form-progress">
+							<div class="step active" data-step="1">1</div>
+							<div class="step" data-step="2">2</div>
+							<div class="step" data-step="3">3</div>
+						</div>
+
+						<form id="workshop-form" class="workshop-form default-form" novalidate>
+
+							<!-- ============================================ -->
+							<!-- SECTION 1: Organization & Contact Info       -->
+							<!-- ============================================ -->
+							<div class="form-step active" data-step="1">
+								<h4 class="form-section-header">Section 1: Organization &amp; Contact Information</h4>
+
+								<!-- Q1 -->
+								<div class="form-group">
+									<label>1. Name of organization, masjid, school, or community group <span class="required">*</span></label>
+									<input type="text" name="org_name" required>
+								</div>
+
+								<!-- Q2 -->
+								<div class="form-group">
+									<label>2. Type of organization <span class="required">*</span></label>
+									<div class="radio-group">
+										<label><input type="radio" name="org_type" value="Masjid / Islamic center" required> Masjid / Islamic center</label>
+										<label><input type="radio" name="org_type" value="Islamic school"> Islamic school</label>
+										<label><input type="radio" name="org_type" value="Sunday school / weekend school"> Sunday school / weekend school</label>
+										<label><input type="radio" name="org_type" value="Homeschool group"> Homeschool group</label>
+										<label><input type="radio" name="org_type" value="Community organization"> Community organization</label>
+										<label><input type="radio" name="org_type" value="Conference / retreat"> Conference / retreat</label>
+										<label><input type="radio" name="org_type" value="Camp program"> Camp program</label>
+										<label><input type="radio" name="org_type" value="Family group"> Family group</label>
+										<label><input type="radio" name="org_type" value="Other"> Other</label>
+									</div>
+								</div>
+
+								<!-- Q3 -->
+								<div class="form-group">
+									<label>3. Event location <span class="required">*</span></label>
+									<span class="label-help">Please include city, state, and address if known.</span>
+									<input type="text" name="event_location" required>
+								</div>
+
+								<!-- Q4 -->
+								<div class="form-group">
+									<label>4. Name of main contact person <span class="required">*</span></label>
+									<input type="text" name="contact_name" required>
+								</div>
+
+								<!-- Q5 -->
+								<div class="form-group">
+									<label>5. Email address <span class="required">*</span></label>
+									<input type="email" name="contact_email" required>
+								</div>
+
+								<!-- Q6 -->
+								<div class="form-group">
+									<label>6. Phone number <span class="required">*</span></label>
+									<input type="tel" name="contact_phone" required>
+								</div>
+
+								<div class="form-nav-buttons">
+									<div></div>
+									<button type="button" class="btn-next">Next <i class="fa-solid fa-arrow-right"></i></button>
+								</div>
+							</div>
+
+							<!-- ============================================ -->
+							<!-- SECTION 2: Event Details                     -->
+							<!-- ============================================ -->
+							<div class="form-step" data-step="2">
+								<h4 class="form-section-header">Section 2: Event Details</h4>
+								<p class="form-section-intro">Help us understand what kind of event you're looking for and who will be attending.</p>
+
+								<!-- Q7 -->
+								<div class="form-group">
+									<label>7. Which Secret Garden TV live event or workshop are you interested in? <span class="required">*</span></label>
+									<div class="checkbox-group">
+										<label><input type="checkbox" name="event_interest" value="Classroom of Allah's Signs"> Classroom of Allah's Signs</label>
+										<span class="option-description">A guided Allah's Secret Signs screening paired with a hands-on activity that helps children encounter an ayah through reflection, creativity, and play.</span>
+										
+										<label><input type="checkbox" name="event_interest" value="Garden Educator Training"> Garden Educator Training</label>
+										<span class="option-description">Professional development for teachers, Sunday school educators, parents, and mentors rooted in SGTV's whole-child approach to Islamic education, imagination, presence, and purposeful learning.</span>
+										
+										<label><input type="checkbox" name="event_interest" value="Ayatology: Knowing the Signs"> Ayatology: Knowing the Signs</label>
+										<span class="option-description">A lecture or workshop for parents, educators, and community leaders introducing Ayatology and SGTV's core values as a framework for raising conscious, compassionate, and purposeful children.</span>
+										
+										<label><input type="checkbox" name="event_interest" value="Secret Garden Storytime"> Secret Garden Storytime</label>
+										<span class="option-description">A live children's book read-aloud event featuring Secret Garden TV physical books, paired with a guided activity that brings story, character, and wonder into a warm community setting.</span>
+										
+										<label><input type="checkbox" name="event_interest" value="Custom SGTV Event / Not sure yet"> Custom SGTV Event / Not sure yet</label>
+										<span class="option-description">We would like SGTV to recommend the best format for our community.</span>
+									</div>
+								</div>
+
+								<!-- Q8 -->
+								<div class="form-group">
+									<label>8. Who is the primary audience for the event? <span class="required">*</span></label>
+									<div class="checkbox-group">
+										<label><input type="checkbox" name="audience" value="Children ages 3-5"> Children ages 3–5</label>
+										<label><input type="checkbox" name="audience" value="Children ages 5-8"> Children ages 5–8</label>
+										<label><input type="checkbox" name="audience" value="Children ages 9-12"> Children ages 9–12</label>
+										<label><input type="checkbox" name="audience" value="Parents and families"> Parents and families</label>
+										<label><input type="checkbox" name="audience" value="Teachers / educators"> Teachers / educators</label>
+										<label><input type="checkbox" name="audience" value="Sunday school staff"> Sunday school staff</label>
+										<label><input type="checkbox" name="audience" value="Community leaders"> Community leaders</label>
+										<label><input type="checkbox" name="audience" value="Mixed-age family audience"> Mixed-age family audience</label>
+										<label><input type="checkbox" name="audience" value="Other"> Other</label>
+									</div>
+								</div>
+
+								<!-- Q9 -->
+								<div class="form-group">
+									<label>9. Estimated number of children attending <span class="required">*</span></label>
+									<input type="number" name="num_children" min="0" required>
+								</div>
+
+								<!-- Q10 -->
+								<div class="form-group">
+									<label>10. Preferred event date <span class="required">*</span></label>
+									<input type="date" name="preferred_date" required>
+								</div>
+
+								<div class="form-nav-buttons">
+									<button type="button" class="btn-prev"><i class="fa-solid fa-arrow-left"></i> Previous</button>
+									<button type="button" class="btn-next">Next <i class="fa-solid fa-arrow-right"></i></button>
+								</div>
+							</div>
+
+							<!-- ============================================ -->
+							<!-- SECTION 3: Final Notes & Confirmation        -->
+							<!-- ============================================ -->
+							<div class="form-step" data-step="3">
+								<h4 class="form-section-header">Section 3: Final Notes &amp; Confirmation</h4>
+								<p class="form-section-intro">Thank you for your interest. These final questions help SGTV review your request and prepare for a meaningful follow-up conversation.</p>
+
+								<!-- Q11 -->
+								<div class="form-group">
+									<label>11. Is there anything else SGTV should know about your community, event goals, venue, audience, or expectations?</label>
+									<textarea name="additional_notes"></textarea>
+								</div>
+
+								<!-- Q12 -->
+								<div class="form-group">
+									<label>12. Final confirmation <span class="required">*</span></label>
+									<div class="checkbox-group">
+										<label><input type="checkbox" name="confirmation" value="no_auto_confirm" required> I understand that submitting this form does not automatically confirm the event.</label>
+										<label><input type="checkbox" name="confirmation" value="email_followup" required> I understand that SGTV will review this request and follow up by email to discuss details including availability, format, venue, costs, and next steps.</label>
+										<label><input type="checkbox" name="confirmation" value="contact_email" required> I understand that questions can be sent to community@secretgardentv.com.</label>
+									</div>
+								</div>
+
+								<div class="form-nav-buttons">
+									<button type="button" class="btn-prev"><i class="fa-solid fa-arrow-left"></i> Previous</button>
+									<button type="submit" class="btn-submit">Submit Request <i class="fa-solid fa-paper-plane"></i></button>
+								</div>
+							</div>
+
+						</form>
+
+						<!-- Confirmation Message -->
+						<div class="form-confirmation" id="form-confirmation">
+							<div class="check-icon"><i class="fa-solid fa-circle-check"></i></div>
+							<h3>Thank You!</h3>
+							<p>Thank you for requesting a Secret Garden TV for Kids live event.</p>
+							<p>Our team has received your request and will review the details carefully. A member of Secret Garden TV will follow up by email to discuss availability, event format, timing, venue needs, technical setup, costs, and next steps.</p>
+							<p>For questions, please contact:<br><strong><a href="mailto:community@secretgardentv.com">community@secretgardentv.com</a></strong></p>
+							<p><em>The world is full of signs, and we look forward to exploring how we may bring that garden of learning to your community.</em></p>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End Workshop Form -->
+
+	<!-- Main Footer -->
+	<footer class="footer-style_two">
+		<div class="footer-two_icon" style="background-image: url(assets/images/icons/footer-icon-1.png)"></div>
+		<div class="footer-two_icon-two" style="background-image: url(assets/images/icons/footer-icon-2.png)"></div>
+		<div class="footer-two_icon-three" style="background-image: url(assets/images/icons/footer-icon-3.png)"></div>
+		<div class="outer-container">
+			<div class="auto-container">
+			</div>
+			
+			<!-- Widgets Section -->
+			<div class="widgets-section">
+				<div class="auto-container">
+					<div class="row clearfix">
+								
+						<!-- Big Column -->
+						<div class="big-column col-lg-6 col-md-12 col-sm-12">
+							<div class="row clearfix">
+
+								<!-- Footer Column -->
+								<div class="footer_column col-lg-6 col-md-6 col-sm-12">
+									<div class="footer-widget">
+										<div class="footer-logo"><a href="index.html"><img src="assets/images/sgtv_logo_transparent_1.png" alt="" title=""></a></div>
+										<div class="footer-text">Secret Garden TV for Kids is an organization devoted to the development of educational content.</div>
+										<!-- Social Box -->
+										<div class="footer_socials">
+											<a target="_blank" href="https://www.youtube.com/@SecretGardenTVforKids"><i class="fa-brands fa-youtube"></i></a>
+											<a target="_blank" href="https://www.instagram.com/secretgardentvforkids"><i class="fa-brands fa-instagram"></i></a>
+											<a target="_blank" href="https://www.tiktok.com/@secretgardentv"><i class="fa-brands fa-tiktok"></i></a>
+											<a target="_blank" href="https://www.facebook.com/profile.php?id=61568807675251"><i class="fa-brands fa-facebook"></i></a>
+											<a target="_blank" href="https://x.com/secretgarden_tv"><i class="fa-brands fa-x-twitter"></i></a>
+										</div>
+									</div>
+								</div>
+
+								<!-- Footer Column -->
+								<div class="footer_column col-lg-6 col-md-6 col-sm-12">
+									<div class="footer-widget links-widget">
+                                        <h5 class="footer-title"><a href="index.html">Home</a></h5>
+                                        <h5 class="footer-title"><a href="about.html">About Us</a></h5>
+                                        <h5 class="footer-title"><a href="program.html">Programs</a></h5>
+                                        <h5 class="footer-title"><a href="live-events.html">Live Events</a></h5>
+                                        <h5 class="footer-title"><a href="donate.html">Donate</a></h5>
+                                    </div>
+								</div>
+
+							</div>
+						</div>
+
+						<!-- Big Column -->
+						<div class="big-column col-lg-6 col-md-12 col-sm-12">
+							<div class="row clearfix">
+
+								<!-- Footer Column -->
+								<div class="footer_column col-lg-4 col-md-6 col-sm-12">
+									<div class="footer-widget links-widget">
+										<h5 class="footer-title">Resources</h5>
+										<ul class="footer-list">
+											<li><a href="blog.html">Blog</a></li>
+											<li><a href="faq.html">FAQs</a></li>
+										</ul>
+									</div>
+								</div>
+
+								<!-- Footer Column -->
+								<div class="footer_column col-lg-8 col-md-6 col-sm-12">
+									<div class="footer-widget newsletter-widget">
+										<h5 class="footer-title">Our Newsletter</h5>
+										<a class="ml-onclick-form" href="javascript:void(0)" onclick="ml('show', 'Pcso7D', true)">
+											<div class="newsletter_footer-text">Click here to sign up to our newsletter to stay updated.</div>
+										</a>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- End Widgets Section -->
+		
+			<!-- Footer Bottom -->
+			<div class="footer-bottom">
+				<div class="auto-container">
+					<div class="inner-container">
+						<div class="row clearfix">
+							<!-- Column -->
+							<div class="column col-lg-6 col-md-12 col-sm-12">
+								<div class="copyright">Copyright &copy; 2026 Secret Garden TV for Kids. All Rights Reserved.</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</footer>
+	<!-- End Main Footer -->
+	
+	<!-- Search Popup -->
+	<div class="search-popup">
+		<div class="color-layer"></div>
+		<button class="close-search"><span class="flaticon-close"></span></button>
+		<form method="post" action="blog.html">
+			<div class="form-group">
+				<input type="search" name="search-field" value="" placeholder="Search Here" required="">
+				<button class="fa fa-solid fa-magnifying-glass fa-fw" type="submit"></button>
+			</div>
+		</form>
+	</div>
+	<!-- End Search Popup -->
+	
+</div>
+<!-- End PageWrapper -->
+
+<div class="progress-wrap">
+	<svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+		<path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/>
+	</svg>
+</div>
+
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/appear.js"></script>
+<script src="assets/js/parallax.min.js"></script>
+<script src="assets/js/tilt.jquery.min.js"></script>
+<script src="assets/js/jquery.paroller.min.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/backtotop.js"></script>
+<script src="assets/js/odometer.js"></script>
+<script src="assets/js/parallax-scroll.js"></script>
+
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/SplitText.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/ScrollToPlugin.min.js"></script>
+<script src="assets/js/ScrollSmoother.min.js"></script>
+
+<script src="assets/js/validate.js"></script>
+<script src="assets/js/magnific-popup.min.js"></script>
+<script src="assets/js/nav-tool.js"></script>
+<script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="assets/js/newsletter.js"></script>
+
+<script>
+(function() {
+  const form = document.getElementById('workshop-form');
+  const steps = document.querySelectorAll('.form-step');
+  const progressSteps = document.querySelectorAll('.form-progress .step');
+  const confirmation = document.getElementById('form-confirmation');
+  let currentStep = 1;
+  const totalSteps = steps.length;
+
+  function showStep(step) {
+    steps.forEach(s => s.classList.remove('active'));
+    progressSteps.forEach(p => {
+      const pStep = parseInt(p.dataset.step);
+      p.classList.remove('active', 'completed');
+      if (pStep === step) p.classList.add('active');
+      else if (pStep < step) p.classList.add('completed');
+    });
+    const target = document.querySelector(`.form-step[data-step="${step}"]`);
+    if (target) {
+      target.classList.add('active');
+      // Scroll to top of form
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    currentStep = step;
+  }
+
+  function validateStep(step) {
+    const currentStepEl = document.querySelector(`.form-step[data-step="${step}"]`);
+    const requiredInputs = currentStepEl.querySelectorAll('input[required], select[required], textarea[required]');
+    let valid = true;
+
+    requiredInputs.forEach(input => {
+      if (input.type === 'radio') {
+        const radioGroup = currentStepEl.querySelectorAll(`input[name="${input.name}"]`);
+        const checked = Array.from(radioGroup).some(r => r.checked);
+        if (!checked) valid = false;
+      } else if (input.type === 'checkbox') {
+        // For required checkboxes, check if at least one in the group is checked
+        // Only validate once per name group
+        const name = input.name;
+        const checkboxGroup = currentStepEl.querySelectorAll(`input[name="${name}"]`);
+        const checked = Array.from(checkboxGroup).some(c => c.checked);
+        if (!checked) valid = false;
+      } else {
+        if (!input.value.trim()) valid = false;
+      }
+    });
+
+    // Check for required checkbox groups (confirmation checkboxes - all must be checked)
+    if (step === 3) {
+      const confirmBoxes = currentStepEl.querySelectorAll('input[name="confirmation"]');
+      const allChecked = Array.from(confirmBoxes).every(c => c.checked);
+      if (!allChecked) valid = false;
+    }
+
+    if (!valid) {
+      // Trigger native validation UI
+      const firstInvalid = currentStepEl.querySelector(':invalid');
+      if (firstInvalid) {
+        firstInvalid.reportValidity();
+      } else {
+        alert('Please complete all required fields before continuing.');
+      }
+    }
+
+    return valid;
+  }
+
+  // Next buttons
+  document.querySelectorAll('.btn-next').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (validateStep(currentStep)) {
+        showStep(currentStep + 1);
+      }
+    });
+  });
+
+  // Previous buttons
+  document.querySelectorAll('.btn-prev').forEach(btn => {
+    btn.addEventListener('click', () => {
+      showStep(currentStep - 1);
+    });
+  });
+
+  // Progress step clicks
+  progressSteps.forEach(p => {
+    p.addEventListener('click', () => {
+      const target = parseInt(p.dataset.step);
+      if (target < currentStep) {
+        showStep(target);
+      }
+    });
+  });
+
+  // Form submission
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    if (!validateStep(currentStep)) return;
+
+    // Collect all form data
+    const formData = new FormData(form);
+    const data = {};
+    for (const [key, value] of formData.entries()) {
+      if (data[key]) {
+        if (Array.isArray(data[key])) {
+          data[key].push(value);
+        } else {
+          data[key] = [data[key], value];
+        }
+      } else {
+        data[key] = value;
+      }
+    }
+
+    // Build email body
+    const subject = encodeURIComponent('SGTV Live Event Request: ' + (data.org_name || 'New Request'));
+    const bodyLines = [];
+    bodyLines.push('SGTV Live Events & Workshop Request');
+    bodyLines.push('===================================');
+    bodyLines.push('');
+    bodyLines.push('ORGANIZATION & CONTACT');
+    bodyLines.push('Organization: ' + (data.org_name || ''));
+    bodyLines.push('Type: ' + (data.org_type || ''));
+    bodyLines.push('Location: ' + (data.event_location || ''));
+    bodyLines.push('Contact: ' + (data.contact_name || ''));
+    bodyLines.push('Email: ' + (data.contact_email || ''));
+    bodyLines.push('Phone: ' + (data.contact_phone || ''));
+    bodyLines.push('');
+    bodyLines.push('EVENT DETAILS');
+    const interests = Array.isArray(data.event_interest) ? data.event_interest.join(', ') : (data.event_interest || '');
+    bodyLines.push('Events Interested In: ' + interests);
+    const audiences = Array.isArray(data.audience) ? data.audience.join(', ') : (data.audience || '');
+    bodyLines.push('Audience: ' + audiences);
+    bodyLines.push('Children Count: ' + (data.num_children || ''));
+    bodyLines.push('Preferred Date: ' + (data.preferred_date || ''));
+    bodyLines.push('');
+    bodyLines.push('ADDITIONAL');
+    bodyLines.push('Additional Notes: ' + (data.additional_notes || ''));
+
+    const body = encodeURIComponent(bodyLines.join('\n'));
+    const mailtoUrl = 'mailto:community@secretgardentv.com?subject=' + subject + '&body=' + body;
+
+    // Open mailto link
+    window.location.href = mailtoUrl;
+
+    // Show confirmation
+    form.style.display = 'none';
+    document.querySelector('.form-progress').style.display = 'none';
+    confirmation.classList.add('active');
+    confirmation.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+})();
+</script>
+
+<script>
+	var url = window.location.href;
+	url = url.split('.html')[0];
+	window.history.replaceState( null, null, url );
+</script>
+
+</body>
+</html>
