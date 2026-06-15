@@ -1,0 +1,352 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: grid;
+  align-items: start;
+  overflow: clip;
+  isolation: isolate;
+  background: var(--canopy-800);
+  padding-bottom: 0;
+}
+
+/* ---------- Sky ---------- */
+.sky {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    180deg,
+    oklch(0.95 0.045 96) 0%,
+    oklch(0.9 0.07 110) 26%,
+    var(--sprout-300) 52%,
+    var(--leaf-500) 74%,
+    var(--canopy-700) 100%
+  );
+}
+.sun {
+  position: absolute;
+  top: -12%;
+  right: 6%;
+  width: min(46vw, 540px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    oklch(0.97 0.08 95) 0%,
+    oklch(0.93 0.12 92 / 0.55) 38%,
+    transparent 68%
+  );
+  filter: blur(2px);
+}
+.haze {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 70% at 50% 8%, oklch(1 0 0 / 0.35), transparent 60%);
+}
+
+/* ---------- Scenic layers ---------- */
+.hills,
+.trees {
+  position: absolute;
+  left: -3%;
+  width: 106%;
+  z-index: 1;
+  pointer-events: none;
+}
+.hills {
+  bottom: 6%;
+  height: 46%;
+}
+.trees {
+  bottom: 4%;
+  height: 40%;
+}
+
+/* ---------- Content ---------- */
+.content {
+  position: relative;
+  z-index: var(--z-content);
+  text-align: center;
+  padding-top: clamp(6.5rem, 15vh, 11rem);
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* Soft light bloom so copy stays legible over the cast below */
+.content::before {
+  content: '';
+  position: absolute;
+  top: 6%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(760px, 92vw);
+  height: 92%;
+  background: radial-gradient(
+    60% 52% at 50% 42%,
+    oklch(0.96 0.04 96 / 0.92),
+    oklch(0.94 0.05 105 / 0.55) 48%,
+    transparent 78%
+  );
+  filter: blur(6px);
+  z-index: -1;
+  pointer-events: none;
+}
+.tag {
+  margin-bottom: 1.4rem;
+}
+.title {
+  font-size: var(--step-5);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--canopy-950);
+  line-height: 0.96;
+}
+.line {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.06em;
+}
+.line > span {
+  display: inline-block;
+}
+.play {
+  font-style: normal;
+  position: relative;
+  color: var(--bloom-500);
+  white-space: nowrap;
+}
+.play::after {
+  content: '';
+  position: absolute;
+  left: -2%;
+  right: -2%;
+  bottom: 0.06em;
+  height: 0.16em;
+  border-radius: 100px;
+  background: var(--honey-500);
+  z-index: -1;
+  transform: rotate(-1.2deg);
+}
+.sub {
+  margin-top: 1.5rem;
+  max-width: 33ch;
+  font-size: var(--step-1);
+  font-weight: 500;
+  color: oklch(0.34 0.05 152);
+  line-height: 1.45;
+}
+.ctas {
+  margin-top: 2.2rem;
+  display: flex;
+  gap: 0.9rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ---------- Cast ---------- */
+.cast {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  z-index: 8;
+  width: min(1180px, 96vw);
+  height: clamp(240px, 46vh, 500px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: clamp(-2rem, -4vw, 0rem);
+  pointer-events: none;
+}
+.cast img {
+  filter: drop-shadow(0 24px 24px oklch(0.24 0.05 158 / 0.28));
+  will-change: transform;
+}
+.baba {
+  height: 86%;
+  margin-right: -3%;
+  z-index: 1;
+  animation: bob 5.5s var(--ease-soft) infinite;
+}
+.grandma {
+  height: 78%;
+  margin-left: -3%;
+  z-index: 1;
+  animation: bob 6.2s var(--ease-soft) infinite 0.4s;
+}
+.ali {
+  height: 70%;
+  z-index: 3;
+  margin-inline: -2%;
+  align-self: flex-end;
+  animation: bob 5s var(--ease-soft) infinite 0.2s;
+}
+@keyframes bob {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-0.6deg);
+  }
+}
+
+/* ---------- Foreground fronds ---------- */
+.frondLeft,
+.frondRight {
+  position: absolute;
+  bottom: -2%;
+  width: clamp(180px, 26vw, 360px);
+  height: auto;
+  z-index: 9;
+  pointer-events: none;
+}
+.frondLeft {
+  left: -2%;
+  transform-origin: bottom left;
+  animation: sway 7s ease-in-out infinite;
+}
+.frondRight {
+  right: -2%;
+  transform-origin: bottom right;
+  animation: sway 8s ease-in-out infinite reverse;
+}
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2.4deg);
+  }
+}
+
+/* ---------- Ground ---------- */
+.ground {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 16%;
+  z-index: 2;
+  background: linear-gradient(180deg, var(--canopy-700), var(--canopy-900));
+  box-shadow: 0 -30px 60px -20px oklch(0.24 0.05 158 / 0.4);
+  border-radius: 50% 50% 0 0 / 18% 18% 0 0;
+}
+
+/* ---------- Parrot ---------- */
+.parrot {
+  position: absolute;
+  left: -12%;
+  top: 32%;
+  width: clamp(90px, 11vw, 150px);
+  z-index: 9;
+  filter: drop-shadow(0 14px 16px oklch(0.24 0.05 158 / 0.3));
+  pointer-events: none;
+}
+
+/* ---------- Pollen ---------- */
+.pollen {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
+  pointer-events: none;
+}
+.pollen span {
+  position: absolute;
+  bottom: -10px;
+  left: calc(var(--i) * 6.6% + 2%);
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, oklch(0.97 0.1 96), oklch(0.84 0.15 92));
+  opacity: 0;
+  filter: blur(0.3px);
+  animation: rise calc(11s + var(--i) * 1s) linear infinite;
+  animation-delay: calc(var(--i) * -1.5s);
+}
+@keyframes rise {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.6);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-92vh) translateX(40px) scale(1);
+    opacity: 0;
+  }
+}
+
+/* ---------- Scroll cue ---------- */
+.cue {
+  position: absolute;
+  left: 50%;
+  bottom: 1.4rem;
+  transform: translateX(-50%);
+  z-index: var(--z-content);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--ink-on-dark);
+  text-shadow: 0 1px 8px oklch(0.24 0.05 158 / 0.5);
+}
+.cue svg {
+  animation: nudge 1.8s var(--ease-soft) infinite;
+}
+@keyframes nudge {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6px);
+  }
+}
+
+@media (max-width: 760px) {
+  .content {
+    padding-top: clamp(6rem, 18vh, 9rem);
+  }
+  .sub {
+    max-width: 28ch;
+  }
+  .cast {
+    height: clamp(220px, 40vh, 360px);
+    gap: 0;
+  }
+  .baba {
+    height: 78%;
+  }
+  .grandma {
+    height: 70%;
+  }
+  .ali {
+    height: 62%;
+  }
+  .cue {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .baba,
+  .grandma,
+  .ali,
+  .frondLeft,
+  .frondRight,
+  .pollen span,
+  .cue svg,
+  .parrot {
+    animation: none;
+  }
+}

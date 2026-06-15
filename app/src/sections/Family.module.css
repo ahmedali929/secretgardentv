@@ -1,0 +1,140 @@
+.family {
+  position: relative;
+  background: linear-gradient(180deg, var(--dew), var(--dew-sunk));
+  padding: clamp(4rem, 9vh, 7rem) 0 clamp(4.5rem, 10vh, 8rem);
+}
+
+.head {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: clamp(2.5rem, 6vh, 4rem);
+}
+.tag {
+  margin-bottom: 1.1rem;
+}
+.title {
+  font-size: var(--step-4);
+  color: var(--canopy-900);
+}
+.intro {
+  margin-top: 1.1rem;
+  max-width: 44ch;
+  font-size: var(--step-1);
+  color: var(--bark-soft);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 1.6rem);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-lg);
+  background: oklch(1 0 0 / 0.6);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s var(--ease-out-expo);
+}
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.stage {
+  position: relative;
+  height: clamp(220px, 24vw, 300px);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--bg) 26%, white);
+}
+.blob {
+  position: absolute;
+  bottom: -38%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150%;
+  aspect-ratio: 1;
+  border-radius: 46% 54% 50% 50% / 60% 60% 40% 40%;
+  background: var(--bg);
+  opacity: 0.9;
+  transition: transform 0.6s var(--ease-out-expo);
+}
+.card:hover .blob {
+  transform: translateX(-50%) scale(1.06) rotate(4deg);
+}
+.char {
+  position: relative;
+  z-index: 1;
+  height: 96%;
+  transform: scale(var(--scale)) translateY(2%);
+  transform-origin: bottom center;
+  filter: drop-shadow(0 16px 18px oklch(0.24 0.05 158 / 0.32));
+  transition: transform 0.5s var(--ease-out-expo);
+}
+.card:hover .char {
+  transform: scale(calc(var(--scale) * 1.05)) translateY(-2%);
+}
+
+/* Babagha floats rather than stands */
+.card:last-child .char {
+  align-self: center;
+  margin-bottom: 8%;
+  animation: floaty 4s ease-in-out infinite;
+}
+@keyframes floaty {
+  0%,
+  100% {
+    transform: scale(var(--scale)) translateY(0) rotate(-3deg);
+  }
+  50% {
+    transform: scale(var(--scale)) translateY(-10px) rotate(4deg);
+  }
+}
+
+.meta {
+  padding: 1.2rem 1.3rem 1.5rem;
+}
+.name {
+  font-size: var(--step-2);
+  color: var(--canopy-900);
+}
+.role {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--bloom-500);
+  margin-top: 0.1rem;
+}
+.line {
+  margin-top: 0.6rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--bark-soft);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .stage {
+    height: 280px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card:last-child .char {
+    animation: none;
+  }
+}

@@ -1,0 +1,82 @@
+/* ============================================================
+   Secret Garden TV — design tokens
+   Palette: a lush storybook garden. Deep canopy greens carry the
+   brand; honey-marigold (Ali's hoodie) is the accent; bloom-coral
+   and sky add life. All OKLCH. Cream is reserved for artwork only,
+   never the page body (avoids the warm-neutral AI default).
+   ============================================================ */
+:root {
+  /* Greens — the canopy ramp (dark -> fresh) */
+  --canopy-950: oklch(0.24 0.045 158);
+  --canopy-900: oklch(0.3 0.06 156);
+  --canopy-800: oklch(0.37 0.078 154);
+  --canopy-700: oklch(0.45 0.095 152);
+  --leaf-600: oklch(0.56 0.12 150);
+  --leaf-500: oklch(0.66 0.14 147);
+  --sprout-400: oklch(0.77 0.16 143);
+  --sprout-300: oklch(0.86 0.13 140);
+
+  /* Accents */
+  --honey-600: oklch(0.74 0.155 78);
+  --honey-500: oklch(0.82 0.158 83);
+  --honey-400: oklch(0.88 0.135 88);
+  --bloom-500: oklch(0.69 0.17 24); /* coral flower */
+  --bloom-400: oklch(0.78 0.13 28);
+  --berry-500: oklch(0.62 0.14 350); /* soft pink-violet */
+  --sky-300: oklch(0.86 0.06 230);
+  --sky-200: oklch(0.92 0.04 228);
+
+  /* Surfaces */
+  --dew: oklch(0.985 0.011 152); /* body off-white, tinted toward leaf */
+  --dew-sunk: oklch(0.965 0.016 150); /* slightly recessed panel */
+  --mist: oklch(0.94 0.022 148);
+  --cream: oklch(0.96 0.035 92); /* artwork halo only */
+
+  /* Ink */
+  --bark: oklch(0.28 0.035 150); /* primary text on light */
+  --bark-soft: oklch(0.4 0.04 150); /* secondary text on light */
+  --ink-on-dark: oklch(0.96 0.02 95); /* text on canopy */
+  --ink-on-dark-soft: oklch(0.86 0.03 110);
+
+  /* Functional */
+  --ring: oklch(0.66 0.14 147 / 0.55);
+  --hairline: oklch(0.28 0.035 150 / 0.12);
+  --hairline-on-dark: oklch(0.96 0.02 95 / 0.16);
+
+  /* Typography */
+  --font-display: 'Baloo 2', system-ui, sans-serif;
+  --font-body: 'Hanken Grotesk', system-ui, sans-serif;
+
+  --step--1: clamp(0.82rem, 0.78rem + 0.2vw, 0.92rem);
+  --step-0: clamp(1rem, 0.95rem + 0.25vw, 1.13rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.45rem);
+  --step-2: clamp(1.5rem, 1.3rem + 1vw, 2rem);
+  --step-3: clamp(2rem, 1.6rem + 2vw, 3rem);
+  --step-4: clamp(2.6rem, 1.9rem + 3.4vw, 4.5rem);
+  --step-5: clamp(3.2rem, 2rem + 6vw, 6rem);
+
+  /* Space + shape */
+  --shell: min(1240px, 92vw);
+  --radius-sm: 0.7rem;
+  --radius: 1.25rem;
+  --radius-lg: 2rem;
+  --radius-xl: 2.75rem;
+
+  /* Elevation — warm green-tinted shadows, never neutral grey */
+  --shadow-sm: 0 2px 8px oklch(0.3 0.06 156 / 0.1);
+  --shadow-md: 0 10px 30px -8px oklch(0.3 0.06 156 / 0.22);
+  --shadow-lg: 0 26px 60px -18px oklch(0.28 0.06 156 / 0.4);
+  --shadow-bloom: 0 18px 50px -12px oklch(0.74 0.155 78 / 0.45);
+
+  /* Motion */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-soft: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* z-index scale */
+  --z-base: 1;
+  --z-foliage: 5;
+  --z-content: 10;
+  --z-nav: 60;
+  --z-overlay: 80;
+}
