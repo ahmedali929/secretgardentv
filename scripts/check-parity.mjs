@@ -64,7 +64,12 @@ for (const { question, answer } of homepageContent.faq) {
 }
 for (const paragraph of homepageContent.about) assert.ok(homepage.includes(paragraph));
 for (const { href } of homepageContent.shows) assert.ok(homepage.includes(`href="${href}"`), href);
-assert.ok(homepage.includes('assets.mailerlite.com/js/universal.js'));
+assert.ok(homepage.includes('For parents, guardians, and other adults'));
+if (homepage.includes('Newsletter signup is disabled in this preview.')) {
+  assert.doesNotMatch(homepage, /id="newsletter-open"/);
+} else {
+  assert.ok(homepage.includes('id="newsletter-open"'));
+}
 assert.ok(homepage.includes('googletagmanager.com/gtag/js'));
 assert.match(homepage, /<video[^>]*preload="none"/);
 assert.ok(homepage.includes('/assets/images/resource/Tree_Blooming.mp4'));
@@ -72,6 +77,15 @@ for (const [asset] of homepage.matchAll(/\/_astro\/[\w.-]+\.webp/g)) {
   assert.ok((await stat(join('dist', asset))).size > 0, asset);
 }
 console.log(`Verified ${pages.length} public route files, canonical URLs, local links and static assets.`);
+
+for (const path of [...pages, 'contact.html', '404.html', 'design-system.html']) {
+  const html = await readFile(join('dist', path), 'utf8');
+  const count = redirects[path] || path === 'design-system.html' ? 0 : 1;
+  assert.equal([...html.matchAll(/src="https:\/\/www\.googletagmanager\.com\/gtag\/js\?/g)].length, count, path);
+  assert.equal([...html.matchAll(/\bgtag\(['"]config['"]/g)].length, count, path);
+  assert.doesNotMatch(html, /gtag\(['"]event['"],\s*['"]page_view['"]/, path);
+  assert.doesNotMatch(html, /<script\b[^>]*\ssrc="https:\/\/assets\.mailerlite\.com\/js\/universal\.js/, path);
+}
 
 const catalog = await readFile('dist/program.html', 'utf8');
 for (const program of secondaryContent.programs) {
