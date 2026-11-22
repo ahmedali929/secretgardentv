@@ -1,0 +1,16 @@
+---
+const { title, description, href, image, width, height, category } = Astro.props;
+---
+<article class="garden-card" data-reveal>
+  <a href={href} class="garden-card-link">
+    <div class="garden-card-media">
+      <img src={image} width={width} height={height} alt="" loading="lazy" decoding="async" />
+    </div>
+    <div class="garden-card-body">
+      <p class="garden-eyebrow">{category}</p>
+      <h3>{title}</h3>
+      <p class="garden-card-description">{description}</p>
+      <span class="garden-card-arrow" aria-hidden="true">→</span>
+    </div>
+  </a>
+</article>
