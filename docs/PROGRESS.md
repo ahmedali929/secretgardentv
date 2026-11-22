@@ -8,10 +8,13 @@
 
 - Added automatic staging and staging-PR checks, a downloadable preview artifact, and a Cloudflare Pages build that sets noindex and removes production GA and CNAME from preview output.
 
+- Added the explicit legacy route registry, reusable SEO and Astro layouts, sitemap, Tailwind-based 404, ESLint and staging lint checks. The compatibility layout preserves legacy markup and integrations.
+
 ## Remaining
 
 - Hosted staging is blocked until the Cloudflare account owner connects GitHub. Follow the phone setup in [DEVELOPMENT.md](DEVELOPMENT.md), then record the verified HTTPS URL.
 - Verify the exact GitHub Pages source mode and folder, configure the production branch review rules, and confirm whether Netlify reviewer access is restricted.
+- Convert page bodies into shared header, footer, program, episode and article components incrementally. Add React hydration when an advanced interaction needs it.
 - Approve the homepage design and prototype URL dispositions. Verify legacy route parity as pages move into shared layouts.
 - Validate MailerLite signup, Zeffy handoff, and analytics on staging. Confirm adult inquiry fields, provider and team routing.
 - Verify mobile and tablet behavior, keyboard accessibility, reduced motion and performance on representative devices.

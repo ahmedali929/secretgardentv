@@ -10,9 +10,15 @@
     "build": "astro build",
     "preview": "astro preview",
     "test": "node scripts/check-parity.mjs",
-    "build:staging": "npm run build && npm test && node scripts/prepare-staging.mjs"
+    "build:staging": "npm run build && npm test && node scripts/prepare-staging.mjs",
+    "lint": "eslint astro.config.mjs eslint.config.mjs scripts src"
   },
   "dependencies": {
     "astro": "6.4.8"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.3.5",
+    "eslint": "10.15.0",
+    "tailwindcss": "4.3.5"
   }
 }

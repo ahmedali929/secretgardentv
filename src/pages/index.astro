@@ -1,6 +1,5 @@
 ---
-import { readFileSync } from 'node:fs';
-
-const html = readFileSync('index.html', 'utf8');
+import LegacyPage from '../layouts/LegacyPage.astro';
+import { readLegacyPage } from '../content/read-legacy-page.mjs';
 ---
-<Fragment set:html={html} />
+<LegacyPage {...readLegacyPage('index')} />

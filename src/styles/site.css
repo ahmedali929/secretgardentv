@@ -1,0 +1,12 @@
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities) source(none);
+@source "../layouts";
+@source "../components";
+@source "../pages";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: Inter, system-ui, sans-serif;
+  --color-garden-ink: #203b2a;
+  --color-garden-paper: #faf8ef;
+}
