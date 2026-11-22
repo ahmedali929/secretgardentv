@@ -1,7 +1,7 @@
 ---
 import Container from './Container.astro';
 
-const { programsHref = '/program.html', aboutHref = '/about.html', newsletterHref } = Astro.props;
+const { programsHref = '/program.html', aboutHref = '/about.html', newsletterHref = "/#newsletter", currentHref } = Astro.props;
 const links = [
   { href: programsHref, label: 'Programs' },
   { href: aboutHref, label: 'About us' },
@@ -16,13 +16,13 @@ const links = [
       <img src="/assets/images/sgtv_logo_transparent_1.png" width="184" height="103" alt="Secret Garden TV home" />
     </a>
     <nav aria-label="Main navigation" class="garden-nav">
-      <ul>{links.map(({ href, label }) => <li><a href={href}>{label}</a></li>)}</ul>
+      <ul>{links.map(({ href, label }) => <li><a href={href} aria-current={href === currentHref ? "page" : undefined}>{label}</a></li>)}</ul>
     </nav>
     {newsletterHref && <a href={newsletterHref} class="garden-nav-cta">Join Our Newsletter</a>}
     <details class="garden-menu">
       <summary>Menu</summary>
       <nav aria-label="Main navigation">
-        <ul>{links.map(({ href, label }) => <li><a href={href}>{label}</a></li>)}{newsletterHref && <li><a href={newsletterHref}>Join Our Newsletter</a></li>}</ul>
+        <ul>{links.map(({ href, label }) => <li><a href={href} aria-current={href === currentHref ? "page" : undefined}>{label}</a></li>)}{newsletterHref && <li><a href={newsletterHref}>Join Our Newsletter</a></li>}</ul>
       </nav>
     </details>
   </Container>

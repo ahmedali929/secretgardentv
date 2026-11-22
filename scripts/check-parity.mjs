@@ -11,17 +11,25 @@ assert.deepEqual(
   'Legacy HTML and route registry must agree',
 );
 const domain = 'https://secretgardentv.com';
+const redirects = { 'landingpage.html': '/', 'blog-test.html': '/blog.html' };
 for (const path of pages) {
-  const original = await readFile(path, 'utf8');
   const built = await readFile(join('dist', path), 'utf8');
-  if (path === 'index.html') continue;
-  const metadata = /<!-- page-seo:start -->[\s\S]*?<!-- page-seo:end -->/g;
-  assert.equal([...built.matchAll(metadata)].length, 1, path);
-  assert.equal(built.replace(metadata, '').trim(), original.trim(), path);
-  assert.equal((built.match(/<meta name="description"/g) ?? []).length, 1, path);
-
   const { canonicalPath } = legacyPages[path.slice(0, -5)];
-  assert.ok(built.includes(`<link rel="canonical" href="${domain}${canonicalPath}">`), path);
+  const redirect = redirects[path];
+  assert.ok(built.includes(`<link rel="canonical" href="${domain}${redirect ?? canonicalPath}">`), path);
+  if (redirect) {
+    assert.ok(built.includes(`content="0;url=${redirect}"`), path);
+  } else {
+    assert.equal((built.match(/<h1[ >]/g) ?? []).length, 1, path);
+    assert.equal((built.match(/<meta name="description"/g) ?? []).length, 1, path);
+    assert.ok(built.includes('class="garden-header"'), path);
+    assert.ok(built.includes('class="garden-footer"'), path);
+  }
+
+  for (const [, attribute] of built.matchAll(/(?:href|src|poster)="(\/(?!\/)[^"?#]+)"/g)) {
+    const asset = decodeURIComponent(attribute);
+    assert.ok((await stat(join('dist', asset))).isFile(), `${path} links to missing ${asset}`);
+  }
 }
 
 async function checkAssets(directory) {
@@ -61,7 +69,7 @@ assert.ok(homepage.includes('/assets/images/resource/Tree_Blooming.mp4'));
 for (const [asset] of homepage.matchAll(/\/_astro\/[\w.-]+\.webp/g)) {
   assert.ok((await stat(join('dist', asset))).size > 0, asset);
 }
-console.log(`Verified ${pages.length - 1} legacy routes, the redesigned homepage, and static assets.`);
+console.log(`Verified ${pages.length} public route files, canonical URLs, local links and static assets.`);
 
 const sitemap = await readFile('dist/sitemap.xml', 'utf8');
 assert.deepEqual(
@@ -70,5 +78,5 @@ assert.deepEqual(
     .map(({ canonicalPath }) => domain + canonicalPath),
 );
 const notFound = await readFile('dist/404.html', 'utf8');
-assert.ok(notFound.includes('content="noindex"'));
+assert.match(notFound, /<meta name="robots" content="noindex(?:, follow)?">/);
 assert.ok(notFound.includes('href="/"'));

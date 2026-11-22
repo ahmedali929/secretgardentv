@@ -1,0 +1,46 @@
+---
+const checkout = 'https://www.zeffy.com/en-US/donation-form/donate-to-make-a-difference-18636';
+---
+<div class="checkout-panel">
+  <h2>Support Our Mission</h2>
+  <form action={checkout} method="get" id="donation-checkout" hidden>
+    <fieldset>
+      <legend>Donation amount</legend>
+      <div class="checkout-options">
+        {[10, 25, 50, 100].map((amount) => <label><input type="radio" name="amount" value={amount} required /> ${amount}</label>)}
+        <label><input type="radio" name="amount" value="custom" required /> Custom</label>
+      </div>
+    </fieldset>
+    <label id="checkout-custom" hidden>
+      Custom amount in dollars
+      <input type="number" min="1" step="0.01" inputmode="decimal" disabled />
+    </label>
+    <button class="garden-button garden-button--primary" type="submit">Donate Now <span aria-hidden="true">→</span></button>
+  </form>
+  <p>Secure checkout powered by Zeffy — you’ll complete your donation on their page.</p>
+  <a href={checkout}>Continue directly to Zeffy</a>
+</div>
+<script>
+  const form = document.querySelector<HTMLFormElement>('#donation-checkout');
+  const custom = document.querySelector<HTMLLabelElement>('#checkout-custom');
+  const amount = custom?.querySelector('input');
+  if (form && custom && amount) {
+    const syncCustom = () => {
+      const isCustom = new FormData(form).get('amount') === 'custom';
+      custom.hidden = !isCustom;
+      amount.disabled = !isCustom;
+      amount.required = isCustom;
+    };
+    syncCustom();
+    form.hidden = false;
+    form.addEventListener('change', syncCustom);
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const selection = new FormData(form).get('amount');
+      if (typeof selection !== 'string') return;
+      const url = new URL(form.action);
+      url.searchParams.set('amount', selection === 'custom' ? amount.value : selection);
+      window.location.assign(url.href);
+    });
+  }
+</script>

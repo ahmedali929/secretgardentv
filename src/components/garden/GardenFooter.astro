@@ -1,0 +1,30 @@
+---
+import Container from './Container.astro';
+const email = 'mailto:secretgardentv@gmail.com';
+const socials = [
+  ['YouTube', 'https://www.youtube.com/@SecretGardenTVforKids'],
+  ['Instagram', 'https://www.instagram.com/secretgardentvforkids'],
+  ['TikTok', 'https://www.tiktok.com/@secretgardentv'],
+  ['Facebook', 'https://www.facebook.com/profile.php?id=61568807675251'],
+  ['X', 'https://x.com/secretgarden_tv'],
+];
+---
+    <footer class="garden-footer">
+      <Container>
+        <div class="home-footer-grid">
+          <div>
+            <a class="garden-logo" href="/"><img src="/assets/images/sgtv_logo_transparent_1.png" width="184" height="103" loading="lazy" alt="Secret Garden TV home" /></a>
+            <p>Secret Garden TV for Kids is an organization devoted to the development of educational content.</p>
+          </div>
+          <nav aria-label="Footer navigation">
+            <a href="/">Home</a><a href="/about.html">About Us</a><a href="/program.html">Programs</a><a href="/donate.html">Donate</a><a href="/blog.html">Blog</a><a href="/faq.html">FAQs</a>
+          </nav>
+          <div>
+            <a href="/#newsletter">Our Newsletter</a>
+            <a href={email}>secretgardentv@gmail.com</a>
+            <nav class="home-socials" aria-label="Social media">{socials.map(([name, href]) => <a href={href}>{name}</a>)}</nav>
+          </div>
+        </div>
+        <p class="home-copyright">Copyright © 2026 Secret Garden TV for Kids. All Rights Reserved.</p>
+      </Container>
+    </footer>
