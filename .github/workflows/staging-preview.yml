@@ -1,0 +1,29 @@
+name: Staging preview
+
+on:
+  push:
+    branches: [redesign/staging]
+  pull_request:
+    branches: [redesign/staging]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    if: github.event_name != 'workflow_dispatch' || github.ref == 'refs/heads/redesign/staging'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build:staging
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sgtv-staging-preview
+          path: dist/
+          retention-days: 7

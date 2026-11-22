@@ -6,8 +6,11 @@
 - The current `main` baseline (`36770a1`) contains the Astro compatibility build and PR preview workflow. Draft PR #8 previously passed its build and route parity checks. The latest observed Pages deployment still points to the earlier audited commit (`fb7146d`).
 - Created `redesign/staging` from `main` at `36770a1`, added persistent Codex instructions, and documented the development and release process.
 
+- Added automatic staging and staging-PR checks, a downloadable preview artifact, and a Cloudflare Pages build that sets noindex and removes production GA and CNAME from preview output.
+
 ## Remaining
 
+- Hosted staging is blocked until the Cloudflare account owner connects GitHub. Follow the phone setup in [DEVELOPMENT.md](DEVELOPMENT.md), then record the verified HTTPS URL.
 - Verify the exact GitHub Pages source mode and folder, configure the production branch review rules, and confirm whether Netlify reviewer access is restricted.
 - Approve the homepage design and prototype URL dispositions. Verify legacy route parity as pages move into shared layouts.
 - Validate MailerLite signup, Zeffy handoff, and analytics on staging. Confirm adult inquiry fields, provider and team routing.

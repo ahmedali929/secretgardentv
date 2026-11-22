@@ -25,7 +25,23 @@ npm run preview
 
 Check the affected legacy URLs, assets, and integrations. For visual changes, test phone, tablet, and desktop, keyboard navigation, and reduced motion. Use staging-only form and analytics settings. Never submit production test data without explicit authorization.
 
-The inherited **PR Preview** GitHub Actions workflow builds and tests PRs and uploads `sgtv-preview`. Draft PRs skip the hosted Netlify job. Use the artifact or local preview for routine review. The existing workflow attempts a Netlify deploy when a same-repository PR is marked ready. Confirm the Netlify site is a separate staging target with verified reviewer access before marking a PR ready. A noindex header does not restrict access. This repository is public, so use a separate approved private environment for confidential work.
+### Staging build and hosted preview
+
+Use `npm run build:staging` with Node.js 24 for a preview artifact. It builds the static site, checks legacy parity, removes the production domain file and GA tag from the output, and adds Cloudflare Pages headers to keep every public preview route out of search indexes. The checked-in production domain file and the ordinary build are unaffected. Preview builds retain outward links and newsletter UI. Use authorized test destinations only.
+
+GitHub Actions builds pushes to `redesign/staging` and PRs targeting it. Download the `sgtv-staging-preview` artifact from the run for local review. The staging workflow uses read-only permissions and has no publishing step. The older Netlify PR workflow skips PRs targeting staging.
+
+#### Blocked until a Cloudflare account owner connects GitHub
+
+On your phone, open the [Cloudflare dashboard](https://dash.cloudflare.com/) in your browser. Use the browser's desktop-site mode if menus are collapsed.
+
+1. Open **Workers & Pages → Create application → Pages → Connect to Git**. Sign in to GitHub if prompted. Install or configure the Cloudflare GitHub app for **only** `ahmedali929/secretgardentv` and select that repository.
+2. Create a separate Pages project, such as `sgtv-redesign-preview` if available. Set the **production branch for this preview-only project** to `redesign/staging`. Leave the project on its Cloudflare-assigned `pages.dev` HTTPS hostname and leave Custom Domains empty.
+3. Choose **None** for the framework preset. Leave the root directory at the repository root, set the build command to `npm run build:staging`, and the output directory to `dist`. Set the build environment variable `NODE_VERSION` to `24` before saving.
+4. Select **Save and Deploy**. Under the project's **Settings → Builds → Branch control**, keep automatic deployments enabled for its selected staging branch and set preview branch deployments to **None**. Every new staging push will update the same public HTTPS site. PR builds remain available as GitHub artifacts.
+5. In **Deployments**, open the successful staging deployment and verify its commit and public HTTPS URL. Check response headers on both the home page and a legacy route, for example `curl -fsSI https://<assigned-host>/program.html`. Expect `X-Robots-Tag: noindex, nofollow`. A noindex header is an indexing directive, and the site is still public. Keep confidential content off this preview.
+
+See [Cloudflare Pages Git setup](https://developers.cloudflare.com/pages/get-started/git-integration/), [branch controls](https://developers.cloudflare.com/pages/configuration/branch-build-controls/), and [custom headers](https://developers.cloudflare.com/pages/configuration/headers/).
 
 ## Production release
 
