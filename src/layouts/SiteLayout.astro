@@ -1,5 +1,6 @@
 ---
 import '../styles/site.css';
+import '../styles/motion.css';
 const { title } = Astro.props;
 ---
 <!doctype html>
@@ -14,3 +15,27 @@ const { title } = Astro.props;
     <slot />
   </body>
 </html>
+
+<script>
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (!reduceMotion.matches && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      for (const { isIntersecting, target } of entries) {
+        if (!isIntersecting) continue;
+        observer.unobserve(target);
+        if (!reduceMotion.matches && !target.matches(':focus-within')) {
+          target.classList.add('garden-revealed');
+        }
+      }
+    }, { rootMargin: '0px 0px -24px 0px' });
+
+    for (const item of document.querySelectorAll('[data-reveal]')) observer.observe(item);
+    reduceMotion.addEventListener('change', () => {
+      if (!reduceMotion.matches) return;
+      observer.disconnect();
+      for (const item of document.querySelectorAll('.garden-revealed')) {
+        item.classList.remove('garden-revealed');
+      }
+    });
+  }
+</script>

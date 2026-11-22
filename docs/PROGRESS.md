@@ -54,3 +54,8 @@ The two prototype redirects use an HTML refresh and a normal link, so they work 
 - The catalog and five show pages now use responsive WebP artwork, reuse the existing program and episode records, and link to one another. The homepage keeps its existing show links.
 - Individual episodes open an on-demand YouTube privacy-enhanced player. Closing the dialog removes the player and returns focus. Native watch links remain available without JavaScript and when a player fails. Channel links remain channel links.
 - Before a public launch, confirm Secret Garden TV’s child-directed site designation with YouTube. YouTube requires the designation even for privacy-enhanced embeds. See [YouTube’s embedding guidance](https://support.google.com/youtube/answer/171780?hl=en).
+
+## Interaction and motion
+
+- Centralized scroll reveals and interaction timing across the redesigned routes. Refined native FAQ and mobile-menu transitions, added desktop-only progressive hero parallax, and preserved the reduced-motion and no-JavaScript experience.
+- Added donation selection, validation and checkout feedback, plus an accessible loading indicator for on-demand episode previews.

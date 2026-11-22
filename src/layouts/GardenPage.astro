@@ -21,7 +21,7 @@ const { page, heading, intro, eyebrow, hideFromSearch = false, currentHref = pag
     <a class="garden-skip" href="#main">Skip to content</a>
     <GardenNav {currentHref} />
     <main id="main" tabindex="-1">
-      <header class="secondary-hero">
+      <header class="secondary-hero" data-intro>
         <Container>
           {eyebrow && <p class="garden-eyebrow">{eyebrow}</p>}
           <h1>{heading}</h1>

@@ -1,7 +1,7 @@
 ---
 const { id, eyebrow } = Astro.props;
 ---
-<div class="garden-heading">
+<div class="garden-heading" data-reveal>
   {eyebrow && <p class="garden-eyebrow">{eyebrow}</p>}
   <h2 id={id}><slot /></h2>
 </div>

@@ -9,7 +9,7 @@ const { episodes } = Astro.props;
     const embed = youtubeEmbedUrl(href);
     const name = title || label;
     return (
-      <article class="garden-card episode-card">
+      <article class="garden-card episode-card" data-reveal>
         <div class="garden-card-media">
           <GardenImage path={image} sizes="(max-width: 670px) 92vw, (max-width: 930px) 44vw, 380px" />
         </div>
@@ -39,7 +39,7 @@ const { episodes } = Astro.props;
     <h2 id="episode-dialog-title"></h2>
     <form method="dialog"><button class="garden-button garden-button--outline" autofocus>Close</button></form>
   </div>
-  <div class="episode-player"></div>
+  <div class="episode-player" aria-busy="false"></div>
   <p role="status" class="episode-status"></p>
   <a class="episode-dialog-link" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗︎</span></a>
 </dialog>
@@ -64,6 +64,7 @@ const { episodes } = Astro.props;
         title.textContent = episodeTitle;
         directLink.href = episodeLink;
         status.textContent = 'Loading YouTube player…';
+        player.setAttribute('aria-busy', 'true');
         dialog.showModal();
 
         const frame = document.createElement('iframe');
@@ -75,6 +76,7 @@ const { episodes } = Astro.props;
         const showFallback = () => {
           if (!dialog.open) return;
           window.clearTimeout(timer);
+          player.setAttribute('aria-busy', 'false');
           status.textContent = 'If playback is unavailable here, watch directly on YouTube.';
         };
         frame.addEventListener('load', showFallback, { once: true });
@@ -88,6 +90,7 @@ const { episodes } = Astro.props;
     dialog.addEventListener('close', () => {
       window.clearTimeout(timer);
       player.replaceChildren();
+      player.setAttribute('aria-busy', 'false');
       status.textContent = '';
       trigger?.focus();
       trigger = undefined;
