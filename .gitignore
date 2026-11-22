@@ -5,3 +5,8 @@
 
 # macOS Finder metadata
 .DS_Store
+
+# Astro and npm
+node_modules/
+.astro/
+dist/

@@ -1,0 +1,16 @@
+---
+import { readdirSync, readFileSync } from 'node:fs';
+
+export function getStaticPaths() {
+  const root = process.cwd();
+  return readdirSync(root)
+    .filter((name) => name.endsWith('.html') && name !== 'index.html')
+    .map((name) => ({
+      params: { page: name.slice(0, -'.html'.length) },
+      props: { html: readFileSync(name, 'utf8') },
+    }));
+}
+
+const { html } = Astro.props;
+---
+<Fragment set:html={html} />
