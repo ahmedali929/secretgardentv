@@ -59,3 +59,8 @@ The two prototype redirects use an HTML refresh and a normal link, so they work 
 
 - Centralized scroll reveals and interaction timing across the redesigned routes. Refined native FAQ and mobile-menu transitions, added desktop-only progressive hero parallax, and preserved the reduced-motion and no-JavaScript experience.
 - Added donation selection, validation and checkout feedback, plus an accessible loading indicator for on-demand episode previews.
+
+## Contact Us
+
+- Implemented the adult-facing contact page, provider adapter, accessibility and validation states, honeypot, and safe local and staging test modes.
+- Account setup, verified team distribution routing, provider-side validation configuration, and real delivery remain pending. See [Contact form configuration](CONTACT.md).

@@ -10,7 +10,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "test": "node scripts/check-parity.mjs",
-    "build:staging": "npm run build && npm test && node scripts/prepare-staging.mjs",
+    "build:staging": "astro build --mode staging && npm test && node scripts/prepare-staging.mjs",
     "lint": "eslint astro.config.mjs eslint.config.mjs scripts src"
   },
   "dependencies": {

@@ -10,3 +10,8 @@
 node_modules/
 .astro/
 dist/
+
+# Local environment overrides
+.env
+.env.*
+!.env.example
