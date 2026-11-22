@@ -1,0 +1,96 @@
+---
+import GardenImage from './GardenImage.astro';
+import { youtubeEmbedUrl } from '../../content/youtube.mjs';
+
+const { episodes } = Astro.props;
+---
+<div class="garden-card-grid program-episode-grid">
+  {episodes.map(({ label, title, extra, href, image }) => {
+    const embed = youtubeEmbedUrl(href);
+    const name = title || label;
+    return (
+      <article class="garden-card episode-card">
+        <div class="garden-card-media">
+          <GardenImage path={image} sizes="(max-width: 670px) 92vw, (max-width: 930px) 44vw, 380px" />
+        </div>
+        <div class="episode-card-body">
+          {label && title && <p class="garden-eyebrow">{label}</p>}
+          <h3>{name}</h3>
+          {extra.map((line) => <p lang="ar" dir="rtl">{line}</p>)}
+          <div class="episode-actions">
+            {embed && (
+              <button type="button" class="garden-button garden-button--primary"
+                data-episode-embed={embed} data-episode-title={name} data-episode-link={href}
+                aria-label={`Preview: ${name}`} aria-haspopup="dialog" hidden>
+                <span aria-hidden="true">▶</span> Preview
+              </button>
+            )}
+            <a href={href} class="episode-external" aria-label={`${embed ? 'Watch on YouTube' : 'Visit YouTube channel'}: ${name}`}>
+              {embed ? 'Watch on YouTube' : 'Visit YouTube channel'} <span aria-hidden="true">↗︎</span>
+            </a>
+          </div>
+        </div>
+      </article>
+    );
+  })}
+</div>
+<dialog class="episode-dialog" id="episode-dialog" aria-labelledby="episode-dialog-title">
+  <div class="episode-dialog-top">
+    <h2 id="episode-dialog-title"></h2>
+    <form method="dialog"><button class="garden-button garden-button--outline" autofocus>Close</button></form>
+  </div>
+  <div class="episode-player"></div>
+  <p role="status" class="episode-status"></p>
+  <a class="episode-dialog-link" target="_blank" rel="noopener noreferrer">Watch on YouTube <span aria-hidden="true">↗︎</span></a>
+</dialog>
+
+<script>
+  const dialog = document.querySelector<HTMLDialogElement>('#episode-dialog');
+  const player = dialog?.querySelector('.episode-player');
+  const title = dialog?.querySelector('#episode-dialog-title');
+  const status = dialog?.querySelector('.episode-status');
+  const directLink = dialog?.querySelector<HTMLAnchorElement>('.episode-dialog-link');
+
+  if (dialog && typeof dialog.showModal === 'function' && player && title && status && directLink) {
+    let trigger: HTMLButtonElement | undefined;
+    let timer: number | undefined;
+
+    for (const button of document.querySelectorAll<HTMLButtonElement>('[data-episode-embed]')) {
+      button.addEventListener('click', () => {
+        const { episodeEmbed, episodeTitle, episodeLink } = button.dataset;
+        if (!episodeEmbed || !episodeTitle || !episodeLink) return;
+
+        trigger = button;
+        title.textContent = episodeTitle;
+        directLink.href = episodeLink;
+        status.textContent = 'Loading YouTube player…';
+        dialog.showModal();
+
+        const frame = document.createElement('iframe');
+        frame.title = episodeTitle;
+        frame.allow = 'encrypted-media; picture-in-picture; fullscreen';
+        frame.allowFullscreen = true;
+        frame.referrerPolicy = 'strict-origin-when-cross-origin';
+        frame.src = episodeEmbed;
+        const showFallback = () => {
+          if (!dialog.open) return;
+          window.clearTimeout(timer);
+          status.textContent = 'If playback is unavailable here, watch directly on YouTube.';
+        };
+        frame.addEventListener('load', showFallback, { once: true });
+        frame.addEventListener('error', showFallback, { once: true });
+        timer = window.setTimeout(showFallback, 7000);
+        player.replaceChildren(frame);
+      });
+      button.hidden = false;
+    }
+
+    dialog.addEventListener('close', () => {
+      window.clearTimeout(timer);
+      player.replaceChildren();
+      status.textContent = '';
+      trigger?.focus();
+      trigger = undefined;
+    });
+  }
+</script>

@@ -48,3 +48,9 @@
 | `/sitemap.xml` and `/sgtv_coloring_book.pdf` | Retained and checked in the build |
 
 The two prototype redirects use an HTML refresh and a normal link, so they work on static hosting. The donation handoff sends only the amount and leaves personal information to Zeffy. Provider acceptance of the amount and live payment completion remain unverified. Footer links preserve the site's existing social accounts and send newsletter visitors to the existing homepage signup flow.
+
+## Programs and episode previews
+
+- The catalog and five show pages now use responsive WebP artwork, reuse the existing program and episode records, and link to one another. The homepage keeps its existing show links.
+- Individual episodes open an on-demand YouTube privacy-enhanced player. Closing the dialog removes the player and returns focus. Native watch links remain available without JavaScript and when a player fails. Channel links remain channel links.
+- Before a public launch, confirm Secret Garden TV’s child-directed site designation with YouTube. YouTube requires the designation even for privacy-enhanced embeds. See [YouTube’s embedding guidance](https://support.google.com/youtube/answer/171780?hl=en).

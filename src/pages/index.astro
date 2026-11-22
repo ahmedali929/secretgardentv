@@ -7,7 +7,7 @@ import Container from '../components/garden/Container.astro';
 import GardenHead from '../components/garden/GardenHead.astro';
 import GardenFooter from '../components/garden/GardenFooter.astro';
 import GardenNav from '../components/garden/GardenNav.astro';
-import HomeImage from '../components/garden/HomeImage.astro';
+import GardenImage from '../components/garden/GardenImage.astro';
 import ProgramCard from '../components/garden/ProgramCard.astro';
 import SectionHeading from '../components/garden/SectionHeading.astro';
 import { legacyPages } from '../content/pages.mjs';
@@ -41,7 +41,7 @@ const email = 'mailto:secretgardentv@gmail.com';
     <main id="main" tabindex="-1">
       <section class="home-hero" aria-labelledby="home-title">
         <div class="home-hero-art">
-          <HomeImage path={opening.image} priority sizes="100vw" />
+          <GardenImage path={opening.image} priority sizes="100vw" />
         </div>
         <Container class="home-hero-inner">
           <div class="garden-hero-copy">
@@ -65,7 +65,7 @@ const email = 'mailto:secretgardentv@gmail.com';
         <Container>
           {chapters.map((chapter, index) => (
             <article class="home-chapter" id={`chapter-${index + 1}`} data-reveal>
-              <div class="home-chapter-image"><HomeImage path={chapter.image} sizes="(max-width: 670px) 92vw, 50vw" /></div>
+              <div class="home-chapter-image"><GardenImage path={chapter.image} sizes="(max-width: 670px) 92vw, 50vw" /></div>
               <div class="home-chapter-copy">
                 <SectionHeading>{chapter.title}</SectionHeading>
                 <p class="garden-lede">{chapter.subtitle}</p>
@@ -115,7 +115,7 @@ const email = 'mailto:secretgardentv@gmail.com';
           <div class="garden-card-grid">
             {content.shows.map(({ image, ...show }) => (
               <ProgramCard {...show}>
-                <HomeImage slot="media" path={image} sizes="(max-width: 670px) 92vw, (max-width: 928px) 44vw, 380px" />
+                <GardenImage slot="media" path={image} sizes="(max-width: 670px) 92vw, (max-width: 928px) 44vw, 380px" />
               </ProgramCard>
             ))}
           </div>
