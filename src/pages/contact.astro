@@ -1,0 +1,162 @@
+---
+import GardenPage from '../layouts/GardenPage.astro';
+import Container from '../components/garden/Container.astro';
+import { contactConfiguration } from '../lib/contact-provider.mjs';
+import '../styles/contact.css';
+
+const page = {
+  title: 'Contact Us | Secret Garden TV for Kids',
+  description: 'Get in touch with the Secret Garden TV team about our programs, partnerships, or website.',
+  canonicalPath: '/contact.html',
+  type: 'website',
+};
+const { provider, endpoint } = contactConfiguration(
+  import.meta.env.PUBLIC_CONTACT_MODE,
+  import.meta.env.PUBLIC_CONTACT_ENDPOINT,
+  import.meta.env.MODE,
+);
+---
+<GardenPage {page} heading="Contact Us" intro="Have a question about Secret Garden TV? We’d love to hear from you.">
+  <section class="garden-section">
+    <Container class="contact-layout">
+      <aside class="contact-note" aria-labelledby="contact-note-heading">
+        <h2 id="contact-note-heading">For parents, guardians, and other adults</h2>
+        <p>Use your own name and email address. Please leave out children’s names, contact details, photos, school information, and other identifying details.</p>
+        <p>We use the information you provide to respond to your inquiry. {provider === 'formspree' && <>Formspree processes submissions for the Secret Garden TV team. <a href="https://formspree.io/legal/privacy-policy/">Formspree privacy policy</a>.</>}</p>
+        <p>You can also email us at <a href="mailto:secretgardentv@gmail.com">secretgardentv@gmail.com</a>.</p>
+      </aside>
+      <div class="contact-panel">
+        <h2>Send us a message</h2>
+        {provider === 'off' ? <p>Online submissions are currently unavailable. Please use the email link to get in touch.</p> : (
+          <>
+            {provider === 'mock' && <p class="contact-demo" id="contact-demo">Test mode. Use sample details only. Submissions stay in this browser and no email is sent.</p>}
+            <noscript><p>To use this form, enable JavaScript or email us directly.</p></noscript>
+            <form id="contact-form" method="post" action={endpoint} data-provider={provider}
+              aria-describedby={provider === 'mock' ? 'contact-demo' : undefined}>
+              <fieldset disabled>
+                <legend class="sr-only">Your inquiry</legend>
+                <p class="contact-required">All fields are required.</p>
+                <div class="contact-fields">
+                  <label>Full name
+                    <input name="name" autocomplete="name" maxlength="100" required />
+                  </label>
+                  <label>Email address
+                    <input name="email" type="email" autocomplete="email" maxlength="254" required />
+                  </label>
+                  <label>Inquiry category
+                    <select name="category" required>
+                      <option value="">Choose a category</option>
+                      <option>General inquiry</option>
+                      <option>Programs and resources</option>
+                      <option>Partnerships</option>
+                      <option>Website feedback</option>
+                      <option>Other</option>
+                    </select>
+                  </label>
+                  <label>Subject
+                    <input name="subject" maxlength="150" required />
+                  </label>
+                </div>
+                <label>Message
+                  <textarea name="message" rows="6" maxlength="3000" required></textarea>
+                </label>
+                <div hidden>
+                  <label>Leave this field blank <input name="_gotcha" tabindex="-1" autocomplete="off" /></label>
+                </div>
+                {provider === 'mock' && (
+                  <label>Test result
+                    <select id="contact-test-result">
+                      <option value="success">Simulate success</option>
+                      <option value="error">Simulate an error</option>
+                    </select>
+                  </label>
+                )}
+                <button type="submit" class="garden-button garden-button--primary">Send message <span aria-hidden="true">→</span></button>
+              </fieldset>
+            </form>
+            <p id="contact-feedback" role="status" aria-atomic="true" tabindex="-1"></p>
+          </>
+        )}
+      </div>
+    </Container>
+  </section>
+</GardenPage>
+
+<script>
+  import { submitContact } from '../lib/contact-provider.mjs';
+
+  const form = document.querySelector<HTMLFormElement>('#contact-form');
+  const fieldset = form?.querySelector('fieldset');
+  const button = form?.querySelector('button');
+  const feedback = document.querySelector('#contact-feedback');
+  const testResult = document.querySelector<HTMLSelectElement>('#contact-test-result');
+
+  if (form && fieldset && button && feedback) {
+    const fields = Array.from(form.querySelectorAll<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>(
+      'input[required], select[required], textarea[required]',
+    ));
+    const report = (text: string, state: string) => {
+      feedback.textContent = text;
+      feedback.setAttribute('data-state', state);
+    };
+    for (const field of fields) {
+      field.addEventListener('input', () => {
+        field.setCustomValidity('');
+        field.removeAttribute('aria-invalid');
+        field.removeAttribute('aria-describedby');
+      });
+    }
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (button.disabled) return;
+
+      const data = new FormData(form);
+      for (const field of fields) {
+        const value = field.value.trim();
+        if (!value) field.setCustomValidity('Please complete this field.');
+        data.set(field.name, value);
+      }
+      if (!form.reportValidity()) return;
+      if (data.get('_gotcha')) {
+        report('The form could not be submitted. Please use the email link instead.', 'error');
+        return;
+      }
+
+      const provider = form.dataset.provider ?? '';
+      fieldset.disabled = true;
+      button.textContent = provider === 'mock' ? 'Running test…' : 'Sending…';
+      report(provider === 'mock' ? 'Running a local test…' : 'Submitting your message…', 'pending');
+
+      const result = await submitContact(provider, form.action, data);
+      fieldset.disabled = false;
+      button.textContent = 'Send message';
+      feedback.focus();
+      if (result.status === 'mock') {
+        if (testResult?.value === 'error') {
+          report('Test error simulated. No email was sent.', 'error');
+        } else {
+          form.reset();
+          report('Test submission complete. No email was sent.', 'success');
+        }
+      } else if (result.status === 'accepted') {
+        form.reset();
+        report('Thank you. Your message was submitted to Secret Garden TV.', 'success');
+      } else if (result.status === 'rejected') {
+        const rejected = fields.filter((field) => result.rejectedFields?.includes(field.name));
+        for (const field of rejected) {
+          field.setAttribute('aria-invalid', 'true');
+          field.setAttribute('aria-describedby', 'contact-feedback');
+        }
+        report(rejected.length ? 'Please check the highlighted fields and try again.' :
+          'The form service did not accept your message. Please try again or use the email link.', 'error');
+        rejected[0]?.focus();
+      } else {
+        report(result.status === 'rate-limit' ?
+          'The form is temporarily busy. Please try again later or use the email link.' :
+          'We couldn’t confirm submission. Please try again or use the email link.', 'error');
+      }
+    });
+    fieldset.disabled = false;
+  }
+</script>

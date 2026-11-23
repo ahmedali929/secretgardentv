@@ -101,3 +101,12 @@ assert.deepEqual(
 const notFound = await readFile('dist/404.html', 'utf8');
 assert.match(notFound, /<meta name="robots" content="noindex(?:, follow)?">/);
 assert.ok(notFound.includes('href="/"'));
+
+const contact = await readFile('dist/contact.html', 'utf8');
+assert.ok(contact.includes('<link rel="canonical" href="https://secretgardentv.com/contact.html">'));
+assert.ok(contact.includes('For parents, guardians, and other adults'));
+assert.ok(homepage.includes('href="/contact.html"'));
+if (contact.includes('data-provider="mock"')) {
+  assert.ok(contact.includes('no email is sent'));
+  assert.doesNotMatch(contact, /action="https:\/\/formspree\.io/);
+}
