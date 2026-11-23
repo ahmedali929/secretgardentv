@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+
+const images = import.meta.glob([
+  '../../../assets/images/main-slider/test.png',
+  '../../../assets/images/main-slider/test2.png',
+  '../../../assets/images/main-slider/14.png',
+  '../../../assets/images/main-slider/playinthegarden.png',
+  '../../../assets/images/main-slider/prayinthegarden.png',
+  '../../../assets/images/shows/allah_secret_signs.png',
+  '../../../assets/images/shows/nurheart_fables.png',
+  '../../../assets/images/shows/toyboxstories.PNG',
+  '../../../assets/images/shows/babagha_sadiqi.png',
+  '../../../assets/images/shows/quranSafari.png',
+  '../../../assets/images/episodes/8.jpg',
+  '../../../assets/images/episodes/babagha_coming_soon.png',
+  '../../../assets/images/episodes/babagha_sadiqi_ep1.avif',
+  '../../../assets/images/episodes/maahir_secret_key.jpg',
+  '../../../assets/images/episodes/noorani-warrior.jpg',
+  '../../../assets/images/episodes/nurheart_hafiz.avif',
+  '../../../assets/images/episodes/nurheart_roly_poly.avif',
+  '../../../assets/images/episodes/nurheart_sami.avif',
+  '../../../assets/images/episodes/quran-safari-e01.png',
+  '../../../assets/images/episodes/quran-safari-e02.png',
+  '../../../assets/images/episodes/quran-safari-e03.png',
+  '../../../assets/images/episodes/quran-safari-e04.png',
+  '../../../assets/images/episodes/secret_sign_apple.png',
+  '../../../assets/images/episodes/secret_sign_blueberry.png',
+  '../../../assets/images/episodes/secret_sign_coming_soon.png',
+  '../../../assets/images/episodes/secret_sign_date.avif',
+  '../../../assets/images/episodes/secret_sign_lavender.png',
+  '../../../assets/images/episodes/secret_sign_rose.png',
+  '../../../assets/images/episodes/secret_sign_thyme.jpg',
+  '../../../assets/images/episodes/secret_sign_venus_flytrap.png',
+  '../../../assets/images/episodes/secret_sign_walnut.png',
+  '../../../assets/images/episodes/taha_tiger_coming_soon.png',
+  '../../../assets/images/episodes/toy-box-coming-soon.png',
+  '../../../assets/images/episodes/toybox-ep2.avif',
+  '../../../assets/images/shows/allah-secret-sign.png',
+  '../../../assets/images/shows/quran-safari.png',
+  '../../../assets/images/shows/test.png',
+  '../../../assets/images/shows/toy_box_stories.png',
+], { eager: true, import: 'default' });
+const { path, alt = '', priority = false, sizes } = Astro.props;
+const source = images[`../../..${path}`];
+if (!source) throw new Error(`Missing garden image: ${path}`);
+---
+<Image
+  src={source}
+  {alt}
+  format="webp"
+  width={Math.min(1200, source.width)}
+  widths={[400, 800, 1200].filter((width) => width <= source.width)}
+  {sizes}
+  loading={priority ? 'eager' : 'lazy'}
+  fetchpriority={priority ? 'high' : undefined}
+  decoding="async"
+/>

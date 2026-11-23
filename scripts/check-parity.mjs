@@ -2,6 +2,8 @@ import assert from 'node:assert/strict';
 import { readdir, readFile, stat } from 'node:fs/promises';
 import { join } from 'node:path';
 import homepageContent from '../src/content/homepage.json' with { type: 'json' };
+import secondaryContent from '../src/content/secondary-pages.json' with { type: 'json' };
+import { youtubeEmbedUrl } from '../src/content/youtube.mjs';
 import { legacyPages } from '../src/content/pages.mjs';
 
 const pages = (await readdir('.')).filter((name) => name.endsWith('.html'));
@@ -70,6 +72,25 @@ for (const [asset] of homepage.matchAll(/\/_astro\/[\w.-]+\.webp/g)) {
   assert.ok((await stat(join('dist', asset))).size > 0, asset);
 }
 console.log(`Verified ${pages.length} public route files, canonical URLs, local links and static assets.`);
+
+const catalog = await readFile('dist/program.html', 'utf8');
+for (const program of secondaryContent.programs) {
+  assert.ok(catalog.includes(`href="${program.href}"`), program.title);
+  const output = await readFile(join('dist', program.href), 'utf8');
+  assert.ok(output.includes('id="episodes"'), program.title);
+  assert.doesNotMatch(output, /<iframe[\s>]/, program.title);
+  for (const { href, title } of secondaryContent.shows[program.href.slice(1, -5)].episodes) {
+    const encoded = href.replaceAll('&', '&amp;');
+    assert.ok(output.includes(`href="${encoded}"`), title);
+    const embed = youtubeEmbedUrl(href);
+    if (embed) assert.ok(output.includes(`data-episode-embed="${embed}"`), title);
+  }
+}
+assert.equal(youtubeEmbedUrl('https://www.youtube.com/watch?v=av6NzM18r-s&t=19s'),
+  'https://www.youtube-nocookie.com/embed/av6NzM18r-s?start=19');
+assert.equal(youtubeEmbedUrl('https://youtu.be/bixsoWn1M4s?si=example'),
+  'https://www.youtube-nocookie.com/embed/bixsoWn1M4s');
+assert.equal(youtubeEmbedUrl('https://www.youtube.com/@SecretGardenTVforKids'), undefined);
 
 const sitemap = await readFile('dist/sitemap.xml', 'utf8');
 assert.deepEqual(

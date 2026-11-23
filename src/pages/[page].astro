@@ -5,9 +5,12 @@ import Container from '../components/garden/Container.astro';
 import Button from '../components/garden/Button.astro';
 import ProgramCard from '../components/garden/ProgramCard.astro';
 import SectionHeading from '../components/garden/SectionHeading.astro';
+import GardenImage from '../components/garden/GardenImage.astro';
+import EpisodeLibrary from '../components/garden/EpisodeLibrary.astro';
 import DonationCheckout from '../components/garden/DonationCheckout.astro';
 import { legacyPages } from '../content/pages.mjs';
 import data from '../content/secondary-pages.json';
+import '../styles/programs.css';
 
 export function getStaticPaths() {
   return Object.values(legacyPages).filter(({ slug }) => slug !== 'index')
@@ -24,6 +27,7 @@ const heading = show?.title ?? article?.title ?? {
   about: 'About Us', program: 'Our Content', blog: 'Seeds of Wisdom',
   faq: 'Frequently Asked Questions', donate: 'Donate',
 }[slug];
+const showIndex = programs.findIndex(({ href }) => href === page.canonicalPath);
 const currentHref = show ? '/program.html' : article ? '/blog.html' : page.canonicalPath;
 ---
 {redirect ? (
@@ -107,8 +111,14 @@ const currentHref = show ? '/program.html' : article ? '/blog.html' : page.canon
     {slug === 'program' && (
       <>
         <section class="garden-section">
-          <Container class="garden-card-grid">
-            {programs.map((program) => <ProgramCard {...program} actionLabel="Watch Now" />)}
+          <Container>
+            <div class="garden-card-grid program-catalog">
+              {programs.map(({ image, ...program }) => (
+                <ProgramCard {...program} actionLabel="Explore show">
+                  <GardenImage slot="media" path={image} sizes="(max-width: 670px) 92vw, (max-width: 930px) 44vw, 380px" />
+                </ProgramCard>
+              ))}
+            </div>
           </Container>
         </section>
         <section class="garden-section secondary-band">
@@ -125,28 +135,37 @@ const currentHref = show ? '/program.html' : article ? '/blog.html' : page.canon
     {show && (
       <>
         <section class="garden-section">
-          <Container class="secondary-split">
-            <img class="secondary-feature-image" src={show.image} alt="" decoding="async" />
+          <Container class="program-show">
+            <div class="program-show-image">
+              <GardenImage path={show.image} priority sizes="(max-width: 670px) 92vw, 50vw" />
+            </div>
             <div class="secondary-prose">
               {show.intro.map((paragraph) => <p>{paragraph}</p>)}
-              <Button href={show.channel}>Watch on YouTube</Button>
+              <div class="flex flex-wrap gap-3">
+                <Button href="#episodes">Browse episodes</Button>
+                <Button href={show.channel} variant="outline">Watch on YouTube</Button>
+              </div>
             </div>
           </Container>
           <Container class="secondary-stats">
             <dl>{show.info.map(({ title, description }) => <div><dt>{title}</dt><dd>{description}</dd></div>)}</dl>
           </Container>
         </section>
-        <section class="garden-section secondary-band">
+        <section id="episodes" class="garden-section secondary-band" aria-labelledby="episode-heading">
           <Container>
-            <SectionHeading eyebrow="Watch Episodes">Click on an Episode</SectionHeading>
-            <div class="garden-card-grid secondary-grid">
-              {show.episodes.map(({ label, title, extra, href, image }) => (
-                <ProgramCard title={title || label} category={title ? label : undefined} {image} {href}>
-                  {extra.map((line) => <span slot="description" lang="ar" dir="rtl">{line}</span>)}
-                </ProgramCard>
+            <SectionHeading id="episode-heading" eyebrow="Watch Episodes">Click on an Episode</SectionHeading>
+            <EpisodeLibrary episodes={show.episodes} />
+          </Container>
+        </section>
+        <section class="garden-section">
+          <Container>
+            <SectionHeading id="program-switcher">More Programs</SectionHeading>
+            <nav class="program-switcher" aria-labelledby="program-switcher">
+              <a href="/program.html">All programs</a>
+              {programs.map(({ href, title }, index) => (
+                <a href={href} aria-current={index === showIndex ? 'page' : undefined}>{title}</a>
               ))}
-            </div>
-            <div class="secondary-action"><Button href="/program.html" variant="outline">All programs</Button></div>
+            </nav>
           </Container>
         </section>
       </>
