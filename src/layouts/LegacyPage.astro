@@ -1,0 +1,9 @@
+---
+import PageSeo from '../components/PageSeo.astro';
+const { page, head, body, hasDescription } = Astro.props;
+---
+<Fragment set:html={head} />
+<!-- page-seo:start -->
+<PageSeo {page} {hasDescription} />
+<!-- page-seo:end -->
+<Fragment set:html={body} />

@@ -1,16 +1,12 @@
 ---
-import { readdirSync, readFileSync } from 'node:fs';
+import LegacyPage from '../layouts/LegacyPage.astro';
+import { legacyPages } from '../content/pages.mjs';
+import { readLegacyPage } from '../content/read-legacy-page.mjs';
 
 export function getStaticPaths() {
-  const root = process.cwd();
-  return readdirSync(root)
-    .filter((name) => name.endsWith('.html') && name !== 'index.html')
-    .map((name) => ({
-      params: { page: name.slice(0, -'.html'.length) },
-      props: { html: readFileSync(name, 'utf8') },
-    }));
+  return Object.keys(legacyPages)
+    .filter((slug) => slug !== 'index')
+    .map((slug) => ({ params: { page: slug }, props: readLegacyPage(slug) }));
 }
-
-const { html } = Astro.props;
 ---
-<Fragment set:html={html} />
+<LegacyPage {...Astro.props} />

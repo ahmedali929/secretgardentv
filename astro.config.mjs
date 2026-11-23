@@ -1,9 +1,11 @@
 import { cp } from 'node:fs/promises';
 import { defineConfig } from 'astro/config';
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: 'https://secretgardentv.com',
   build: { format: 'file' },
+  vite: { plugins: [tailwindcss()] },
   integrations: [{
     name: 'legacy-assets',
     hooks: {

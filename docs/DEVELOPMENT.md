@@ -18,12 +18,26 @@ Run these commands from the repository root with Node.js 24.
 
 ```sh
 npm ci
+npm run dev
+```
+
+Run these separately to verify and serve the static output.
+
+```sh
+npm run lint
 npm run build
 npm test
 npm run preview
 ```
 
 Check the affected legacy URLs, assets, and integrations. For visual changes, test phone, tablet, and desktop, keyboard navigation, and reduced motion. Use staging-only form and analytics settings. Never submit production test data without explicit authorization.
+
+### Frontend layout
+
+- `src/content/pages.mjs` owns the legacy URL registry, descriptions, social types and sitemap inclusion. Add a registry entry when introducing a new legacy HTML document. Astro emits the existing `.html` URLs from this registry.
+- `LegacyPage.astro` is a migration bridge. It inserts the shared `PageSeo.astro` component into the existing head and preserves original markup, scripts, external integrations and media references. `SiteLayout.astro` and the scoped Tailwind utility entry are for new Astro templates, starting with the 404 page.
+- Keep public media in the existing asset tree. The build copies it into `dist/` once. Keep `CNAME` in the ordinary output and GitHub Pages production settings outside staging.
+- Legacy pages are static and use their existing interactions. Add React only when a new interaction needs it. Run the parity checks after each template migration and adjust them only for intentional changes.
 
 ### Staging build and hosted preview
 

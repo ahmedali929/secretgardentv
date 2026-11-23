@@ -1,0 +1,10 @@
+---
+const { page, hasDescription = false } = Astro.props;
+const canonical = new URL(page.canonicalPath, Astro.site).href;
+---
+{!hasDescription && <meta name="description" content={page.description} />}
+<link rel="canonical" href={canonical} />
+<meta property="og:type" content={page.type} />
+<meta property="og:title" content={page.title} />
+<meta property="og:description" content={page.description} />
+<meta property="og:url" content={canonical} />
