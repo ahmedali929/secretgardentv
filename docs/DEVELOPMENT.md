@@ -35,7 +35,7 @@ Check the affected legacy URLs, assets, and integrations. For visual changes, te
 ### Frontend layout
 
 - `src/content/pages.mjs` owns the legacy URL registry, descriptions, social types and sitemap inclusion. Add a registry entry when introducing a new legacy HTML document. Astro emits the existing `.html` URLs from this registry.
-- `LegacyPage.astro` is a migration bridge. It inserts the shared `PageSeo.astro` component into the existing head and preserves original markup, scripts, external integrations and media references. `SiteLayout.astro` and the scoped Tailwind utility entry are for new Astro templates, starting with the 404 page.
+- `GardenPage.astro` provides shared navigation, footer, analytics and SEO for the migrated secondary pages. The homepage shares the same navigation and footer. `src/content/secondary-pages.json` holds audited content for About, Programs, Blog, Donate and FAQs. Article bodies are checked-in editorial HTML, and other content uses structured records. Root legacy HTML remains a source reference.
 - Keep public media in the existing asset tree. The build copies it into `dist/` once. Keep `CNAME` in the ordinary output and GitHub Pages production settings outside staging.
 - Legacy pages are static and use their existing interactions. Add React only when a new interaction needs it. Run the parity checks after each template migration and adjust them only for intentional changes.
 

@@ -18,8 +18,33 @@
 
 - Hosted staging is blocked until the Cloudflare account owner connects GitHub. Follow the phone setup in [DEVELOPMENT.md](DEVELOPMENT.md), then record the verified HTTPS URL.
 - Verify the exact GitHub Pages source mode and folder, configure the production branch review rules, and confirm whether Netlify reviewer access is restricted.
-- Convert page bodies into shared header, footer, program, episode and article components incrementally. Add React hydration when an advanced interaction needs it.
 - Approve the homepage design and prototype URL dispositions. Verify legacy route parity as pages move into shared layouts.
 - Validate MailerLite signup, Zeffy handoff, and analytics on staging. Confirm adult inquiry fields, provider and team routing.
 - Verify mobile and tablet behavior, keyboard accessibility, reduced motion and performance on representative devices.
 - Prepare, rehearse and obtain explicit approval for the production release and rollback plan.
+
+## Page migration checklist
+
+| Route | Completion |
+|---|---|
+| `/` and `/index.html` | Complete. Shared header and footer, illustrated Garden chapters, signup and FAQs |
+| `/about.html` | Complete. Mission, philosophy, values, approach, existing video and characters |
+| `/program.html` | Complete. Five published programs and existing testimonials |
+| `/allah-secret-signs.html` | Complete. Show information and existing episode links |
+| `/toy-box-stories.html` | Complete. Show information and existing episode links |
+| `/nurheart-fables.html` | Complete. Show information and existing episode links |
+| `/babagha-sadiqi.html` | Complete. Show information and bilingual episode copy |
+| `/quran-safari.html` | Complete. Show information and existing episode links |
+| `/blog.html` | Complete. Both published article cards |
+| `/blog-teaching-adab-everyday-moments.html` | Complete. Article copy, date and illustrations |
+| `/blog-raising-purposeful-children.html` | Complete. Article copy, date, illustrations and video link |
+| `/blog-detail.html` | Complete. Retains the older article as a noindex page. Removed dummy author, self-links and inactive template forms |
+| `/blog-test.html` | Complete. Static redirect with fallback link to the published blog |
+| `/landingpage.html` | Complete. Static redirect with fallback link to the homepage |
+| `/faq.html` | Complete. All 11 questions. Artwork inquiries point to the existing site email |
+| `/donate.html` | Complete. Published funding and tax copy, presets, custom amount, and existing Zeffy checkout |
+| `/404.html` | Complete. Shared layout and return link |
+| `/design-system.html` | Retained as the noindex design reference |
+| `/sitemap.xml` and `/sgtv_coloring_book.pdf` | Retained and checked in the build |
+
+The two prototype redirects use an HTML refresh and a normal link, so they work on static hosting. The donation handoff sends only the amount and leaves personal information to Zeffy. Provider acceptance of the amount and live payment completion remain unverified. Footer links preserve the site's existing social accounts and send newsletter visitors to the existing homepage signup flow.

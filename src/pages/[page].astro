@@ -1,12 +1,205 @@
 ---
-import LegacyPage from '../layouts/LegacyPage.astro';
+import GardenPage from '../layouts/GardenPage.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Container from '../components/garden/Container.astro';
+import Button from '../components/garden/Button.astro';
+import ProgramCard from '../components/garden/ProgramCard.astro';
+import SectionHeading from '../components/garden/SectionHeading.astro';
+import DonationCheckout from '../components/garden/DonationCheckout.astro';
 import { legacyPages } from '../content/pages.mjs';
-import { readLegacyPage } from '../content/read-legacy-page.mjs';
+import data from '../content/secondary-pages.json';
 
 export function getStaticPaths() {
-  return Object.keys(legacyPages)
-    .filter((slug) => slug !== 'index')
-    .map((slug) => ({ params: { page: slug }, props: readLegacyPage(slug) }));
+  return Object.values(legacyPages).filter(({ slug }) => slug !== 'index')
+    .map((page) => ({ params: { page: page.slug }, props: { page } }));
 }
+
+const { page } = Astro.props;
+const { slug } = page;
+const { about, programs, quotes, shows, blog, articles, faq, faqExtras, donate } = data;
+const show = shows[slug];
+const article = articles[slug];
+const redirect = { landingpage: '/', 'blog-test': '/blog.html' }[slug];
+const heading = show?.title ?? article?.title ?? {
+  about: 'About Us', program: 'Our Content', blog: 'Seeds of Wisdom',
+  faq: 'Frequently Asked Questions', donate: 'Donate',
+}[slug];
+const currentHref = show ? '/program.html' : article ? '/blog.html' : page.canonicalPath;
 ---
-<LegacyPage {...Astro.props} />
+{redirect ? (
+  <SiteLayout title="Secret Garden TV for Kids">
+    <Fragment slot="head">
+      <meta name="robots" content="noindex, follow" />
+      <link rel="canonical" href={new URL(redirect, Astro.site)} />
+      <meta http-equiv="refresh" content={`0;url=${redirect}`} />
+    </Fragment>
+    <main class="mx-auto max-w-2xl px-6 py-20">
+      <h1>Secret Garden TV for Kids</h1>
+      <a href={redirect}>Continue to Secret Garden TV</a>
+    </main>
+  </SiteLayout>
+) : (
+  <GardenPage page={{ ...page, title: `${heading} | Secret Garden TV for Kids` }} {heading}
+    eyebrow={show ? 'Our Shows' : article ? 'Seeds of Wisdom' : undefined}
+    intro={{
+      about: 'Learn about Secret Garden TV for Kids',
+      program: 'Every story a seed. Every seed a sign.',
+      blog: 'Reflections, stories, and tools for growing hearts.',
+      faq: "A list of the most questions we've been asked, and their answers",
+      donate: donate.intro,
+    }[slug]}
+    hideFromSearch={!page.inSitemap} {currentHref}>
+    {slug === 'about' && (
+      <>
+        <section class="garden-section">
+          <Container class="secondary-split">
+            <div class="secondary-prose">
+              {about.intro.map(({ title, description }) => <section><h2>{title}</h2><p>{description}</p></section>)}
+            </div>
+            <figure class="secondary-art">
+              <img src={about.image} alt="" decoding="async" />
+              <Button href={about.video}>Watch the video</Button>
+            </figure>
+          </Container>
+        </section>
+        <section class="garden-section secondary-band">
+          <Container>
+            <SectionHeading eyebrow="What Makes Us Unique">Purposeful Creation, Rooted in Our Core Values</SectionHeading>
+            <div class="secondary-grid">
+              {about.values.map(({ title, description, reference, quote }) => (
+                <article class="secondary-panel">
+                  <h3>{title}</h3><p>{description}</p>
+                  {quote && <details><summary>{reference}</summary><p>{quote}</p></details>}
+                </article>
+              ))}
+            </div>
+          </Container>
+        </section>
+        <section class="garden-section">
+          <Container class="secondary-split">
+            <div class="secondary-prose">
+              <SectionHeading>Our Approach in Practice</SectionHeading>
+              {about.approach.map((paragraph) => <p>{paragraph}</p>)}
+              <ul>{about.practice.map(({ title, description }) => <li><strong>{title}</strong><p>{description}</p></li>)}</ul>
+            </div>
+            <img class="secondary-feature-image" src={about.practiceImage} alt="" loading="lazy" decoding="async" />
+          </Container>
+          <Container class="secondary-stats">
+            <dl>{about.stats.map(({ value, label }) => <div><dt>{label}</dt><dd>{value}</dd></div>)}</dl>
+          </Container>
+        </section>
+        <section class="garden-section secondary-band">
+          <Container>
+            <SectionHeading eyebrow="Meet the characters">Our Characters</SectionHeading>
+            <div class="secondary-grid">
+              {about.characters.map(({ title, role, description, image, alt }) => (
+                <article class="secondary-panel character-panel">
+                  <img src={image} {alt} loading="lazy" decoding="async" />
+                  <h3>{title}</h3><p class="garden-eyebrow">{role}</p><p>{description}</p>
+                </article>
+              ))}
+            </div>
+          </Container>
+        </section>
+      </>
+    )}
+
+    {slug === 'program' && (
+      <>
+        <section class="garden-section">
+          <Container class="garden-card-grid">
+            {programs.map((program) => <ProgramCard {...program} actionLabel="Watch Now" />)}
+          </Container>
+        </section>
+        <section class="garden-section secondary-band">
+          <Container>
+            <SectionHeading eyebrow="Kid-approved Stories">Voices of Adventure from Kids and Parents</SectionHeading>
+            <div class="home-quotes">
+              {quotes.map(([quote, name]) => <figure><blockquote>{quote}</blockquote><figcaption>{name}</figcaption></figure>)}
+            </div>
+          </Container>
+        </section>
+      </>
+    )}
+
+    {show && (
+      <>
+        <section class="garden-section">
+          <Container class="secondary-split">
+            <img class="secondary-feature-image" src={show.image} alt="" decoding="async" />
+            <div class="secondary-prose">
+              {show.intro.map((paragraph) => <p>{paragraph}</p>)}
+              <Button href={show.channel}>Watch on YouTube</Button>
+            </div>
+          </Container>
+          <Container class="secondary-stats">
+            <dl>{show.info.map(({ title, description }) => <div><dt>{title}</dt><dd>{description}</dd></div>)}</dl>
+          </Container>
+        </section>
+        <section class="garden-section secondary-band">
+          <Container>
+            <SectionHeading eyebrow="Watch Episodes">Click on an Episode</SectionHeading>
+            <div class="garden-card-grid secondary-grid">
+              {show.episodes.map(({ label, title, extra, href, image }) => (
+                <ProgramCard title={title || label} category={title ? label : undefined} {image} {href}>
+                  {extra.map((line) => <span slot="description" lang="ar" dir="rtl">{line}</span>)}
+                </ProgramCard>
+              ))}
+            </div>
+            <div class="secondary-action"><Button href="/program.html" variant="outline">All programs</Button></div>
+          </Container>
+        </section>
+      </>
+    )}
+
+    {slug === 'blog' && (
+      <section class="garden-section">
+        <Container class="secondary-blog-grid">
+          {blog.map(({ description, ...post }) => <ProgramCard {...post} category={description} actionLabel="Read More" />)}
+        </Container>
+      </section>
+    )}
+    {article && (
+      <section class="garden-section">
+        <Container>
+          <article class="secondary-article">
+            <Button href="/blog.html" variant="outline">Back to Blog</Button>
+            {article.date && <p class="garden-eyebrow">{article.date}</p>}
+            <img src={article.image} alt={article.alt} decoding="async" />
+            <div class="secondary-prose" set:html={article.body} />
+            <div class="secondary-action"><Button href="/#newsletter">Join the Secret Garden</Button></div>
+          </article>
+        </Container>
+      </section>
+    )}
+
+    {slug === 'faq' && (
+      <section class="garden-section">
+        <Container class="secondary-faq">
+          <div class="home-faq-list">
+            {faq.map(({ title, description }) => <details><summary>{title}</summary><p>{description}</p></details>)}
+          </div>
+          <SectionHeading>Read Our Most General Questions</SectionHeading>
+          <div class="home-faq-list">
+            {faqExtras.map(({ title, description }, index) => (
+              <details>
+                <summary>{title}</summary>
+                <p>{index === 0 ? description.replace('You can send drawings, reflections, or story ideas through the contact form on our website.', 'Parents or guardians can email drawings, reflections, or story ideas to Secret Garden TV.') : description}</p>
+                {index === 0 && <p><a href="mailto:secretgardentv@gmail.com">secretgardentv@gmail.com</a></p>}
+              </details>
+            ))}
+          </div>
+        </Container>
+      </section>
+    )}
+
+    {slug === 'donate' && (
+      <section class="garden-section">
+        <Container class="secondary-split donation-layout">
+          <DonationCheckout />
+          <div class="secondary-prose" set:html={donate.body} />
+        </Container>
+      </section>
+    )}
+  </GardenPage>
+)}

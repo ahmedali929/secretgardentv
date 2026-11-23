@@ -1,15 +1,17 @@
 ---
-const { title, description, href, image, width, height, category } = Astro.props;
+const { title, description, href, image, width, height, category, actionLabel } = Astro.props;
 ---
 <article class="garden-card" data-reveal>
   <a href={href} class="garden-card-link">
-    <div class="garden-card-media">
+    {(image || Astro.slots.has("media")) && <div class="garden-card-media">
       <slot name="media"><img src={image} width={width} height={height} alt="" loading="lazy" decoding="async" /></slot>
-    </div>
+    </div>}
     <div class="garden-card-body">
       {category && <p class="garden-eyebrow">{category}</p>}
       <h3>{title}</h3>
-      <p class="garden-card-description">{description}</p>
+      {description && <p class="garden-card-description">{description}</p>}
+      <slot name="description" />
+      {actionLabel && <p class="secondary-card-action">{actionLabel}</p>}
       <span class="garden-card-arrow" aria-hidden="true">→</span>
     </div>
   </a>

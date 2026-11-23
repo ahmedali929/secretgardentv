@@ -4,6 +4,8 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import PageSeo from '../components/PageSeo.astro';
 import Button from '../components/garden/Button.astro';
 import Container from '../components/garden/Container.astro';
+import GardenHead from '../components/garden/GardenHead.astro';
+import GardenFooter from '../components/garden/GardenFooter.astro';
 import GardenNav from '../components/garden/GardenNav.astro';
 import HomeImage from '../components/garden/HomeImage.astro';
 import ProgramCard from '../components/garden/ProgramCard.astro';
@@ -19,31 +21,11 @@ const page = { ...legacyPages.index, title };
 const [opening, ...chapters] = content.hero;
 const poster = await getImage({ src: posterArt, width: 900, format: 'webp' });
 const email = 'mailto:secretgardentv@gmail.com';
-const socials = [
-  ['YouTube', 'https://www.youtube.com/@SecretGardenTVforKids'],
-  ['Instagram', 'https://www.instagram.com/secretgardentvforkids'],
-  ['TikTok', 'https://www.tiktok.com/@secretgardentv'],
-  ['Facebook', 'https://www.facebook.com/profile.php?id=61568807675251'],
-  ['X', 'https://x.com/secretgarden_tv'],
-];
 ---
 <SiteLayout {title}>
   <Fragment slot="head">
     <PageSeo {page} />
-    <link rel="icon" href="/assets/images/favicon_sgtv/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" />
-    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-8BV81NN8H4"></script>
-    <script is:inline>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-8BV81NN8H4', {
-        allow_google_signals: false,
-        allow_ad_personalization_signals: false
-      });
-    </script>
+    <GardenHead />
     <script is:inline>
       (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
       .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
@@ -55,7 +37,7 @@ const socials = [
 
   <div class="garden-preview garden-home">
     <a class="garden-skip" href="#main">Skip to content</a>
-    <GardenNav programsHref="#programs" aboutHref="#about" newsletterHref="#newsletter" />
+    <GardenNav newsletterHref="#newsletter" />
     <main id="main" tabindex="-1">
       <section class="home-hero" aria-labelledby="home-title">
         <div class="home-hero-art">
@@ -183,25 +165,7 @@ const socials = [
       </section>
     </main>
 
-    <footer class="garden-footer">
-      <Container>
-        <div class="home-footer-grid">
-          <div>
-            <a class="garden-logo" href="/"><img src="/assets/images/sgtv_logo_transparent_1.png" width="184" height="103" loading="lazy" alt="Secret Garden TV home" /></a>
-            <p>Secret Garden TV for Kids is an organization devoted to the development of educational content.</p>
-          </div>
-          <nav aria-label="Footer navigation">
-            <a href="/">Home</a><a href="/about.html">About Us</a><a href="/program.html">Programs</a><a href="/donate.html">Donate</a><a href="/blog.html">Blog</a><a href="/faq.html">FAQs</a>
-          </nav>
-          <div>
-            <a href="#newsletter">Our Newsletter</a>
-            <a href={email}>secretgardentv@gmail.com</a>
-            <nav class="home-socials" aria-label="Social media">{socials.map(([name, href]) => <a href={href}>{name}</a>)}</nav>
-          </div>
-        </div>
-        <p class="home-copyright">Copyright © 2026 Secret Garden TV for Kids. All Rights Reserved.</p>
-      </Container>
-    </footer>
+    <GardenFooter />
   </div>
 </SiteLayout>
 <script>

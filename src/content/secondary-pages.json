@@ -1,0 +1,677 @@
+{
+  "about": {
+    "intro": [
+      {
+        "title": "Who We Are",
+        "description": "Secret Garden TV for Kids is a nonprofit educational organization and creative studio rooted in Islamic values, dedicated to the holistic nurturing of children through spiritually grounded, Prophetically guided media. We create thoughtful, engaging, shows, games, and educational materials designed especially for children — and their families — to inspire reflection, build character, and connect everyday life with timeless truths."
+      },
+      {
+        "title": "Our Mission - Be the Mission",
+        "description": "Rooted in Islamic understandings of education, our mission is to bring the Garden (al-Jannah) to life for children as a powerful Qur’anic vision and model for living. We encourage children to embody the lessons they learn, transforming how they see themselves, others, and the world around them. Our goal is to educate a generation of conscious, curious, and compassionate young people by weaving Islamic teachings into joyful, purpose-driven storytelling and media experiences."
+      },
+      {
+        "title": "Our Vision - Be the Vision",
+        "description": "We envision a world where children develop a deep sense of purpose, empathy, and connection to Allah through engaging content that reflects their spiritual, emotional, intellectual, and true selves. Our work supports parents and educators in raising whole-hearted, thoughtful human beings who live intentionally, love expansively, and learn endlessly."
+      },
+      {
+        "title": "Our Philosophy — Be the Garden",
+        "description": "Our work grows from three roots: the Garden philosophy, which sees all learning as cultivation of the soul back home where we came from; the epistemology of presence (Hudur), which teaches children to know through living fully in the presence of Allah, unlocking Taqwa and the path of God-consciousness; and Ayatology, the Qur’anic art and science of learning through the Ayaat (Signs) of Allah in creation and the self, as a means of acquiring Hikma (wisdom). Guided by this philosophy, our pedagogy nurtures the whole child — uniting heart, mind, body, and spirit — so that knowledge is not only learned, but lived. Through stories, play, and reflection, children experience the signs of Allah with all their senses and the heart, allowing them to grow into Signs of His beauty and light in the world."
+      }
+    ],
+    "image": "/assets/images/resource/about-1-sgtv.png",
+    "video": "https://www.youtube.com/watch?v=sSzRKSKA8X8",
+    "values": [
+      {
+        "title": "Purposeful Creation",
+        "description": "Helping children see meaning in the world by recognizing Allah’s intentional design in all creation.",
+        "reference": "Āl ʿImrān 3:191",
+        "quote": "Our Lord, You did not create this without purpose."
+      },
+      {
+        "title": "Ayatology: Acquiring Hikma",
+        "description": "Fostering curiosity and a love for learning through deep reflection on the living signs of Allah.",
+        "reference": "Āl ʿImrān 3:190",
+        "quote": "In the creation of the heavens and the earth are signs for people of reason."
+      },
+      {
+        "title": "Heart: Awakening Consciousness",
+        "description": "Encouraging emotional awareness and spiritual mindfulness through Dhikr, empathy, and self-knowledge.",
+        "reference": "Ar-Raʿd 13:28",
+        "quote": "Surely in the remembrance of Allah do hearts find comfort"
+      },
+      {
+        "title": "Hudur (Adab & Akhlaq)",
+        "description": "Nurturing patience, humility, and presence for Allah through noble manners and prophetic character.",
+        "reference": "Al-Aʿrāf 7:205",
+        "quote": "Remember your Lord inwardly with humility and reverence."
+      },
+      {
+        "title": "The Human as a Sacred Trust",
+        "description": "Teaching the dignity of every person as honored creation (Ahsan Taqweem).",
+        "reference": "Al-Isrāʾ 17:70",
+        "quote": "We have certainly honored the children of Adam."
+      },
+      {
+        "title": "Education as Becoming",
+        "description": "Guiding learning as an inner journey where knowledge is lived, embodied, and returned to Allah.",
+        "reference": "Al-Jumuʿah 62:2",
+        "quote": "Reciting His revelations, purifying them, and teaching the Book and wisdom."
+      },
+      {
+        "title": "Love-Based Relationships",
+        "description": "Centering kindness, loyalty, and forgiveness in family, friendships, and community life.",
+        "reference": "Al-Ḥujurāt 49:10",
+        "quote": "The believers are but one brotherhood, so make peace between your brothers."
+      },
+      {
+        "title": "Family Orientation",
+        "description": "Celebrating the home as the first school of the soul and a place of belonging.",
+        "reference": "Al-Isrāʾ 17:23",
+        "quote": "Your Lord has decreed that you worship none but Him, and be good to parents."
+      },
+      {
+        "title": "Creation as Alive",
+        "description": "Helping children see that every plant, animal, and stone glorifies Allah.",
+        "reference": "Al-Hajj 22:18",
+        "quote": "Do you not see that to Allah bow down ˹in submission˺1 all those in the heavens and all those on the earth, as well as the sun, the moon, the stars, the mountains, the trees, and ˹all˺ living beings, as well as many humans, while many are deserving of punishment. And whoever Allah disgraces, none can honour. Surely Allah does what He wills."
+      },
+      {
+        "title": "Wonder & Imagination as Witnessing",
+        "description": "Seeing imagination not as escape, but as a way to witness deeper truths.",
+        "reference": "Fussilat 41:53",
+        "quote": "We will show them Our signs in the universe and within themselves until it becomes clear to them that this ˹Quran˺ is the truth. Is it not enough that your Lord is a Witness over all things?"
+      },
+      {
+        "title": "Duty Orientation",
+        "description": "Instilling justice, fairness, and responsibility as core spiritual and civic values.",
+        "reference": "An-Nisāʾ 4:135:",
+        "quote": "O believers, stand firm for justice as witnesses for Allah."
+      },
+      {
+        "title": "Systems Building: Spiritual Leadership",
+        "description": "Equipping children to lead with ethics, service, and prophetic inspiration.",
+        "reference": "Ash-Shūrā 42:38",
+        "quote": "Their affairs are conducted by mutual consultation."
+      },
+      {
+        "title": "Wholistic Conceptual Architecture",
+        "description": "Encouraging children to understand the interconnectedness of systems, ideas, and values in Allah’s creation.",
+        "reference": "Al-Baqarah 2:164",
+        "quote": "In all this are surely signs for people of understanding."
+      },
+      {
+        "title": "Purposeful Creation",
+        "description": "Reminding children that nothing is without purpose and all creation reflects its Creator.",
+        "reference": "Al-Qaṣaṣ 28:77",
+        "quote": "Seek the Hereafter by what Allah has given you, and do not forget your share of this world."
+      }
+    ],
+    "approach": [
+      "At Secret Garden TV, education isn’t just about information — it’s about becoming. Inspired by the prophetic model, we nurture human relationships rooted in trust, empathy, and lifelong growth.",
+      "Flowing from our three roots — the Garden philosophy, the epistemology of presence, and Ayatology — we shape every story, game, and activity to reflect the way children truly grow. In practice, this means we design content that encourages:"
+    ],
+    "practice": [
+      {
+        "title": "Cultivating collaborative learning",
+        "description": "Rooted in Garden philosophy, our stories model intergenerational care, where knowledge flows through trust, love, and shared reflection."
+      },
+      {
+        "title": "Encouraging oriented, thoughtful thinking",
+        "description": "Flowing from Ayatology, we help children think beyond false dichotomies of science versus religion or faith versus reason, instead using properly grounded Qur’anic signs to strengthen the thinking and discerning capacity of hearts."
+      },
+      {
+        "title": "Connecting systems through ethics",
+        "description": "Inspired by the interconnectedness of creation, we guide children to see how ideas, values, and communities fit into Allah’s greater design."
+      },
+      {
+        "title": "Keeping family at the center",
+        "description": "Aligned with the Garden philosophy, we affirm home as the first school of the soul, where love and responsibility are learned."
+      },
+      {
+        "title": "Building love-based relationships",
+        "description": "Rooted in the epistemology of presence, we foster kindness, loyalty, and forgiveness as living reflections of prophetic character."
+      }
+    ],
+    "practiceImage": "/assets/images/resource/value-sgtv.png",
+    "stats": [
+      {
+        "value": "5+",
+        "label": "shows"
+      },
+      {
+        "value": "20+",
+        "label": "Writers and Artists"
+      },
+      {
+        "value": "1",
+        "label": "Mission"
+      },
+      {
+        "value": "100%",
+        "label": "Our Commitment"
+      }
+    ],
+    "characters": [
+      {
+        "title": "Ali",
+        "role": "Brave Warrior",
+        "description": "A curious, big-hearted boy who faces challenges with courage, kindness, and faith — learning from the signs of Allah in creation and in himself.",
+        "image": "/assets/images/resource/ali.png",
+        "alt": "Ali — The Brave Warrior"
+      },
+      {
+        "title": "Baba",
+        "role": "Caring Father",
+        "description": "Ali’s wise and gentle guide, always ready with a story, a smile, or a lesson from the Qur’an and the world around them.",
+        "image": "/assets/images/resource/characters/baba.png",
+        "alt": "Baba — The Caring Father"
+      },
+      {
+        "title": "Grandma",
+        "role": "Keeper of Wisdom",
+        "description": "A loving elder whose stories, memories, and gentle humor pass on the light of faith from one generation to the next.",
+        "image": "/assets/images/resource/tata.png",
+        "alt": "Grandma — The Keeper of Wisdom"
+      },
+      {
+        "title": "Babagha",
+        "role": "Smartest Bird",
+        "description": "A witty green parrot who loves to teach Arabic through games, songs, and secret maps hidden in the Garden.",
+        "image": "/assets/images/resource/babagha.jpg",
+        "alt": "Babagha — The Smartest Bird"
+      },
+      {
+        "title": "Mohammad",
+        "role": "Dear Friend",
+        "description": "Ali’s loyal companion who shares in adventures, laughter, and learning — proving that friendship is one of Allah’s greatest blessings.",
+        "image": "/assets/images/resource/mohammad_babagha.jpg",
+        "alt": "Mohammad — The Dear Friend"
+      },
+      {
+        "title": "Suleiman Tiger",
+        "role": "Patient Teacher",
+        "description": "A gentle mentor who guides his son Taha — and all young viewers — on Qur’anic safaris, planting prayers in the Garden of the heart.",
+        "image": "/assets/images/resource/suleiman.jpg",
+        "alt": "Suleiman Tiger — The Patient Teacher"
+      },
+      {
+        "title": "Taha Tiger",
+        "role": "Kindest Tiger",
+        "description": "A playful tiger cub whose curiosity leads him to discover Qur’anic duʿas and the wonders of Allah’s creation.",
+        "image": "/assets/images/resource/taha.jpg",
+        "alt": "Taha Tiger — The Kindest Tiger"
+      },
+      {
+        "title": "Master Lavender",
+        "role": "Gentle Awakener",
+        "description": "Opens the day in the Garden with gentle guidance, preparing hearts and minds to notice the signs of Allah.",
+        "image": "/assets/images/resource/lavender.png",
+        "alt": "Master Lavender — The Gentle Awakener"
+      },
+      {
+        "title": "Maahir the Monkey",
+        "role": "Caring Monkey",
+        "description": "Quick, clever, and always ready to help his friends — even if his playful tricks sometimes get him into trouble.",
+        "image": "/assets/images/resource/maahir.jpg",
+        "alt": "Maahir the Monkey — The Caring Monkey"
+      },
+      {
+        "title": "Noorani Warrior",
+        "role": "Soldier of Light",
+        "description": "A shining guardian who protects the Garden from darkness, showing that true strength comes from Noor and trust in Allah.",
+        "image": "/assets/images/resource/noorani.png",
+        "alt": "Noorani Warrior — The Soldier of Light"
+      },
+      {
+        "title": "Hafez the Tortoise",
+        "role": "Patient Traveler",
+        "description": "Slow and steady, Hafez reminds us that the journey matters as much as the destination — and that wisdom often walks at the pace of the heart.",
+        "image": "/assets/images/resource/characters/hafez.jpg",
+        "alt": "Hafez the Tortoise — The Patient Traveler"
+      },
+      {
+        "title": "Moly Moly the Roly Poly",
+        "role": "Cheerful Companion",
+        "description": "A tiny, round friend who can roll into a ball to stay safe, teaching the wisdom of protection and humility.",
+        "image": "/assets/images/resource/molymoly.jpg",
+        "alt": "Moly Moly the Roly Poly — The Cheerful Companion"
+      }
+    ]
+  },
+  "programs": [
+    {
+      "title": "Allah's Secret Signs™",
+      "description": "A fully illustrated and animated nature-themed series helping children discover science through the Ayaat (Signs) of Allah in the everyday wonders of creation.",
+      "href": "/allah-secret-signs.html",
+      "image": "/assets/images/shows/allah_secret_signs.png"
+    },
+    {
+      "title": "Toy Box Stories™",
+      "description": "Mixed live-action and animated tales of toys who come to life, learning about the Prophets and important lessons in kindness, honesty, and teamwork.",
+      "href": "/toy-box-stories.html",
+      "image": "/assets/images/shows/toyboxstories.PNG"
+    },
+    {
+      "title": "Nurheart Fables™",
+      "description": "Short, heartwarming moral fables centered on Allah’s animals and told through engaging animation — inspired by Islamic values and virtues.",
+      "href": "/nurheart-fables.html",
+      "image": "/assets/images/shows/nurheart_fables.png"
+    },
+    {
+      "title": "Babagha Sadiqi™",
+      "description": "Join Babagha Sadiqi and his friend Mohammad on joyful adventures that teach the beauty of the Arabic language.",
+      "href": "/babagha-sadiqi.html",
+      "image": "/assets/images/shows/babagha_sadiqi.png"
+    },
+    {
+      "title": "Qur'an Safari with Taha Tiger™",
+      "description": "Embark on fun-filled adventures with Taha the Tiger as he explores Qur’anic prayers, revives a dying tree, and journeys through jungles, deserts, and seas.",
+      "href": "/quran-safari.html",
+      "image": "/assets/images/shows/quranSafari.png"
+    }
+  ],
+  "quotes": [
+    [
+      "SGTV shows have been a refreshing shift in children’s content. I like how the shows nurture Islamic values in a thoughtful and fun way.",
+      "Ali"
+    ],
+    [
+      "I love the Nabi Nuh episode. Can we watch it now?",
+      "Khadija"
+    ],
+    [
+      "Secret Garden TV for Kids is exactly what I’ve been looking for. The stories are bright and gentle while teaching adab and gratitude in a way my toddler understands. He’s started repeating the duas and noticing Allah’s signs in nature. I trust SGTV for safe, beautiful screen time in our home.",
+      "Fairouz"
+    ],
+    [
+      "I am going to the Garden!",
+      "Abdullah"
+    ],
+    [
+      "Secret Garden TV is opening new horizons for my children and family. It’s difficult to find good quality education for Muslims out there. SGTV is shedding new light on foundationally important concepts in our whole family’s education from the lives of the prophets to science lessons to learning about the wisdom behind the foods we eat, and beyond. I’m truly grateful to have this part of our lives now",
+      "Yusuf"
+    ]
+  ],
+  "shows": {
+    "allah-secret-signs": {
+      "title": "Allah's Secret Signs™",
+      "image": "/assets/images/shows/allah-secret-sign.png",
+      "intro": [
+        "Allah’s Secret Signs™ is a Qur’an-inspired story show and curriculum that nurtures the heart, mind, and soul through the wonders of the created world. Guided by the adventures of a boy named Ali, each story reveals how plants like the olive, fig, and carrot are not just part of creation—but living Ayaat (signs) that teach us about patience, beauty, trust, and our return to Allah. Rooted in the Qur’an and the teachings of the Anbiya (Prophets), this series helps children grow in Fitrah, imagination, and reverence—so they don’t just study the world, but become part of its divine meaning."
+      ],
+      "episodes": [
+        {
+          "label": "Episode 1",
+          "title": "Ali and the Healer's Fruit: The Sign of the Apple",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=Zv6umVZS3NY",
+          "image": "/assets/images/episodes/secret_sign_apple.png"
+        },
+        {
+          "label": "Episode 2",
+          "title": "A Superhero’s Secret: The Sign of Thyme",
+          "extra": [],
+          "href": "https://youtu.be/bixsoWn1M4s?si=efaFlZuuQmuVZuHD",
+          "image": "/assets/images/episodes/secret_sign_thyme.jpg"
+        },
+        {
+          "label": "Episode 3",
+          "title": "Ali and the Hidden Treasure: The Sign of the Walnut",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=av6NzM18r-s&t=19s&pp=0gcJCbIJAYcqIYzv",
+          "image": "/assets/images/episodes/secret_sign_walnut.png"
+        },
+        {
+          "label": "Episode 4",
+          "title": "Blooming in the Rocks: The Sign of the Lavender",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=psytn2Ei1D0",
+          "image": "/assets/images/episodes/secret_sign_lavender.png"
+        },
+        {
+          "label": "Episode 5",
+          "title": "Bursting at Different Levels: The Sign of the Blueberry",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=EZ9tZMOsY58",
+          "image": "/assets/images/episodes/secret_sign_blueberry.png"
+        },
+        {
+          "label": "Episode 6",
+          "title": "The Dangerous Disguise: The Sign of a Venus Flytrap",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=mvb1mMeJ8lA",
+          "image": "/assets/images/episodes/secret_sign_venus_flytrap.png"
+        },
+        {
+          "label": "Episode 7",
+          "title": "Ali and the Prayer of the Rose: The Sign of the Rose",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=OXiceougwfY",
+          "image": "/assets/images/episodes/secret_sign_rose.png"
+        },
+        {
+          "label": "Episode 8",
+          "title": "Ali’s Ride Through the Sands of Sabr: The Sign of the Date",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=DMg6yPg5GcI",
+          "image": "/assets/images/episodes/secret_sign_date.avif"
+        },
+        {
+          "label": "More Episodes",
+          "title": "Coming Soon",
+          "extra": [],
+          "href": "https://www.youtube.com/@SecretGardenTVforKids",
+          "image": "/assets/images/episodes/secret_sign_coming_soon.png"
+        }
+      ],
+      "info": [
+        {
+          "title": "Episodes Released",
+          "description": "7 episodes"
+        },
+        {
+          "title": "In Production?",
+          "description": "Yes"
+        },
+        {
+          "title": "Premiere Date",
+          "description": "August 16, 2025"
+        }
+      ],
+      "channel": "https://www.youtube.com/@SecretGardenTVforKids"
+    },
+    "toy-box-stories": {
+      "title": "Toy Box Stories™",
+      "image": "/assets/images/shows/toy_box_stories.png",
+      "intro": [
+        "Toy Box Stories™ is a playful and poetic Islamic show for children. Through animated toys, puzzles, music videos, and stop-motion adventures, each episode opens a door into a new world of meaning—from the Secret Garden Expressway Train to the story of Nabi Nuh’s Ark. Guided by a gentle narrator, children explore timeless Islamic themes and topics like light vs. darkness, being kind when it is hard, the importance of staying clean, becoming who Allah made you to be, and the lives of beloved Prophets (Anbiya). Some toys come to life, others become part of symbolic story worlds—but every episode leads back to the heart, inviting little ones to imagine, reflect, and return to the Garden of Allah (Janna)."
+      ],
+      "episodes": [
+        {
+          "label": "Episode 1",
+          "title": "The Noorani Warrior Versus the Zulumati Knight: The Puzzle Quest to Save the Butterfly",
+          "extra": [],
+          "href": "https://youtu.be/Ysxxf_Lzcws?si=JPIA-C3-77NPRoKS",
+          "image": "/assets/images/episodes/noorani-warrior.jpg"
+        },
+        {
+          "label": "Episode 2",
+          "title": "Uncle Kareem and His Friday Eid Ice Cream: Serving with Hudur",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=qUPdLdTxncw",
+          "image": "/assets/images/episodes/toybox-ep2.avif"
+        },
+        {
+          "label": "More Episodes",
+          "title": "Coming Soon",
+          "extra": [],
+          "href": "https://www.youtube.com/@SecretGardenTVforKids",
+          "image": "/assets/images/episodes/toy-box-coming-soon.png"
+        }
+      ],
+      "info": [
+        {
+          "title": "Episodes Released",
+          "description": "2"
+        },
+        {
+          "title": "In Production?",
+          "description": "Yes"
+        },
+        {
+          "title": "Premiere Date",
+          "description": "To be Announced"
+        }
+      ],
+      "channel": "https://www.youtube.com/@SecretGardenTVforKids"
+    },
+    "nurheart-fables": {
+      "title": "Nurheart Fables™",
+      "image": "/assets/images/shows/test.png",
+      "intro": [
+        "Nurheart Fables™ is a gentle, storybook-style video series for children, where timeless values bloom through the adventures of lovable animal friends. Each animated episode brings to life a new illustrated fable featuring characters like Maahir the curious Monkey, Moly Moly the kind Roly Poly, Sami the brave Sparrow, and Hafiz the wise Tortoise. Through tales of patience, sharing, wonder, and discovery, little hearts are invited to journey toward the Secret Garden — a symbol of goodness, growth, and hidden treasure within. With each turn of the page, Nurheart Fables™ nurtures emotional wisdom, moral imagination, and a spark of light in every child."
+      ],
+      "episodes": [
+        {
+          "label": "Episode 1",
+          "title": "Maahir the Monkey and the Secret Key",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=9k8X4gnZU0c",
+          "image": "/assets/images/episodes/maahir_secret_key.jpg"
+        },
+        {
+          "label": "Episode 2",
+          "title": "Moly Moly the Roly Poly and Allah's Special Gift",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=L-jDs8xqpyw",
+          "image": "/assets/images/episodes/nurheart_roly_poly.avif"
+        },
+        {
+          "label": "Episode 3",
+          "title": "Hafez the Tortoise and the Desert Oasis",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=SqS6TsiyEgo",
+          "image": "/assets/images/episodes/nurheart_hafiz.avif"
+        },
+        {
+          "label": "Episode 4",
+          "title": "Sami the Sparrow’s Journey to Trust in Allah",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=P8hdpVdM-4w",
+          "image": "/assets/images/episodes/nurheart_sami.avif"
+        },
+        {
+          "label": "More Episodes",
+          "title": "Coming Soon",
+          "extra": [],
+          "href": "https://www.youtube.com/@SecretGardenTVforKids",
+          "image": "/assets/images/episodes/8.jpg"
+        }
+      ],
+      "info": [
+        {
+          "title": "Episodes Released",
+          "description": "3 episodes"
+        },
+        {
+          "title": "In Production?",
+          "description": "Yes"
+        },
+        {
+          "title": "Premiere Date",
+          "description": "August 16, 2025"
+        }
+      ],
+      "channel": "https://www.youtube.com/@SecretGardenTVforKids"
+    },
+    "babagha-sadiqi": {
+      "title": "Babagha Sadiqi™",
+      "image": "/assets/images/shows/babagha_sadiqi.png",
+      "intro": [
+        "Babagha Sadiqi™ (“Babagha, My Friend”) is a joyful Arabic language learning series set in a beautiful garden school where every episode is a playful return to the Secret Garden. Guided by young host Mohammad and his feathered friend Babagha the green parrot, children explore Arabic through songs, puzzles, storytelling, physical games, outdoor adventures, and a treasure map that unlocks new words each and every episode. With every leaf, letter, and laugh, the garden grows—and so does each child's love for the Arabic language."
+      ],
+      "episodes": [
+        {
+          "label": "Episode 1",
+          "title": "A Journey on the Farm",
+          "extra": [
+            "رحلة ببغاء صديقي و محمد في المزرعة"
+          ],
+          "href": "https://www.youtube.com/watch?v=K2c0ZNE73qU",
+          "image": "/assets/images/episodes/babagha_sadiqi_ep1.avif"
+        },
+        {
+          "label": "More Episodes",
+          "title": "Coming Soon",
+          "extra": [],
+          "href": "https://www.youtube.com/@SecretGardenTVforKids",
+          "image": "/assets/images/episodes/babagha_coming_soon.png"
+        }
+      ],
+      "info": [
+        {
+          "title": "Episodes Released",
+          "description": "1"
+        },
+        {
+          "title": "In Production?",
+          "description": "Yes"
+        },
+        {
+          "title": "Premiere Date",
+          "description": "January 24th, 2026"
+        }
+      ],
+      "channel": "https://www.youtube.com/@SecretGardenTVforKids"
+    },
+    "quran-safari": {
+      "title": "Qur'an Safari with Taha Tiger™",
+      "image": "/assets/images/shows/quran-safari.png",
+      "intro": [
+        "Qur’an Safari with Taha Tiger™ is a joyful and heartwarming Qur’anic adventure series for children eager to learn prayers from the Holy Qur’an. In each short episode, viewers join Taha Tiger and his wise father, Suleiman Tiger, on a gentle safari through a secret garden full of wonder. Along the way, they learn special prayers from the Holy Qur’an — each beginning with the word “Rabbana” (“Our Lord”) — recited in Arabic and brought to life with simple meaning, clear recitation, and gentle animation.",
+        "With every prayer they learn and practice together, Taha places a glowing green leaf on a once-dead tree, slowly bringing it back to life. The tree, once dark and dry, begins to bloom with signs of hope, faith, and remembrance of Allah. Through stories and safari surprises, children will connect with the Holy Qur’an not just in memory — but in heart."
+      ],
+      "episodes": [
+        {
+          "label": "Episode 1",
+          "title": "A Garden in Both Worlds",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=v10R3XlBuJI",
+          "image": "/assets/images/episodes/quran-safari-e01.png"
+        },
+        {
+          "label": "Episode 2",
+          "title": "A Gift for Allah",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=YHoO-AN0IyA",
+          "image": "/assets/images/episodes/quran-safari-e02.png"
+        },
+        {
+          "label": "Episode 3",
+          "title": "Hearts that Stay on the Path",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=3PRn29lg28A",
+          "image": "/assets/images/episodes/quran-safari-e03.png"
+        },
+        {
+          "label": "Episode 4",
+          "title": "Even When We Forget",
+          "extra": [],
+          "href": "https://www.youtube.com/watch?v=4ysocbN8WwY",
+          "image": "/assets/images/episodes/quran-safari-e04.png"
+        },
+        {
+          "label": "More Episodes",
+          "title": "Coming Soon",
+          "extra": [],
+          "href": "https://www.youtube.com/@SecretGardenTVforKids",
+          "image": "/assets/images/episodes/taha_tiger_coming_soon.png"
+        }
+      ],
+      "info": [
+        {
+          "title": "Episodes Released",
+          "description": "3 episodes"
+        },
+        {
+          "title": "In Production?",
+          "description": "Yes"
+        },
+        {
+          "title": "Premiere Date",
+          "description": "September 5th, 2025"
+        }
+      ],
+      "channel": "https://www.youtube.com/@SecretGardenTVforKids"
+    }
+  },
+  "blog": [
+    {
+      "title": "Teaching Adab in Everyday Moments",
+      "description": "7 min read",
+      "image": "/assets/images/resource/blog/blog-2.png",
+      "href": "/blog-teaching-adab-everyday-moments.html"
+    },
+    {
+      "title": "Raising Purposeful Children in a Noisy World",
+      "description": "6 min read",
+      "image": "/assets/images/resource/blog/blog-1.png",
+      "href": "/blog-raising-purposeful-children.html"
+    }
+  ],
+  "articles": {
+    "blog-teaching-adab-everyday-moments": {
+      "title": "Teaching Adab in Everyday Moments—Living Before Allah in a Distracting World",
+      "image": "/assets/images/resource/blog/blog-2.png",
+      "alt": "",
+      "date": "April 5th, 2026",
+      "body": "<p>In the previous blog post, we spoke about raising children with purpose. Yet purpose must be protected and refined if it is to shape character. In Islam, that refinement is known as <em>adab</em>.</p>\n                                    <p>In a world that rewards speed, excitement, and attraction, adab invites us to slow down and remember something deeper: we are always standing before Allah. Even in the ordinary moments — when a child interrupts us mid-sentence, when siblings argue over a toy, when we respond while tired — we are living in His presence.</p>\n\n                                    <h2>Adab Is More Than Manners</h2>\n                                    <p>Many people translate adab as \"good manners,\" but in the Islamic tradition it carries a richer meaning. Adab is not simply politeness or social etiquette. It is the awareness that Allah is our first and most important audience, and that every word, action, and reaction unfolds in His presence.</p>\n                                    <p>Allah tells us in the Qur'an, <em>\"I did not create jinn and humans except to worship Me\"</em> (51:56). Worship is not confined to prayer alone. It includes how we speak to our children when we are frustrated, how we respond when they make mistakes, how we carry ourselves in private, and how we behave online when no one else seems to be watching. The Prophet ﷺ expressed this beautifully when he said, <em>\"My Lord taught me adab, and He perfected it in me.\"</em> This reminds us that adab is a spiritual formation shaped by divine guidance.</p>\n                                    <div>\n                                        <img src=\"/assets/images/resource/blog/blog-2-nabis-glowing-way.png\" alt=\"In the Nabi's Glowing Way - Nurheart Fables\" loading=\"lazy\">\n                                    </div>\n                                    <br>\n                                    <blockquote>\n                                        \n\t\t\t\t\t\t\t\t\t\tI did not create jinn and humans except to worship Me.\n                                        <div>\n                                            <span>Surah Adh-Dhariyat (51:56)</span>\n                                        </div>\n                                    </blockquote>\n                                    <p>When a child understands that Allah sees them—not in a frightening way, but in a loving and constant way—their behavior begins to change from within. They choose their tone more carefully. They pause before reacting. They begin to ask themselves, even quietly, \"Would this please Allah?\" They become conscious that their actions matter because they are lived before Allah.</p>\n                                    <p>While the term etiquette comes from the French meaning prescribed behavior, its roots are from the Old French <em>estiquette</em> meaning a ticket or label. Presumably, the term evolved from cards telling people how to behave at court. The word Adab comes from the root أ د ب (ʾa-d-b) literally meaning to invite to a meal or hospitality and expanded in meaning to be defined as moral refinement, good manners, and correct conduct. However, adab is not only about outward etiquette, but also serves as a means of shaping hearts and character through intention, respect, and presence.</p>\n\n                                    <blockquote>\n                                        \n\t\t\t\t\t\t\t\t\t\tAdab starts at home—in the way we as parents speak, listen, and respond.\n                                    </blockquote>\n\n                                    <h2>How Adab Shows Up at Home</h2>\n                                    <p>Adab does not begin in grand gestures; it begins in daily family life. It appears when we greet each other with warmth and salaam, conscious that even this small exchange unfolds before Allah. It appears when we kneel down to listen fully to a child's story, even if we have heard a similar one before. It appears when we apologize sincerely after raising our voice and say, \"That wasn't the best way to act before Allah.\"</p>\n                                    <p>Children learn adab less from instruction and more from observation. And they taste the sincerity and humbleness of those around them. They watch how we handle inconvenience. They notice how we speak about others. They feel the atmosphere of the home — whether it is rushed and reactive or calm and intentional. Over time, they internalize what they repeatedly witness.</p>\n                                    <p>When they see us pray without rushing, speak respectfully to strangers, or set aside distractions while they are talking, they begin to understand that presence is part of faith. In this way, adab is not lectured into the home—it is modeled into it.</p>\n                                    <div>\n                                        <img src=\"/assets/images/resource/blog/blog-2-starve-ego-feed-soul.png\" alt=\"Starve the Ego. Feed the Soul. - Allah's Secret Signs\" loading=\"lazy\">\n                                    </div>\n                                    <br>\n\n                                    <blockquote>\n                                        \n\t\t\t\t\t\t\t\t\t\tWhen hearts remember Allah, actions become beautiful.\n                                    </blockquote>\n\n                                    <h2>Nine Examples of Adab in Daily Interactions</h2>\n                                    <p>Adab is not abstract. It lives in the small moments of the day, where our tone, attention, and reactions reveal what we truly remember.</p>\n                                    <p>Here are nine simple examples of how adab can shape daily life at home:</p>\n\n                                    <h3>1. Listening Without Interrupting</h3>\n                                    <p>When your child is speaking, give them your full attention. Put the phone down. Look at them directly. Even if the story is long, listening teaches them that their words matter. Teaching adab begins with showing that every voice deserves dignity, and that Allah hears how we respond to one another.</p>\n\n                                    <h3>2. Lowering the Voice During Disagreement</h3>\n                                    <p>Disagreements are natural in every home. Adab appears when we choose to lower our voice instead of raising it. A calm tone reminds our children that strength is not in volume, but in lived self-control before Allah.</p>\n\n                                    <h3>3. Beginning and Ending Meals with Gratitude</h3>\n                                    <p>Saying a short duʿā before eating and thanking Allah afterward transforms a routine meal into worship. It gently teaches children that even nourishment is a gift from Allah, and that gratitude is part of refined character. Gratitude softens hearts and brings calm into shared space.</p>\n\n                                    <h3>4. Sharing Meals Together</h3>\n                                    <p>Whenever possible, eating together strengthens both faith and family bonds. Sitting at one table—rather than eating separately or distracted—creates space for connection. These are the moments when children feel seen and heard, and when adab surely but quietly grows through shared presence.</p>\n                                    <div>\n                                        <img src=\"/assets/images/resource/blog/blog-2-planting-duas.png\" alt=\"Planting Du'as in the Garden of the Heart - Qur'an Safari\" loading=\"lazy\">\n                                    </div>\n                                    <br>\n\n                                    <h3>5. Beginning Tasks with Bismillah</h3>\n                                    <p>Whether starting homework, cooking dinner, or leaving the house, saying <em>Bismillah</em> turns an ordinary action into worship. It gently reminds children that nothing in life is separate from Allah's presence.</p>\n\n                                    <h3>6. Apologizing Sincerely</h3>\n                                    <p>When a parent says, \"I'm sorry. I should have spoken more gently,\" something powerful happens. Children learn humility. They learn that dignity includes correction. They learn that everyone is accountable before Allah.</p>\n\n                                    <h3>7. Guarding Words—Online and Offline</h3>\n                                    <p>Adab extends beyond the home. Remind children that Allah sees what we type, what we watch, and what we share. Integrity means behaving the same way whether others are present or not.</p>\n\n                                    <h3>8. Showing Joy and Energy Even When Tired</h3>\n                                    <p>Parents are human, and exhaustion is real. Yet even small efforts to greet our children with warmth, smile when we walk into the room, or respond kindly despite fatigue demonstrate emotional discipline. When children see that we strive to bring good energy into our homes for Allah's sake, they learn that adab includes managing our moods with intention. It shows that love and intention should trump your mood.</p>\n                                    <div>\n                                        <img src=\"/assets/images/resource/blog/blog-2-patience-lavender.png\" alt=\"Patience Blooms Where the Soil is Rough - Allah's Secret Signs\" loading=\"lazy\">\n                                    </div>\n                                    <br>\n\n                                    <h3>9. Creating Sacred Pauses—Especially Before Daily Prayers</h3>\n                                    <p>Before daily prayers, take a few quiet seconds together. A deep breath. A short dhikr. A reminder: \"We are about to stand before Allah.\" These small pauses train the heart to slow down and remember.</p>\n\n                                    <blockquote>                            \n\t\t\t\t\t\t\t\t\t\tIf you are interested in receiving more information about future Muslim parenting workshops (both online and in-person), please sign up here:\n                                        <div>\n                                            Join\n                                        </div>\n                                    </blockquote>\n\n                                    <blockquote>\n                                        \n\t\t\t\t\t\t\t\t\t\tRaise children who carry presence into every moment.\n                                    </blockquote>\n\n                                    <h2>A Gift That Shapes the Heart</h2>\n                                    <p>In a culture that prizes image, efficiency, and outward achievement at the expense of substance, nurturing adab helps our children grow into thoughtful and spiritually grounded human beings. It teaches them that every moment carries weight because every moment unfolds before Allah.</p>\n                                    <p>When children learn to live with Godly awareness, their actions become intentional, their character becomes steady, and even the smallest choices become sacred. Adab, in the end, is about being in the presence of Allah.</p>\n                                    <p><strong>May Allah grant our families beautiful adab, inward and outward, and help us raise children who live before Him and for Him with sincerity and light. Ameen.</strong></p>\n\n                                    \n                                "
+    },
+    "blog-raising-purposeful-children": {
+      "title": "Raising Purposeful Children in a Noisy World—With Allah at the Center",
+      "image": "/assets/images/resource/blog/blog-1.png",
+      "alt": "",
+      "date": "January 11th, 2026",
+      "body": "<p>In an age of constant noise—screens, crowded schedules, endless scrolling, and a rush toward more—helping children develop a deep sense of purpose can feel like planting a tree in a storm. But with the right roots, even the youngest Muslim hearts can grow strong, grounded, and God-conscious despite the distractions.</p>\n                                    <div>\n                                        <img src=\"/assets/images/resource/blog/blog-10.png\" alt=\"\" loading=\"lazy\">\n                                    </div>\n                                    <br>\n                                    <p>From an Islamic parenting approach, we believe that every child has a sacred purpose, not just to succeed in the world, but to contribute meaningfully to it, guided by faith, values, purpose, and love.</p>\n                                    <blockquote>\n                                        \n\t\t\t\t\t\t\t\t\t\tI did not create jinn and humans except to worship Me.\n                                        <div>\n                                            <span>Surah Adh-Dhariyat (51:56)</span>\n                                        </div>\n                                    </blockquote>\n                                    <div>\n                                        <img src=\"/assets/images/resource/blog/blog-1(vid).png\" alt=\"\" loading=\"lazy\">\n                                        <a href=\"/assets/images/resource/blog/blog-1.mp4\">Watch video<span></span></a>\n                                    </div>\n                                    <h2>Purpose Isn’t a Goal—It’s a Way of Being</h2>\n                                    <p>Modern culture often reduces purpose to material advantages and achievements: a dream job, high grades, or an outstanding reputation. While not necessarily denying such achievements, the Islamic tradition has a different understanding of life. In Islam, all material benefits are provided by Allah and are entrusted to His creation. Purpose is found in ever-present alignment with Allah’s will, one’s innate Fitrah (God-given internal programming), and service to others.</p>\n                                    <p>A purposeful child doesn’t just ask, “What do I want to be?” Instead, they begin by asking, “Why did Allah make me this way?” and “How can I give with what I’ve been given?” “How can I share the Light with others?”</p>\n                                    <p>True purpose fills the heart with gratitude. We embody our duty to Allah in how we care for ourselves, serve others, and worship Him. In the Qur'an, Allah tells us that the purpose of our creation is worship: \"I did not create jinn and humans except to worship Me\" (51:56).<sup>[1]</sup> This verse reminds us that it is for the act of love-filled service to God that we have been created.  </p>\n                                    <div>\n                                        <img src=\"/assets/images/resource/blog/blog-11.png\" alt=\"\" loading=\"lazy\">\n                                    </div>\n                                    <br>\n                                    <p>True worship is not only prayer and remembrance—it is living in servitude to Allah. This means fulfilling our duties by understanding the needs of our families, our communities, and the wider Muslim ummah from the perspective of Allah. As Muslim parents, our responsibility is to prepare our children to meet these needs with faith and responsibility, so future generations can continue this trust.</p>\n                                    <p>This first begins with instilling purpose into our daily routines. Teaching children that there is a why behind our actions is the first step in modelling consciousness rooted in Allah. </p>\n\n\n                                    <h2>Five Simple Ways to Begin Nurturing Purpose in Everyday Life</h2>\n                                    <h3>1. Invite Presence in Daily Activities</h3>\n                                    <p>Purpose begins with intentionality. Teach your children to view their actions—tidying toys, sharing lunch, loving their family—as small acts of worship. Help them say <em>Bismillah</em> before beginning and <em>Alhamdulillah</em> upon completing any act. More on this in a future blog post!</p>\n                                    <h3>2. Encourage Questions—Respect Curiosity</h3>\n                                    <p>Children often ask profound things: Why do people suffer? What is God like? Instead of rushing to answer, turn these into reflections. Say, “Why do you think that is? Let’s explore that together.” Show them that seeking truth is part of their journey. And that their thoughts and thinking process matters.</p>\n                                    <p>At a parent workshop, one of our Secret Garden Academy instructors related that their son once asked: \"Why do some people get oppressed?\" They related how they resisted the urge to give a quick answer. Instead, the parent and child sat together and thought about historical and Qur'anic examples of pain and trials, and then made du'a for people in need. These moments plant seeds of reflection and connect daily moral issues of good and bad with what happens in the world around us.</p>\n                                    <blockquote>                            \n\t\t\t\t\t\t\t\t\t\tIf you are interested in receiving more information about future Muslim parenting workshops (both online and in-person), please sign up here:\n                                        <div>\n                                            Join\n                                        </div>\n                                    </blockquote>\n                                    <h3>3. Model Purposeful Living</h3>\n                                    <p>Children absorb more from your actions than your words. Let them see you pray with focus, serve with love, and speak with sincerity and invite them to participate. Let them hear you say, “I’m doing this for Allah” and experience your love for Allah in daily life.  Sincere actions naturally invite others to emulation. </p>\n                                    <h3>4. Slow Down the Noise</h3>\n                                    <p>Create screen-free hours. Go for reflective walks. Read stories of the Prophets and lovers of God-righteous people together. Take a quiet moment before beginning prayer. Silence allows the heart to speak and listen.</p>\n                                    <div>\n                                        <img src=\"/assets/images/resource/blog/blog-12.png\" alt=\"\" loading=\"lazy\">\n                                    </div>\n                                    <br>\n                                    <h3>5. Let Them Serve</h3>\n                                    <p>Purpose comes alive in service. Let your child donate a toy to someone in need. Give them money to donate by their own hand in a trusted sadaqa box. Help them write a kind note to a friend. Join a Muslim community initiative. When children give, their personality develops in a multifaceted way oriented towards paying attention to the needs of others and better understanding their place in the wider world around them.</p>\n                                    <h2>A Child’s Purpose Isn’t Just in the Future—It’s Also Now</h2>\n                                    <p>We often dream of our children's future and the amazing things that they will do. This is wonderful. At the same time, we should not let this prevent us from seeing who the child is now, to elevate their dignity and let them experience the value we hold for them today, and enjoy the special time we have with them at these earlier stages of life. They are already whole beings, entrusted to us by Allah. Their laughter, their wonder, their questions—these are sacred signs of their Fitrah. Our role is to protect that light, and guide it.</p>\n                                    <p>Let us raise children who pause to reflect before they act, who learn to ask \"why\" before chasing after \"what,\" and who walk through the world with the awareness that every moment—even the smallest ones—carries the potential for divine meaning.</p>\n                                    <p><strong>May we raise them not just to achieve but to become, Insha'Allah.</strong></p>\n                                    <hr>\n                                    <p>[1] Surah Adh-Dhariyat, verse 56.</p>\n                                    \n                                    "
+    },
+    "blog-detail": {
+      "title": "Raising Purposeful Children in a Distracted World",
+      "image": "/assets/images/resource/blog/blog-1.png",
+      "alt": "",
+      "date": "June 22nd, 2025",
+      "body": "<p>In an age of constant noise—screens, ads, social media scrolls, and a rush toward “more”—helping children develop a deep sense of purpose can feel like planting a tree in a storm. But with the right roots, even the youngest hearts can grow upright, grounded, and God-conscious.</p>\n                                    <p>At <strong>Secret Garden TV</strong>, we believe that every child has a sacred purpose—not just to succeed in the world, but to contribute meaningfully to it, guided by faith, values, and love.</p>\n                                    <blockquote>\n                                        \n\t\t\t\t\t\t\t\t\t\tI did not create jinn and humans except to worship Me.\n                                        <div>\n                                            <span>Surah Adh-Dhariyat (51:56)</span>\n                                        </div>\n                                    </blockquote>\n                                    <div>\n                                        <img src=\"/assets/images/resource/blog/blog-1.png\" alt=\"\" loading=\"lazy\">\n                                        <a href=\"/assets/images/resource/blog/blog-1.mp4\">Watch video<span></span></a>\n                                    </div>\n                                    <h2>- Purpose Isn’t a Goal—It’s a Way of Being</h2>\n                                    <p>Modern culture often reduces purpose to achievement: a dream job, high grades, or status. But in the Islamic tradition, purpose is about alignment—with <strong>God’s will</strong>, <strong>one’s fitrah (innate nature)</strong>, and <strong>service to others</strong>.</p>\n                                    <p>A purposeful child doesn’t just ask, <em>“What do I want to be?”</em>—they begin to ask, <em>“Why did God make me this way?”</em> and <em>“How can I give back with what I’ve been given?”</em></p>\n                                    <h2>- 5 Ways to Nurture Purpose in Everyday Life</h2>\n                                    <h3>1. Connect Daily Life to the Divine</h3>\n                                    <p>Teach your children to view their actions—tidying toys, sharing lunch, caring for pets—as small acts of worship. Help them say <em>Bismillah</em> before beginning and <em>Alhamdulillah</em> upon completing. Purpose begins with intentionality.</p>\n                                    <h3>2. Encourage Questions—Even Big Ones</h3>\n                                    <p>Children often ask profound things: <em>Why do people suffer?</em> <em>What is God like?</em> Instead of rushing to answer, turn these into reflections. Say, <em>“Let’s explore that together.”</em> Show them that seeking truth is part of their journey.</p>\n                                    <h3>3. Model Purposeful Living</h3>\n                                    <p>Children absorb more from your actions than your words. Let them see you pray with focus, serve with love, and speak with sincerity. Let them hear you say, <em>“I’m doing this for Allah.”</em></p>\n                                    <h3>4. Slow Down the Noise</h3>\n                                    <p>Create screen-free hours. Go for reflective walks. Read stories of the Prophets and righteous people together. Silence allows the heart to speak—and listen.</p>\n                                    <h3>5. Let Them Serve</h3>\n                                    <p>Purpose comes alive in service. Let your child donate a toy to someone in need. Help them write a kind note to a friend. Join a community cleanup. When children <strong>give</strong>, they begin to understand <strong>why they exist</strong>.</p>\n                                    <h2>- A Child’s Purpose Isn’t in the Future—It’s Now</h2>\n                                    <p>We often speak of what children <em>will become</em>. But they are already <strong>whole beings</strong>, entrusted to us by God. Their laughter, their wonder, their questions—these are sacred signs of their fitrah. Our role is to protect that light, and guide it.</p>\n                                    <p>Let us raise children who:</p>\n                                    <ol>\n                                        <li>Reflect before they act,</li>\n                                        <li>Ask <em>why</em> before chasing <em>what</em>,</li>\n                                        <li>And walk through the world knowing that every moment, even the small ones, carry the potential for meaning.</li>\n                                    </ol>\n                                    <p><strong>May we raise them not just to achieve—but to become.</strong></p>\n                                    \n                                    "
+    }
+  },
+  "faq": [
+    {
+      "title": "What is Secret Garden TV?",
+      "description": "Secret Garden TV is a faith-inspired edutainment platform offering fun, educational videos for Muslim children. Our content includes nature and play-based science education, martial arts with Islamic heritage, Arabic learning adventures, Qur’anic duʿas, and spiritually themed storytelling — all designed to nurture the Garden within each child."
+    },
+    {
+      "title": "Is the content suitable for all ages?",
+      "description": "Yes! While our shows are designed especially for ages 4–10, many older children — and even parents — enjoy them too. We make Islamic learning engaging, beautiful, and accessible for the whole family."
+    },
+    {
+      "title": "How often do you release new videos?",
+      "description": "We release new episodes regularly — usually every week or two. Subscribe to our YouTube channel, join our newsletter, and follow our socials so you never miss a new story or adventure."
+    },
+    {
+      "title": "How can I support Secret Garden TV?",
+      "description": "You can support us by subscribing, sharing our videos, and donating via the links in our footer. Your support helps us plant more seeds of faith and learning in children’s hearts around the world."
+    },
+    {
+      "title": "Is your content safe and values-based?",
+      "description": "Absolutely. Every episode is rooted in Islamic values and designed with both faith and child development in mind. We avoid harmful themes, encourage good character, and weave lessons of the Qur’an and Sunnah throughout."
+    },
+    {
+      "title": "How can my children watch your shows?",
+      "description": "Our shows are available on YouTube and can also be accessed through links on our website. We are working toward making them available on more platforms in the future, insha’Allah."
+    },
+    {
+      "title": "How do you approach screen time?",
+      "description": "We believe screen time can be meaningful when used wisely. Our episodes are short, purposeful, and often include hands-on activities, as well as thought and physical exercises, to encourage children to engage with the world beyond the screen."
+    },
+    {
+      "title": "Are the stories based directly on Islamic texts?",
+      "description": "Some stories are inspired by themes from the Qur’an, hadith, and Islamic traditions, while others are original fables that reflect Islamic ethics and worldview. Each show is crafted with spiritual depth and narrative clarity in mind."
+    }
+  ],
+  "faqExtras": [
+    {
+      "title": "Can my child submit artwork, questions, or story ideas?",
+      "description": "Yes! We love hearing from our young viewers. You can send drawings, reflections, or story ideas through the contact form on our website. Some may even be featured in future episodes or newsletters (with parent permission, of course)."
+    },
+    {
+      "title": "How do you choose the themes for your shows and stories?",
+      "description": "We select themes that reflect key Islamic values—like kindness, gratitude, honesty, and community service—while also addressing real-world challenges kids face today. Each theme is carefully aligned with child development principles and Islamic teachings."
+    },
+    {
+      "title": "Is Secret Garden TV only for Muslim families?",
+      "description": "While our content is inspired by Islamic values, the lessons—like compassion, responsibility, and honesty—are universal. Families of all backgrounds are welcome and often find our stories deeply enriching."
+    }
+  ],
+  "donate": {
+    "intro": "Your generous donation helps Secret Garden TV for Kids bring creative, faith-based education to children around the world.",
+    "body": "<div>\n\t    <div>\n\n\t      <div>\n\t        <div>\n\t          <div>\n\t            \n\t          </div>\n\t          <h2>Where Your Donation Goes</h2>\n\t         \t<p>Your gift helps plant seeds of knowledge, wonder, and faith in young hearts. Every dollar directly supports the creation of engaging, educational programs for children — from the first spark of a story idea to the final frame on screen.</p>\n\t\t\t\t<p>You’re funding:\n</p><ul>\n\t<li><strong>Meaningful storytelling</strong> with Qur’anic values at its core.</li>\n\t<li><strong>Beautiful animation</strong> and illustrations that capture the imagination.</li>\n\t<li><strong>Original soundtracks, voiceovers, and post-production</strong> that bring each episode to life.</li>\n\t<li><strong>Collaboration with experienced educators and creatives</strong> to ensure every piece is spiritually rich and developmentally appropriate.</li>\n</ul>\n\t\t\t\t\n\t\t\t\t<p> Beyond creating content, your support also:\n</p><ul>\n\t<li>Brings our shows to <strong>underserved communities</strong>.</li>\n\t<li>Maintains our platform and makes it safe for families.</li>\n\t<li>Provides <strong>free resources</strong> for parents and educators around the world.</li>\n</ul>\n\n\n\n<p>Transparency matters to us. We use every contribution ethically and efficiently, with one goal in mind: <strong>helping children grow in the Garden of Allah’s signs</strong>.\n</p>\n\t        </div>\n\t      </div>\n\n\t      <div>\n\t        <div>\n\t          <div>\n\t            \n\t          </div>\n\t          <h2>Tax Deductible</h2>\n\t\t\t\t<p>Secret Garden TV for Kids is a registered 501(c)(3) nonprofit organization. This means your contributions are not only meaningful — they’re also tax-deductible in the United States.</p>\n\t\t\t</div>\n\t      </div>\n\n\t    </div>\n\t  </div>\n\t"
+  }
+}

@@ -1,0 +1,35 @@
+---
+import SiteLayout from './SiteLayout.astro';
+import PageSeo from '../components/PageSeo.astro';
+import Container from '../components/garden/Container.astro';
+import GardenNav from '../components/garden/GardenNav.astro';
+import GardenFooter from '../components/garden/GardenFooter.astro';
+import GardenHead from '../components/garden/GardenHead.astro';
+import '../styles/garden.css';
+import '../styles/homepage.css';
+import '../styles/secondary-pages.css';
+
+const { page, heading, intro, eyebrow, hideFromSearch = false, currentHref = page.canonicalPath } = Astro.props;
+---
+<SiteLayout title={page.title}>
+  <Fragment slot="head">
+    <GardenHead />
+    <PageSeo {page} />
+    {hideFromSearch && <meta name="robots" content="noindex, follow" />}
+  </Fragment>
+  <div class="garden-preview garden-secondary">
+    <a class="garden-skip" href="#main">Skip to content</a>
+    <GardenNav {currentHref} />
+    <main id="main" tabindex="-1">
+      <header class="secondary-hero">
+        <Container>
+          {eyebrow && <p class="garden-eyebrow">{eyebrow}</p>}
+          <h1>{heading}</h1>
+          {intro && <p>{intro}</p>}
+        </Container>
+      </header>
+      <slot />
+    </main>
+    <GardenFooter />
+  </div>
+</SiteLayout>

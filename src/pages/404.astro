@@ -1,11 +1,17 @@
 ---
-import SiteLayout from '../layouts/SiteLayout.astro';
+import GardenPage from '../layouts/GardenPage.astro';
+import Container from '../components/garden/Container.astro';
+import Button from '../components/garden/Button.astro';
+
+const page = {
+  title: 'Page not found | Secret Garden TV for Kids',
+  description: 'The page you requested may have moved.',
+  canonicalPath: '/404.html',
+  type: 'website',
+};
 ---
-<SiteLayout title="Page not found | Secret Garden TV for Kids">
-  <meta slot="head" name="robots" content="noindex" />
-  <main class="mx-auto max-w-2xl px-6 py-20">
-    <h1 class="font-display text-4xl">Page not found</h1>
-    <p class="mt-4">The page you requested may have moved.</p>
-    <a class="mt-6 inline-block underline" href="/">Return to Secret Garden TV</a>
-  </main>
-</SiteLayout>
+<GardenPage {page} heading="Page not found" intro={page.description} hideFromSearch>
+  <section class="garden-section">
+    <Container><Button href="/">Return to Secret Garden TV</Button></Container>
+  </section>
+</GardenPage>
