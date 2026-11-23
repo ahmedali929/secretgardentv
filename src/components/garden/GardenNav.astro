@@ -1,0 +1,40 @@
+---
+import Container from './Container.astro';
+
+const { programsHref = '/program.html', aboutHref = '/about.html' } = Astro.props;
+const links = [
+  { href: programsHref, label: 'Programs' },
+  { href: aboutHref, label: 'About us' },
+  { href: '/blog.html', label: 'Blog' },
+  { href: '/faq.html', label: 'FAQs' },
+  { href: '/donate.html', label: 'Donate' },
+];
+---
+<header class="garden-header">
+  <Container class="garden-header-inner">
+    <a href="/" class="garden-logo">
+      <img src="/assets/images/sgtv_logo_transparent_1.png" width="184" height="103" alt="Secret Garden TV home" />
+    </a>
+    <nav aria-label="Main navigation" class="garden-nav">
+      <ul>{links.map(({ href, label }) => <li><a href={href}>{label}</a></li>)}</ul>
+    </nav>
+    <details class="garden-menu">
+      <summary>Menu</summary>
+      <nav aria-label="Main navigation">
+        <ul>{links.map(({ href, label }) => <li><a href={href}>{label}</a></li>)}</ul>
+      </nav>
+    </details>
+  </Container>
+</header>
+<script>
+  const menu = document.querySelector<HTMLDetailsElement>('.garden-menu');
+  menu?.addEventListener('click', (event) => {
+    if (event.target instanceof HTMLAnchorElement) menu.open = false;
+  });
+  menu?.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menu.open) {
+      menu.open = false;
+      menu.querySelector('summary')?.focus();
+    }
+  });
+</script>

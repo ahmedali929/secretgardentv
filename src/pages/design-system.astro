@@ -1,0 +1,83 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import Button from '../components/garden/Button.astro';
+import Container from '../components/garden/Container.astro';
+import GardenNav from '../components/garden/GardenNav.astro';
+import ProgramCard from '../components/garden/ProgramCard.astro';
+import SectionHeading from '../components/garden/SectionHeading.astro';
+import { featuredPrograms } from '../content/featured-programs.mjs';
+import '../styles/garden.css';
+---
+<SiteLayout title="Design preview | Secret Garden TV for Kids">
+  <meta slot="head" name="robots" content="noindex, nofollow" />
+  <link slot="head" rel="preconnect" href="https://fonts.googleapis.com" />
+  <link slot="head" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+  <link slot="head" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" />
+  <div class="garden-preview">
+    <a class="garden-skip" href="#main">Skip to content</a>
+    <GardenNav programsHref="#programs" aboutHref="#about" />
+    <main id="main" tabindex="-1">
+      <section class="garden-hero" aria-labelledby="garden-title">
+        <Container class="garden-hero-grid">
+          <div class="garden-hero-copy">
+            <p class="garden-eyebrow">Secret Garden TV for Kids</p>
+            <h1 id="garden-title">Know the <em>Garden.</em></h1>
+            <p class="garden-lede">Building a brighter future for Muslim children.</p>
+            <p>We empower the next generation with knowledge, creativity, and a strong spiritual foundation—through fun, thoughtful, and faith-centered stories rooted in the Qur’an.</p>
+            <div class="flex flex-wrap gap-3">
+              <Button href="#programs">Explore programs</Button>
+              <Button href="#about" variant="outline">Our story</Button>
+            </div>
+          </div>
+          <figure class="garden-hero-art">
+            <img src="/assets/images/main-slider/playinthegarden.png" width="2912" height="1632" alt="An illustrated child overlooking a luminous, leafy garden" fetchpriority="high" />
+          </figure>
+        </Container>
+      </section>
+      <section id="programs" tabindex="-1" class="garden-section" aria-labelledby="programs-title">
+        <Container>
+          <div class="garden-section-top">
+            <SectionHeading id="programs-title" eyebrow="Our shows">Explore the programs</SectionHeading>
+            <Button href="/program.html" variant="outline">All programs</Button>
+          </div>
+          <div class="garden-card-grid">
+            {featuredPrograms.map((program) => <ProgramCard {...program} />)}
+          </div>
+        </Container>
+      </section>
+      <section id="about" tabindex="-1" class="garden-section garden-story" aria-labelledby="about-title">
+        <Container class="garden-story-grid">
+          <img src="/assets/images/resource/about.png" width="2912" height="1632" loading="lazy" decoding="async" alt="An illustrated treasure chest surrounded by sunlit leaves" />
+          <div data-reveal>
+            <SectionHeading id="about-title" eyebrow="About Secret Garden TV">Lighting the way for our children</SectionHeading>
+            <p>We are an Islamic educational media organization devoted to nurturing the Garden within each child—through spiritually rich stories, thoughtful animation, and heart-centered learning.</p>
+            <Button href="/about.html">Learn more about us</Button>
+          </div>
+        </Container>
+      </section>
+    </main>
+    <footer class="garden-footer">
+      <Container class="flex flex-wrap items-center justify-between gap-4">
+        <a href="/">Secret Garden TV</a>
+        <a href="mailto:secretgardentv@gmail.com">secretgardentv@gmail.com</a>
+      </Container>
+    </footer>
+  </div>
+</SiteLayout>
+<script>
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        observer.unobserve(entry.target);
+        if (!reducedMotion.matches && !entry.target.matches(':focus-within')) {
+          entry.target.classList.add('garden-revealed');
+        }
+      }
+    }, { threshold: 0.16 });
+    if (!reducedMotion.matches) {
+      for (const item of document.querySelectorAll('[data-reveal]')) observer.observe(item);
+    }
+  }
+</script>

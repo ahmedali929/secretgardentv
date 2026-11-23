@@ -10,6 +10,8 @@
 
 - Added the explicit legacy route registry, reusable SEO and Astro layouts, sitemap, Tailwind-based 404, ESLint and staging lint checks. The compatibility layout preserves legacy markup and integrations.
 
+- Implemented an isolated design-system demo with reusable components, existing artwork, and responsive/motion checks. See [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md).
+
 ## Remaining
 
 - Hosted staging is blocked until the Cloudflare account owner connects GitHub. Follow the phone setup in [DEVELOPMENT.md](DEVELOPMENT.md), then record the verified HTTPS URL.
