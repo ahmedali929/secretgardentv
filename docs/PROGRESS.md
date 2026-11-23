@@ -12,6 +12,8 @@
 
 - Implemented an isolated design-system demo with reusable components, existing artwork, and responsive/motion checks. See [DESIGN-SYSTEM.md](DESIGN-SYSTEM.md).
 
+- Rebuilt the homepage in Astro with the approved design system and retained active editorial sections, program links, the newsletter, and existing visual assets. Lint, staging build, parity, and Chromium viewport and interaction checks passed.
+
 ## Remaining
 
 - Hosted staging is blocked until the Cloudflare account owner connects GitHub. Follow the phone setup in [DEVELOPMENT.md](DEVELOPMENT.md), then record the verified HTTPS URL.

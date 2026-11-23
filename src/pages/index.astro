@@ -1,5 +1,234 @@
 ---
-import LegacyPage from '../layouts/LegacyPage.astro';
-import { readLegacyPage } from '../content/read-legacy-page.mjs';
+import { getImage } from 'astro:assets';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import PageSeo from '../components/PageSeo.astro';
+import Button from '../components/garden/Button.astro';
+import Container from '../components/garden/Container.astro';
+import GardenNav from '../components/garden/GardenNav.astro';
+import HomeImage from '../components/garden/HomeImage.astro';
+import ProgramCard from '../components/garden/ProgramCard.astro';
+import SectionHeading from '../components/garden/SectionHeading.astro';
+import { legacyPages } from '../content/pages.mjs';
+import content from '../content/homepage.json';
+import posterArt from '../../assets/images/resource/about.png';
+import '../styles/garden.css';
+import '../styles/homepage.css';
+
+const title = 'Secret Garden TV for Kids';
+const page = { ...legacyPages.index, title };
+const [opening, ...chapters] = content.hero;
+const poster = await getImage({ src: posterArt, width: 900, format: 'webp' });
+const email = 'mailto:secretgardentv@gmail.com';
+const socials = [
+  ['YouTube', 'https://www.youtube.com/@SecretGardenTVforKids'],
+  ['Instagram', 'https://www.instagram.com/secretgardentvforkids'],
+  ['TikTok', 'https://www.tiktok.com/@secretgardentv'],
+  ['Facebook', 'https://www.facebook.com/profile.php?id=61568807675251'],
+  ['X', 'https://x.com/secretgarden_tv'],
+];
 ---
-<LegacyPage {...readLegacyPage('index')} />
+<SiteLayout {title}>
+  <Fragment slot="head">
+    <PageSeo {page} />
+    <link rel="icon" href="/assets/images/favicon_sgtv/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" />
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-8BV81NN8H4"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8BV81NN8H4', {
+        allow_google_signals: false,
+        allow_ad_personalization_signals: false
+      });
+    </script>
+    <script is:inline>
+      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+      .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+      n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+      (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account', '1739117');
+    </script>
+  </Fragment>
+
+  <div class="garden-preview garden-home">
+    <a class="garden-skip" href="#main">Skip to content</a>
+    <GardenNav programsHref="#programs" aboutHref="#about" newsletterHref="#newsletter" />
+    <main id="main" tabindex="-1">
+      <section class="home-hero" aria-labelledby="home-title">
+        <div class="home-hero-art">
+          <HomeImage path={opening.image} priority sizes="100vw" />
+        </div>
+        <Container class="home-hero-inner">
+          <div class="garden-hero-copy">
+            <p class="garden-eyebrow">Secret Garden TV for Kids</p>
+            <h1 id="home-title">Know the <em>Garden</em></h1>
+            <p class="garden-lede">{opening.subtitle}</p>
+            <p>{opening.description}</p>
+            <div class="flex flex-wrap gap-3">
+              <Button href="#programs">Explore programs</Button>
+              <Button href="#newsletter" variant="outline">Join Our Newsletter</Button>
+              <a class="home-hero-more" href="/about.html">Read More</a>
+            </div>
+          </div>
+          <nav class="home-chapter-nav" aria-label="Garden chapters">
+            {content.hero.map(({ title }, index) => <a href={index === 0 ? '#home-title' : `#chapter-${index}`}>{title}</a>)}
+          </nav>
+        </Container>
+      </section>
+
+      <section class="garden-section home-chapters" aria-label="Garden chapters">
+        <Container>
+          {chapters.map((chapter, index) => (
+            <article class="home-chapter" id={`chapter-${index + 1}`} data-reveal>
+              <div class="home-chapter-image"><HomeImage path={chapter.image} sizes="(max-width: 670px) 92vw, 50vw" /></div>
+              <div class="home-chapter-copy">
+                <SectionHeading>{chapter.title}</SectionHeading>
+                <p class="garden-lede">{chapter.subtitle}</p>
+                <p>{chapter.description}</p>
+                <Button href="/about.html" variant="outline">Read More</Button>
+              </div>
+            </article>
+          ))}
+        </Container>
+      </section>
+
+      <section id="about" class="garden-section garden-story" aria-labelledby="about-title" tabindex="-1">
+        <Container class="garden-story-grid">
+          <video class="home-video" controls playsinline preload="none" poster={poster.src} aria-label="Tree blooming animation" width="1920" height="1080">
+            <source src="/assets/images/resource/Tree_Blooming.mp4" type="video/mp4" />
+            <a href="/assets/images/resource/Tree_Blooming.mp4">Watch the tree blooming animation</a>
+          </video>
+          <div data-reveal>
+            <SectionHeading id="about-title" eyebrow="About Secret Garden TV">Lighting the way for our Children</SectionHeading>
+            {content.about.map((paragraph) => <p>{paragraph}</p>)}
+            <Button href="/about.html">Learn more</Button>
+          </div>
+        </Container>
+      </section>
+
+      <section class="garden-section" aria-labelledby="philosophy-title">
+        <Container>
+          <SectionHeading id="philosophy-title" eyebrow="Discover the Difference">Discover the Light of true Islamic teachings</SectionHeading>
+          <div class="home-values">
+            {content.philosophy.map(({ title, description }) => (
+              <article data-reveal>
+                <h3><a href="/about.html">{title}</a></h3>
+                <p>{description}</p>
+              </article>
+            ))}
+          </div>
+          <Button href="/about.html" variant="outline">Learn more</Button>
+        </Container>
+      </section>
+
+      <section id="programs" class="garden-section home-programs" aria-labelledby="programs-title" tabindex="-1">
+        <Container>
+          <div class="garden-section-top">
+            <SectionHeading id="programs-title" eyebrow="Our Shows">Based on the principles of the Prophet Muhammad</SectionHeading>
+            <Button href="/program.html" variant="outline">All programs</Button>
+          </div>
+          <div class="garden-card-grid">
+            {content.shows.map(({ image, ...show }) => (
+              <ProgramCard {...show}>
+                <HomeImage slot="media" path={image} sizes="(max-width: 670px) 92vw, (max-width: 928px) 44vw, 380px" />
+              </ProgramCard>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section id="newsletter" class="garden-section home-newsletter" aria-labelledby="newsletter-title" tabindex="-1">
+        <Container class="home-newsletter-inner">
+          <div>
+            <SectionHeading id="newsletter-title" eyebrow="Stay Updated">Be the First to Enter the Secret Garden</SectionHeading>
+            <p>Sign up for our newsletter and be part of our journey from the very first season of blooming.</p>
+          </div>
+          <div>
+            <button type="button" class="garden-button home-signup" id="newsletter-open" hidden>Join the Secret Garden Family <span aria-hidden="true">→</span></button>
+            <p id="newsletter-status" role="status"></p>
+            <noscript><a href={email}>Email Secret Garden TV about the newsletter</a></noscript>
+            <a id="newsletter-fallback" href={email} hidden>Email Secret Garden TV</a>
+          </div>
+        </Container>
+      </section>
+
+      <section class="garden-section" aria-labelledby="testimonials-title">
+        <Container>
+          <SectionHeading id="testimonials-title" eyebrow="Kid-Approved Stories">Voices of Adventure from Kids and Parents</SectionHeading>
+          <div class="home-quotes">
+            {content.quotes.map(({ quote, name, credit }) => (
+              <figure data-reveal><blockquote>{quote}</blockquote><figcaption><strong>{name}</strong> · {credit}</figcaption></figure>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section class="garden-section home-faq" aria-labelledby="faq-title">
+        <Container class="home-faq-grid">
+          <div>
+            <SectionHeading id="faq-title" eyebrow="General FAQs">General Questions</SectionHeading>
+            <p>We’re happy to answer your questions about Secret Garden TV.</p>
+            <p>Here are some of the most popular — click “See More” to explore more answers.</p>
+            <Button href="/faq.html">See More</Button>
+          </div>
+          <div class="home-faq-list">
+            {content.faq.map(({ question, answer }, index) => (
+              <details open={index === 0}><summary>{question}</summary><p>{answer}</p></details>
+            ))}
+          </div>
+        </Container>
+      </section>
+    </main>
+
+    <footer class="garden-footer">
+      <Container>
+        <div class="home-footer-grid">
+          <div>
+            <a class="garden-logo" href="/"><img src="/assets/images/sgtv_logo_transparent_1.png" width="184" height="103" loading="lazy" alt="Secret Garden TV home" /></a>
+            <p>Secret Garden TV for Kids is an organization devoted to the development of educational content.</p>
+          </div>
+          <nav aria-label="Footer navigation">
+            <a href="/">Home</a><a href="/about.html">About Us</a><a href="/program.html">Programs</a><a href="/donate.html">Donate</a><a href="/blog.html">Blog</a><a href="/faq.html">FAQs</a>
+          </nav>
+          <div>
+            <a href="#newsletter">Our Newsletter</a>
+            <a href={email}>secretgardentv@gmail.com</a>
+            <nav class="home-socials" aria-label="Social media">{socials.map(([name, href]) => <a href={href}>{name}</a>)}</nav>
+          </div>
+        </div>
+        <p class="home-copyright">Copyright © 2026 Secret Garden TV for Kids. All Rights Reserved.</p>
+      </Container>
+    </footer>
+  </div>
+</SiteLayout>
+<script>
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (!reducedMotion.matches && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      for (const entry of entries) {
+        if (!entry.isIntersecting) continue;
+        observer.unobserve(entry.target);
+        if (!reducedMotion.matches && !entry.target.matches(':focus-within')) {
+          entry.target.classList.add('garden-revealed');
+        }
+      }
+    }, { threshold: 0.12 });
+    for (const item of document.querySelectorAll('[data-reveal]')) observer.observe(item);
+  }
+
+  const signup = document.querySelector<HTMLButtonElement>('#newsletter-open');
+  const status = document.querySelector('#newsletter-status');
+  const fallback = document.querySelector<HTMLAnchorElement>('#newsletter-fallback');
+  if (signup && status && fallback) {
+    signup.hidden = false;
+    signup.addEventListener('click', () => {
+      const mailerLite = Reflect.get(window, 'ml');
+      if (typeof mailerLite === 'function') mailerLite('show', 'Pcso7D', true);
+      status.textContent = 'If the signup form doesn’t open, please contact us.';
+      fallback.hidden = false;
+    });
+  }
+</script>

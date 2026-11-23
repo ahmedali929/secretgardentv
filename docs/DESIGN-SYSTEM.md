@@ -34,3 +34,13 @@ Import `src/styles/garden.css` and wrap design-system screens in `.garden-previe
 Hover lift and image scaling are short and optional. Visible focus, keyboard navigation, large touch targets, a skip link, and native mobile disclosure work independently of animation. Reveals play once as content enters view and start from visible content, so the page remains usable without JavaScript. Reduced-motion mode removes transitions and reveals.
 
 The demo was checked in Chromium at 320, 375, 768, and 1440 CSS pixels for horizontal overflow, hero asset loading, and navigation layout. Keyboard menu opening, Escape focus restoration, and reduced-motion behavior also passed. Viewport checks used fallback fonts to avoid relying on an external font request.
+
+## Homepage adoption
+
+The homepage now applies the system at `/` and `/index.html`. The five Garden themes appear as a cinematic opening and four illustrated chapters. Editorial copy lives in `src/content/homepage.json`, sourced from the active legacy homepage. The original HTML remains as a migration reference.
+
+For local preview, run `npm ci`, `npm run build:staging` and `npm run preview`, then open the URL printed by Astro at `/`. The PR workflow also provides a `sgtv-staging-preview` archive. Extract it, serve the directory containing `index.html` with `python3 -m http.server 8000`, and open `http://localhost:8000/`. Review at 375px for the mobile menu and at 1440px for the full-width hero. The other legacy routes remain available in the archive.
+
+Astro builds responsive WebP variants from existing illustrations. The hero loads eagerly and later artwork is lazy-loaded. The original Tree Blooming video uses an optimized poster and loads only on request. Chapters use standard anchor links, the FAQ uses native details controls, and reveals honor reduced motion.
+
+Browser checks covered 320, 375, 768, and 1440px, keyboard navigation, FAQ toggles, about and program media loading, the index alias, and the MailerLite callback using a stub. Live newsletter signup was not submitted. The staging build strips the production GA tag.

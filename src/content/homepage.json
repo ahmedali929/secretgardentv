@@ -1,0 +1,160 @@
+{
+  "hero": [
+    {
+      "title": "Know the Garden",
+      "subtitle": "Building a brighter future for Muslim children.",
+      "description": "We empower the next generation with knowledge, creativity, and a strong spiritual foundation—through fun, thoughtful, and faith-centered stories rooted in the Qur’an.",
+      "image": "/assets/images/main-slider/test.png"
+    },
+    {
+      "title": "See the Garden",
+      "subtitle": "A fresh vision for Islamic learning.",
+      "description": "We bring Allah’s signs to life through engaging, high-quality media that sparks curiosity and helps children see His wonders in everyday life.",
+      "image": "/assets/images/main-slider/test2.png"
+    },
+    {
+      "title": "Be the Garden",
+      "subtitle": "Inspiring character and faith that last.",
+      "description": "Our stories nurture kindness, courage, and love for Allah—so the Garden can bloom inside your child’s heart.",
+      "image": "/assets/images/main-slider/14.png"
+    },
+    {
+      "title": "Play in the Garden",
+      "subtitle": "Where learning feels like play.",
+      "description": "Through crafts, science experiments, and joyful adventures, children explore the Qur’an’s signs while having fun every step of the way.",
+      "image": "/assets/images/main-slider/playinthegarden.png"
+    },
+    {
+      "title": "Pray in the Garden",
+      "subtitle": "Planting with every dua.",
+      "description": "From short Qur’anic prayers to daily moments of remembrance, we help children make talking to Allah a natural and happy part of life.",
+      "image": "/assets/images/main-slider/prayinthegarden.png"
+    }
+  ],
+  "philosophy": [
+    {
+      "title": "The Garden as Teacher",
+      "description": "From the smallest seeds to the widest skies, creation is filled with Allah’s signs. Our stories help children read creation as a living book of Ayaat (Signs)—so the Garden outside becomes a mirror of the Garden within."
+    },
+    {
+      "title": "Purposeful Living, Purposeful Content",
+      "description": "We inspire children to see life as a meaningful journey—rooted in Taqwa (God-consciousness), true imagination, and creative action. Every story nurtures duty, responsibility, and wonder toward the world and themselves."
+    },
+    {
+      "title": "Character That Shines From Within",
+      "description": "Through gentle storytelling and memorable characters, we teach Adab (courtesy), Akhlaq (character), Sabr (patience), and Khushu’ (humility)—values that help children flourish both spiritually and socially."
+    },
+    {
+      "title": "Science Filled with Light",
+      "description": "Exploring nature and science becomes part of knowing Allah. From photosynthesis to the flight of birds, every discovery is a step closer to the Creator."
+    },
+    {
+      "title": "Awakening the Heart",
+      "description": "Our media kindles the heart’s awakening—nurturing emotional refinement, Dhikr-filled moments, and intentional living. Children learn to know themselves… and through that, come to know their Lord."
+    },
+    {
+      "title": "Signs in Every Culture, Wisdom in Every Face",
+      "description": "By exploring diverse cultures through an Islamic lens, we teach children to see every people and tradition as an Ayah—a Sign—pointing back to the One."
+    },
+    {
+      "title": "The Human as a Sacred Trust",
+      "description": "We center every child’s tremendous worth through the Qur’anic truth of the human being as Ahsan Taqweem—“the best of forms” (Qur’an 95:4). Our work reflects this lofty view, teaching compassion, self-worth, and the dignity of seeing humanity with divinely created purpose."
+    },
+    {
+      "title": "Love That Begins at Home",
+      "description": "We revive the spiritual depth of family, where care, loyalty, and forgiveness reflect Allah’s Divine Attributes. Through characters like Ali, Baba, and Grandma, children learn that home is the first school of the heart."
+    },
+    {
+      "title": "Living with Presence",
+      "description": "We guide children to slow down, notice, and truly be with the people, places, and moments around them. Through play, prayer, and reflection, they learn that presence is the doorway to gratitude and wisdom."
+    }
+  ],
+  "shows": [
+    {
+      "title": "Allah's Secret Signs™",
+      "description": "The Science Show for Muslims",
+      "image": "/assets/images/shows/allah_secret_signs.png",
+      "href": "/allah-secret-signs.html"
+    },
+    {
+      "title": "Nurheart Fables™",
+      "description": "Tiny Adventures. Timeless wisdom.",
+      "image": "/assets/images/shows/nurheart_fables.png",
+      "href": "/nurheart-fables.html"
+    },
+    {
+      "title": "Toy Box Stories™",
+      "description": "Following the Sunnah with toys.",
+      "image": "/assets/images/shows/toyboxstories.PNG",
+      "href": "/toy-box-stories.html"
+    },
+    {
+      "title": "Babagha Sadiqi™",
+      "description": "Fly with Babagha into the world of Arabic.",
+      "image": "/assets/images/shows/babagha_sadiqi.png",
+      "href": "/babagha-sadiqi.html"
+    },
+    {
+      "title": "Qur'an Safari with Taha Tiger™",
+      "description": "Discover a world of Qur’anic prayers.",
+      "image": "/assets/images/shows/quranSafari.png",
+      "href": "/quran-safari.html"
+    }
+  ],
+  "quotes": [
+    {
+      "quote": "Secret Garden TV for Kids is exactly what I’ve been looking for. The stories are bright and gentle while teaching adab and gratitude in a way my toddler understands. He’s started repeating the duas and noticing Allah’s signs in nature. I trust SGTV for safe, beautiful screen time in our home.",
+      "name": "Fairouz",
+      "credit": "Young Mother"
+    },
+    {
+      "quote": "Nur always beats Zulaamaat! I want to go to the Garden!",
+      "name": "Hamza",
+      "credit": "Age 5"
+    },
+    {
+      "quote": "SGTV gives us family moments filled with wonder and values. The episodes spark real conversations about Allah’s creation, kindness, and courage. I love that it’s cheerful yet high-quality, never preachy, and always uplifting. It’s a show I’m proud to watch with my kids.",
+      "name": "Karim",
+      "credit": "Young Father"
+    },
+    {
+      "quote": "I love Secret Garden TV for Kids. It will teach everyone how to get to the garden. Allah is everywhere!",
+      "name": "Jamal",
+      "credit": "Age 6"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is Secret Garden TV?",
+      "answer": "Secret Garden TV is a faith-inspired edutainment platform offering fun, educational videos for Muslim children. Our content includes nature and play-based science education, martial arts with Islamic heritage, Arabic learning adventures, Qur’anic duʿas, and spiritually themed storytelling — all designed to nurture the Garden within each child."
+    },
+    {
+      "question": "Is the content suitable for all ages?",
+      "answer": "Yes! While our shows are designed especially for ages 4–10, many older children — and even parents — enjoy them too. We make Islamic learning engaging, beautiful, and accessible for the whole family."
+    },
+    {
+      "question": "How often do you release new videos?",
+      "answer": "We release new episodes regularly — usually every week or two. Subscribe to our YouTube channel, join our newsletter, and follow our socials so you never miss a new story or adventure."
+    },
+    {
+      "question": "How can I support Secret Garden TV?",
+      "answer": "You can support us by subscribing, sharing our videos, and donating via the links in our footer. Your support helps us plant more seeds of faith and learning in children’s hearts around the world."
+    },
+    {
+      "question": "Is your content safe and values-based?",
+      "answer": "Absolutely. Every episode is rooted in Islamic values and designed with both faith and child development in mind. We avoid harmful themes, encourage good character, and weave lessons of the Qur’an and Sunnah throughout."
+    },
+    {
+      "question": "How can my children watch your shows?",
+      "answer": "Our shows are available on YouTube and can also be accessed through links on our website. We are working toward making them available on more platforms in the future, insha’Allah."
+    },
+    {
+      "question": "How do you approach screen time?",
+      "answer": "We believe screen time can be meaningful when used wisely. Our episodes are short, purposeful, and often include hands-on activities, as well as thought and physical exercises, to encourage children to engage with the world beyond the screen."
+    }
+  ],
+  "about": [
+    "We are an Islamic educational media organization devoted to nurturing the Garden within each child—through spiritually rich stories, thoughtful animation, and heart-centered learning.",
+    "Rooted in the tradition of Taqwa (God-consciousness), our programming helps children see the Ayaat (Signs) of Allah in themselves and the world around them. We believe in guiding young hearts toward beauty, true meaning, and nearness to al-Khaaliq, the Creator."
+  ]
+}
