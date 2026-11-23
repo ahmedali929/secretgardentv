@@ -17,6 +17,7 @@ const checkout = 'https://www.zeffy.com/en-US/donation-form/donate-to-make-a-dif
     </label>
     <button class="garden-button garden-button--primary" type="submit">Donate Now <span aria-hidden="true">→</span></button>
   </form>
+  <p class="checkout-status" role="status"></p>
   <p>Secure checkout powered by Zeffy — you’ll complete your donation on their page.</p>
   <a href={checkout}>Continue directly to Zeffy</a>
 </div>
@@ -24,7 +25,13 @@ const checkout = 'https://www.zeffy.com/en-US/donation-form/donate-to-make-a-dif
   const form = document.querySelector<HTMLFormElement>('#donation-checkout');
   const custom = document.querySelector<HTMLLabelElement>('#checkout-custom');
   const amount = custom?.querySelector('input');
-  if (form && custom && amount) {
+  const submit = form?.querySelector('button');
+  const status = document.querySelector('.checkout-status');
+  if (form && custom && amount && submit && status) {
+    window.addEventListener('pageshow', () => {
+      submit.disabled = false;
+      status.textContent = '';
+    });
     const syncCustom = () => {
       const isCustom = new FormData(form).get('amount') === 'custom';
       custom.hidden = !isCustom;
@@ -40,6 +47,8 @@ const checkout = 'https://www.zeffy.com/en-US/donation-form/donate-to-make-a-dif
       if (typeof selection !== 'string') return;
       const url = new URL(form.action);
       url.searchParams.set('amount', selection === 'custom' ? amount.value : selection);
+      submit.disabled = true;
+      status.textContent = 'Opening Zeffy checkout…';
       window.location.assign(url.href);
     });
   }

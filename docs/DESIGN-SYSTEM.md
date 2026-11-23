@@ -44,3 +44,9 @@ For local preview, run `npm ci`, `npm run build:staging` and `npm run preview`, 
 Astro builds responsive WebP variants from existing illustrations. The hero loads eagerly and later artwork is lazy-loaded. The original Tree Blooming video uses an optimized poster and loads only on request. Chapters use standard anchor links, the FAQ uses native details controls, and reveals honor reduced motion.
 
 Browser checks covered 320, 375, 768, and 1440px, keyboard navigation, FAQ toggles, about and program media loading, the index alias, and the MailerLite callback using a stub. Live newsletter signup was not submitted. The staging build strips the production GA tag.
+
+### Shared interaction motion
+
+The shared layout uses one IntersectionObserver for one-time reveals. Content stays visible before JavaScript runs. Heading and lead transitions use 6px of travel and opacity, while menu, FAQ, and dialog entrances are shorter. Native links, details, and dialogs retain their keyboard and touch behavior. Hover movement is reserved for fine pointers. Smooth anchors and the optional 16px hero parallax run only when reduced motion is off. The hero effect also requires a wide screen and CSS scroll-timeline support.
+
+Donation controls show focus, selection, validation, and checkout feedback. Video previews reserve the player space and expose a loading status. Reduced-motion users receive the same feedback without motion.

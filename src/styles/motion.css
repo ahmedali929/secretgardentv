@@ -1,0 +1,93 @@
+.garden-preview {
+  --motion-quick: 160ms;
+  --motion-enter: 340ms;
+  --motion-ease: cubic-bezier(.2, .75, .25, 1);
+}
+
+.garden-preview :target { scroll-margin-block-start: 1.25rem; }
+.garden-preview .garden-card:focus-within { border-color: var(--gold); }
+.garden-preview :is(.garden-button, .episode-external):active { box-shadow: inset 0 0 0 2px currentColor; }
+.garden-preview .garden-button:disabled { cursor: wait; opacity: .75; }
+.garden-preview .garden-menu[open] summary,
+.garden-preview .checkout-options label:has(:checked) { background: var(--linen); border-color: var(--gold); }
+.garden-preview .checkout-options label:focus-within { outline: 2px solid var(--gold); outline-offset: 2px; }
+.garden-preview .checkout-options label { cursor: pointer; display: inline-flex; align-items: center; min-height: 44px; gap: .3rem; }
+.garden-preview .checkout-panel input { accent-color: var(--forest); }
+.garden-preview #checkout-custom input:focus { border-color: var(--gold); background: var(--cream); }
+.garden-preview #checkout-custom input:user-invalid { border-color: #a33c30; }
+.garden-preview .checkout-status:empty { display: none; }
+
+.garden-preview .episode-player { position: relative; }
+.garden-preview .episode-player[aria-busy="true"]::after {
+  content: "";
+  position: absolute;
+  inset: 1rem 1rem auto auto;
+  width: 1.25rem;
+  aspect-ratio: 1;
+  border: 2px solid #fffdf766;
+  border-top-color: var(--gold-accent);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html:has(.garden-preview) { scroll-behavior: smooth; }
+
+  .garden-preview .garden-revealed,
+  .garden-preview [data-intro] h1 {
+    animation: garden-enter var(--motion-enter) var(--motion-ease);
+  }
+  .garden-preview [data-intro] .garden-lede {
+    animation: garden-enter var(--motion-enter) var(--motion-ease) 45ms backwards;
+  }
+  .garden-preview .garden-revealed:focus-within { animation: none; }
+  .garden-preview .garden-menu[open] nav,
+  .garden-preview .episode-dialog[open],
+  .garden-preview #checkout-custom:not([hidden]) {
+    animation: garden-enter var(--motion-quick) var(--motion-ease);
+  }
+
+  .garden-preview .home-faq-list details[open] > :not(summary) {
+    animation: garden-enter var(--motion-quick) var(--motion-ease);
+  }
+  .garden-preview .home-faq-list summary { transition: color var(--motion-quick); }
+  .garden-preview .home-faq-list details[open] summary { color: var(--gold); }
+  .garden-preview .episode-player[aria-busy="true"]::after {
+    animation: garden-spin 800ms linear infinite;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .garden-preview .garden-button:hover { transform: translateY(-2px); }
+    .garden-preview .garden-card:hover { transform: translateY(-3px); }
+    .garden-preview .garden-card:hover img { transform: scale(1.025); }
+    .garden-preview .garden-nav a { text-decoration-color: transparent; transition: text-decoration-color var(--motion-quick); }
+    .garden-preview .garden-nav a:is(:hover, :focus-visible, [aria-current]) {
+      text-decoration: underline;
+      text-decoration-color: var(--gold);
+      text-underline-offset: .35em;
+    }
+  }
+
+  @supports (animation-timeline: view()) {
+    @media (min-width: 64rem) and (hover: hover) and (pointer: fine) {
+      .garden-preview .home-hero { view-timeline-name: --garden-hero; }
+      .garden-preview [data-parallax] img {
+        height: calc(100% + 16px);
+        animation: garden-drift linear both;
+        animation-timeline: --garden-hero;
+        animation-range: exit 0% exit 60%;
+      }
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .garden-preview *, .garden-preview *::before, .garden-preview *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@keyframes garden-enter { from { opacity: .78; translate: 0 6px; } }
+@keyframes garden-drift { to { translate: 0 -16px; } }
+@keyframes garden-spin { to { rotate: 1turn; } }
