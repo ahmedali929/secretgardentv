@@ -12,6 +12,7 @@ import ProgramCard from '../components/garden/ProgramCard.astro';
 import SectionHeading from '../components/garden/SectionHeading.astro';
 import { legacyPages } from '../content/pages.mjs';
 import content from '../content/homepage.json';
+import NewsletterSignup from '../components/garden/NewsletterSignup.astro';
 import posterArt from '../../assets/images/resource/about.png';
 import '../styles/garden.css';
 import '../styles/homepage.css';
@@ -20,19 +21,11 @@ const title = 'Secret Garden TV for Kids';
 const page = { ...legacyPages.index, title };
 const [opening, ...chapters] = content.hero;
 const poster = await getImage({ src: posterArt, width: 900, format: 'webp' });
-const email = 'mailto:secretgardentv@gmail.com';
 ---
 <SiteLayout {title}>
   <Fragment slot="head">
     <PageSeo {page} />
     <GardenHead />
-    <script is:inline>
-      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-      .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-      n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-      (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-      ml('account', '1739117');
-    </script>
   </Fragment>
 
   <div class="garden-preview garden-home">
@@ -128,12 +121,7 @@ const email = 'mailto:secretgardentv@gmail.com';
             <SectionHeading id="newsletter-title" eyebrow="Stay Updated">Be the First to Enter the Secret Garden</SectionHeading>
             <p>Sign up for our newsletter and be part of our journey from the very first season of blooming.</p>
           </div>
-          <div>
-            <button type="button" class="garden-button home-signup" id="newsletter-open" hidden>Join the Secret Garden Family <span aria-hidden="true">→</span></button>
-            <p id="newsletter-status" role="status"></p>
-            <noscript><a href={email}>Email Secret Garden TV about the newsletter</a></noscript>
-            <a id="newsletter-fallback" href={email} hidden>Email Secret Garden TV</a>
-          </div>
+          <NewsletterSignup />
         </Container>
       </section>
 
@@ -168,17 +156,3 @@ const email = 'mailto:secretgardentv@gmail.com';
     <GardenFooter />
   </div>
 </SiteLayout>
-<script>
-  const signup = document.querySelector<HTMLButtonElement>('#newsletter-open');
-  const status = document.querySelector('#newsletter-status');
-  const fallback = document.querySelector<HTMLAnchorElement>('#newsletter-fallback');
-  if (signup && status && fallback) {
-    signup.hidden = false;
-    signup.addEventListener('click', () => {
-      const mailerLite = Reflect.get(window, 'ml');
-      if (typeof mailerLite === 'function') mailerLite('show', 'Pcso7D', true);
-      status.textContent = 'If the signup form doesn’t open, please contact us.';
-      fallback.hidden = false;
-    });
-  }
-</script>

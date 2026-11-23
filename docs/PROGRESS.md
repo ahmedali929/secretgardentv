@@ -64,3 +64,8 @@ The two prototype redirects use an HTML refresh and a normal link, so they work 
 
 - Implemented the adult-facing contact page, provider adapter, accessibility and validation states, honeypot, and safe local and staging test modes.
 - Account setup, verified team distribution routing, provider-side validation configuration, and real delivery remain pending. See [Contact form configuration](CONTACT.md).
+
+## Third-party integration audit
+
+- Deferred the existing MailerLite popup until requested, with accessible loading and failure feedback. Staging cannot initiate a live signup.
+- Added build checks for single GA initialization per tracked page and documented provider verification, privacy, and external link behavior in [INTEGRATIONS.md](INTEGRATIONS.md).

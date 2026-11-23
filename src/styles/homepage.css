@@ -65,6 +65,11 @@
 .home-newsletter-inner p:not(.garden-eyebrow) { margin-top: .75rem; }
 .home-signup { cursor: pointer; }
 .home-signup[hidden] { display: none; }
+.newsletter-signup { max-width: 31ch; }
+.newsletter-signup .home-signup { margin-top: .85rem; }
+.newsletter-signup > a { display: inline-block; margin-top: .65rem; }
+.newsletter-signup a { text-underline-offset: .2em; }
+.newsletter-signup .newsletter-privacy { font-size: .9rem; }
 
 .home-quotes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(.9rem, 2.5vw, 1.8rem); margin-top: 2rem; }
 .home-quotes figure { background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.1rem, 3vw, 2.25rem); }

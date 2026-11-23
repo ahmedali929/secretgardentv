@@ -1,0 +1,73 @@
+---
+const disabled = import.meta.env.MODE === 'staging';
+---
+<div class="newsletter-signup">
+  <p>For parents, guardians, and other adults. Use your own email address.</p>
+  {disabled ? (
+    <p>Newsletter signup is disabled in this preview.</p>
+  ) : (
+    <>
+      <button type="button" class="garden-button home-signup" id="newsletter-open" aria-haspopup="dialog" hidden>
+        Join the Secret Garden Family <span aria-hidden="true">→</span>
+      </button>
+      <p id="newsletter-status" role="status" aria-atomic="true"></p>
+      <noscript><p>Enable JavaScript to open the signup form, or contact us for help.</p></noscript>
+      <p class="newsletter-privacy"><a href="https://www.mailerlite.com/legal/privacy-policy">MailerLite privacy policy</a></p>
+    </>
+  )}
+  <a href="/contact.html">Contact us for newsletter help</a>
+</div>
+
+<script>
+  type MailerLite = ((...args: unknown[]) => void) & { q?: unknown[][] };
+  const button = document.querySelector<HTMLButtonElement>('#newsletter-open');
+  const status = document.querySelector('#newsletter-status');
+
+  if (button && status) {
+    const providerWindow = window as Window & { ml?: MailerLite };
+    let ready = false;
+
+    button.hidden = false;
+    button.addEventListener('click', async () => {
+      if (button.disabled) return;
+      button.disabled = true;
+      status.textContent = 'Loading the MailerLite signup form…';
+
+      try {
+        if (!ready) {
+          if (!providerWindow.ml) {
+            const queued: MailerLite = (...args) => (queued.q ??= []).push(args);
+            providerWindow.ml = queued;
+            queued('account', '1739117');
+          }
+          await new Promise<void>((resolve, reject) => {
+            const script = document.createElement('script');
+            const fail = () => {
+              window.clearTimeout(timer);
+              script.remove();
+              reject(new Error('MailerLite unavailable'));
+            };
+            const timer = window.setTimeout(fail, 8000);
+            script.src = 'https://assets.mailerlite.com/js/universal.js';
+            script.async = true;
+            script.onload = () => {
+              window.clearTimeout(timer);
+              resolve();
+            };
+            script.onerror = fail;
+            document.head.append(script);
+          });
+          ready = true;
+        }
+
+        if (typeof providerWindow.ml !== 'function') throw new Error('MailerLite unavailable');
+        providerWindow.ml('show', 'Pcso7D', true);
+        status.textContent = 'Complete signup in the MailerLite form. If it doesn’t open, use the contact link below.';
+      } catch {
+        status.textContent = 'The signup form couldn’t load. Try again or contact us for help.';
+      } finally {
+        button.disabled = false;
+      }
+    });
+  }
+</script>
